@@ -1,0 +1,1 @@
+Initial data stored inside JFFS2 image.
