@@ -1,0 +1,29 @@
+# Kernel module build products
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+.*.cmd
+Module.symvers
+modules.order
+.tmp_versions/
+
+# Generated system images
+output/
+logs/
+*.cpio
+*.cpio.gz
+*.jffs2
+*.dtb
+zImage
+Image
+*.bin
+
+# Runtime mount directory
+mtd/mount/
+
+# Editor temporary files
+*~
+*.swp
+.vscode/
