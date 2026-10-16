@@ -1,0 +1,53 @@
+interval=10 ms, duration=15 s per run, CPUs=2
+
+########## policy=fifo  background_load=0 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_FIFO (prio 50)
+Interval        : 10 ms
+Samples         : 1501
+Min / Avg / Max : 91 / 442.7 / 892 us
+P99             : 684 us
+Histogram:
+  0-100us    :      1 (  0.1%) 
+  100-500us  :   1040 ( 69.3%) ##################################
+  500-1000us :    460 ( 30.6%) ###############
+  >1000us    :      0 (  0.0%) 
+
+########## policy=other  background_load=0 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_OTHER (prio 0)
+Interval        : 10 ms
+Samples         : 1501
+Min / Avg / Max : 182 / 492.8 / 1021 us
+P99             : 725 us
+Histogram:
+  0-100us    :      0 (  0.0%) 
+  100-500us  :    870 ( 58.0%) ############################
+  500-1000us :    630 ( 42.0%) ####################
+  >1000us    :      1 (  0.1%) 
+
+########## policy=fifo  background_load=4 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_FIFO (prio 50)
+Interval        : 10 ms
+Samples         : 1498
+Min / Avg / Max : 78 / 127.7 / 2103 us
+P99             : 185 us
+Histogram:
+  0-100us    :    399 ( 26.6%) #############
+  100-500us  :   1098 ( 73.3%) ####################################
+  500-1000us :      0 (  0.0%) 
+  >1000us    :      1 (  0.1%) 
+
+########## policy=other  background_load=4 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_OTHER (prio 0)
+Interval        : 10 ms
+Samples         : 1501
+Min / Avg / Max : 136 / 161.0 / 342 us
+P99             : 248 us
+Histogram:
+  0-100us    :      0 (  0.0%) 
+  100-500us  :   1501 (100.0%) ##################################################
+  500-1000us :      0 (  0.0%) 
+  >1000us    :      0 (  0.0%) 

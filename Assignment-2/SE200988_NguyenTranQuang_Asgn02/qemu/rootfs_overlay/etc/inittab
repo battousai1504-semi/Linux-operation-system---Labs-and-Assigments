@@ -1,0 +1,7 @@
+# /etc/inittab - ASSIGNMENT-02
+::sysinit:/etc/init.d/rcS
+# Shell trên ttyAMA0 (tty thật, không phải /dev/console) -> có job control,
+# Ctrl+C gửi được SIGINT cho sms_app khi demo
+ttyAMA0::askfirst:-/bin/sh
+::ctrlaltdel:/sbin/reboot
+::shutdown:/bin/umount -a -r
