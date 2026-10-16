@@ -1,0 +1,1741 @@
+  SYSHDR  arch/arm/include/generated/uapi/asm/unistd-oabi.h
+  SYSHDR  arch/arm/include/generated/uapi/asm/unistd-eabi.h
+  WRAP    arch/arm/include/generated/uapi/asm/kvm_para.h
+  WRAP    arch/arm/include/generated/uapi/asm/bitsperlong.h
+  WRAP    arch/arm/include/generated/uapi/asm/bpf_perf_event.h
+  WRAP    arch/arm/include/generated/uapi/asm/errno.h
+  WRAP    arch/arm/include/generated/uapi/asm/ioctl.h
+  WRAP    arch/arm/include/generated/uapi/asm/ipcbuf.h
+  WRAP    arch/arm/include/generated/uapi/asm/msgbuf.h
+  WRAP    arch/arm/include/generated/uapi/asm/param.h
+  WRAP    arch/arm/include/generated/uapi/asm/poll.h
+  WRAP    arch/arm/include/generated/uapi/asm/resource.h
+  WRAP    arch/arm/include/generated/uapi/asm/sembuf.h
+  WRAP    arch/arm/include/generated/uapi/asm/shmbuf.h
+  WRAP    arch/arm/include/generated/uapi/asm/siginfo.h
+  WRAP    arch/arm/include/generated/uapi/asm/socket.h
+  WRAP    arch/arm/include/generated/uapi/asm/sockios.h
+  WRAP    arch/arm/include/generated/uapi/asm/termbits.h
+  WRAP    arch/arm/include/generated/uapi/asm/termios.h
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  LEX     scripts/dtc/dtc-lexer.lex.c
+  YACC    scripts/dtc/dtc-parser.tab.[ch]
+  HOSTCC  scripts/dtc/libfdt/fdt.o
+  HOSTCC  scripts/dtc/libfdt/fdt_ro.o
+  HOSTCC  scripts/dtc/libfdt/fdt_wip.o
+  UPD     include/config/kernel.release
+  HOSTCC  scripts/dtc/libfdt/fdt_sw.o
+  HOSTCC  scripts/dtc/libfdt/fdt_rw.o
+  WRAP    arch/arm/include/generated/asm/early_ioremap.h
+  WRAP    arch/arm/include/generated/asm/extable.h
+  WRAP    arch/arm/include/generated/asm/flat.h
+  WRAP    arch/arm/include/generated/asm/parport.h
+  WRAP    arch/arm/include/generated/asm/compat.h
+  WRAP    arch/arm/include/generated/asm/current.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm/include/generated/asm/exec.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  WRAP    arch/arm/include/generated/asm/kmap_size.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/mmiowb.h
+  WRAP    arch/arm/include/generated/asm/msi.h
+  WRAP    arch/arm/include/generated/asm/preempt.h
+  WRAP    arch/arm/include/generated/asm/rwonce.h
+  WRAP    arch/arm/include/generated/asm/serial.h
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/softirq_stack.h
+  WRAP    arch/arm/include/generated/asm/trace_clock.h
+  WRAP    arch/arm/include/generated/asm/unaligned.h
+  HOSTCC  scripts/dtc/libfdt/fdt_strerror.o
+  HOSTCC  scripts/dtc/libfdt/fdt_empty_tree.o
+  UPD     include/generated/uapi/linux/version.h
+  HOSTCC  scripts/dtc/libfdt/fdt_addresses.o
+  HOSTCC  scripts/dtc/libfdt/fdt_overlay.o
+  HOSTCC  scripts/dtc/fdtoverlay.o
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTLD  scripts/dtc/fdtoverlay
+  HOSTLD  scripts/dtc/dtc
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/sorttable
+  DTC     arch/arm/boot/dts/vexpress-v2p-ca5s.dtb
+  DTC     arch/arm/boot/dts/vexpress-v2p-ca9.dtb
+  DTC     arch/arm/boot/dts/vexpress-v2p-ca15-tc1.dtb
+  DTC     arch/arm/boot/dts/vexpress-v2p-ca15_a7.dtb
+  SYSNR   arch/arm/include/generated/asm/unistd-nr.h
+  GEN     arch/arm/include/generated/asm/mach-types.h
+  SYSTBL  arch/arm/include/generated/calls-oabi.S
+  SYSTBL  arch/arm/include/generated/calls-eabi.S
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  CC      scripts/mod/devicetable-offsets.s
+  UPD     scripts/mod/devicetable-offsets.h
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/sumversion.o
+scripts/mod/modpost.c: In function ‘match’:
+scripts/mod/modpost.c:842:38: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  842 |                         char *here = strstr(sym, bare);
+      |                                      ^~~~~~
+  HOSTLD  scripts/mod/modpost
+  CC      kernel/bounds.s
+  CALL    scripts/atomic/check-atomics.sh
+  UPD     include/generated/timeconst.h
+  UPD     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  CC      init/calibrate.o
+  CC      init/init_task.o
+  HOSTCC  usr/gen_init_cpio
+  UPD     include/generated/compile.h
+  CC      arch/arm/vfp/vfpmodule.o
+  LDS     arch/arm/vdso/vdso.lds
+  CC      arch/arm/common/firmware.o
+  AR      arch/arm/net/built-in.a
+  AS      arch/arm/common/secure_cntvoff.o
+  CC      arch/arm/mm/extable.o
+  CC      arch/arm/mach-vexpress/v2m.o
+  CC      arch/arm/probes/uprobes/core.o
+  CC      arch/arm/vdso/vgettimeofday.o
+  AS      arch/arm/plat-versatile/headsmp.o
+  AS      arch/arm/kernel/head.o
+  CC      arch/arm/mach-vexpress/dcscb.o
+  CC      arch/arm/plat-versatile/platsmp.o
+  LDS     arch/arm/kernel/vmlinux.lds
+  CC      arch/arm/kernel/elf.o
+  CC      arch/arm/mm/fault.o
+  GEN     usr/initramfs_data.cpio
+/tmp/ccnIXKvT.s: Assembler messages:
+/tmp/ccnIXKvT.s:74: Error: selected processor does not support `dsb st' in ARM mode
+/tmp/ccnIXKvT.s:115: Error: selected processor does not support `dsb st' in ARM mode
+make[1]: *** [scripts/Makefile.build:277: arch/arm/mach-vexpress/v2m.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+  CC      arch/arm/plat-versatile/hotplug.o
+  CC      arch/arm/probes/uprobes/actions-arm.o
+/tmp/ccO1pdy5.s: Assembler messages:
+/tmp/ccO1pdy5.s:127: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:161: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccO1pdy5.s:171: Error: selected processor does not support `mrrc p15,1,r8,r9,c14' in ARM mode
+/tmp/ccO1pdy5.s:265: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:547: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:568: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:713: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:747: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccO1pdy5.s:757: Error: selected processor does not support `mrrc p15,1,r10,fp,c14' in ARM mode
+/tmp/ccO1pdy5.s:852: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:1127: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:1151: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:1278: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccO1pdy5.s:1311: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccO1pdy5.s:1321: Error: selected processor does not support `mrrc p15,1,r8,r9,c14' in ARM mode
+/tmp/ccO1pdy5.s:1407: Error: selected processor does not support `dmb ish' in ARM mode
+  SHIPPED usr/initramfs_inc_data
+make[2]: *** [scripts/Makefile.build:277: arch/arm/vdso/vgettimeofday.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: arch/arm/vdso] Error 2
+  CC      arch/arm/mm/init.o
+  AS      usr/initramfs_data.o
+make[1]: *** Waiting for unfinished jobs....
+  AR      usr/built-in.a
+  AS      arch/arm/common/mcpm_head.o
+  AS      arch/arm/kernel/entry-common.o
+  CC      kernel/sched/core.o
+  CC      arch/arm/kernel/irq.o
+/tmp/cc6wcKc3.s: Assembler messages:
+/tmp/cc6wcKc3.s:54: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc6wcKc3.s:193: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6wcKc3.s:210: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc6wcKc3.s:214: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc6wcKc3.s:298: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc6wcKc3.s:488: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6wcKc3.s:524: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6wcKc3.s:542: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc6wcKc3.s:546: Error: selected processor does not support `sev' in ARM mode
+make[1]: *** [scripts/Makefile.build:277: arch/arm/plat-versatile/platsmp.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+/tmp/cc1uUHs0.s: Assembler messages:
+/tmp/cc1uUHs0.s:97: Error: selected processor does not support `cpsid i' in ARM mode
+  AS      arch/arm/vfp/entry.o
+make[3]: *** [scripts/Makefile.build:277: arch/arm/probes/uprobes/core.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+  CC      arch/arm/common/mcpm_entry.o
+  CC      kernel/locking/mutex.o
+  CC      arch/arm/common/mcpm_platsmp.o
+make[2]: *** [scripts/Makefile.build:540: arch/arm/probes/uprobes] Error 2
+make[1]: *** [scripts/Makefile.build:540: arch/arm/probes] Error 2
+/tmp/cc6Ple3p.s: Assembler messages:
+/tmp/cc6Ple3p.s:85: Error: selected processor does not support `wfi' in ARM mode
+/tmp/cc6Ple3p.s:111: Error: selected processor does not support `wfi' in ARM mode
+  CC      kernel/sched/loadavg.o
+make[1]: *** [scripts/Makefile.build:277: arch/arm/plat-versatile/hotplug.o] Error 1
+make: *** [Makefile:1868: arch/arm/plat-versatile] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      kernel/power/qos.o
+make: *** [Makefile:1868: arch/arm/mach-vexpress] Error 2
+  AS      arch/arm/vfp/vfphw.o
+/tmp/ccoWpej4.s: Assembler messages:
+/tmp/ccoWpej4.s:77: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccoWpej4.s:182: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccoWpej4.s:391: Error: selected processor does not support `isb' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/vfp/vfpmodule.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  CC      kernel/locking/semaphore.o
+make[1]: *** [scripts/Makefile.build:540: arch/arm/vfp] Error 2
+  CC      kernel/power/main.o
+  CC      arch/arm/mm/iomap.o
+  CC      kernel/printk/printk.o
+  CC      kernel/irq/irqdesc.o
+/tmp/ccO563LL.s: Assembler messages:
+/tmp/ccO563LL.s:281: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccO563LL.s:285: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc508AUn.s: Assembler messages:
+/tmp/cc508AUn.s:936: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cc508AUn.s:2645: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc508AUn.s:3102: Error: selected processor does not support `cpsie a' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/common/mcpm_platsmp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/tmp/cc9XPHoa.s: Assembler messages:
+/tmp/cc9XPHoa.s:365: Error: selected processor does not support `dsb ishst' in ARM mode
+  CC      kernel/sched/clock.o
+make[2]: *** [scripts/Makefile.build:277: arch/arm/mm/fault.o] Error 1
+  CC      arch/arm/kernel/opcodes.o
+  CC      kernel/power/console.o
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [scripts/Makefile.build:277: arch/arm/mm/init.o] Error 1
+  CC      kernel/locking/rwsem.o
+In file included from ./include/linux/rculist.h:10,
+                 from ./include/linux/pid.h:5,
+                 from ./include/linux/sched.h:14,
+                 from kernel/locking/semaphore.c:30:
+In function ‘__list_add’,
+    inlined from ‘list_add_tail’ at ./include/linux/list.h:100:2,
+    inlined from ‘__down_common’ at kernel/locking/semaphore.c:213:2,
+    inlined from ‘__down_killable’ at kernel/locking/semaphore.c:251:9:
+./include/linux/list.h:70:20: warning: storing the address of local variable ‘waiter’ in ‘((struct list_head *)sem)[1].prev’ [-Wdangling-pointer=]
+   70 |         next->prev = new;
+      |         ~~~~~~~~~~~^~~~~
+kernel/locking/semaphore.c: In function ‘__down_killable’:
+kernel/locking/semaphore.c:211:33: note: ‘waiter’ declared here
+  211 |         struct semaphore_waiter waiter;
+      |                                 ^~~~~~
+kernel/locking/semaphore.c:249:63: note: ‘sem’ declared here
+  249 | static noinline int __sched __down_killable(struct semaphore *sem)
+      |                                             ~~~~~~~~~~~~~~~~~~^~~
+In function ‘__list_add’,
+    inlined from ‘list_add_tail’ at ./include/linux/list.h:100:2,
+    inlined from ‘__down_common’ at kernel/locking/semaphore.c:213:2,
+    inlined from ‘__down_timeout’ at kernel/locking/semaphore.c:256:9:
+./include/linux/list.h:70:20: warning: storing the address of local variable ‘waiter’ in ‘((struct list_head *)sem)[1].prev’ [-Wdangling-pointer=]
+   70 |         next->prev = new;
+      |         ~~~~~~~~~~~^~~~~
+kernel/locking/semaphore.c: In function ‘__down_timeout’:
+kernel/locking/semaphore.c:211:33: note: ‘waiter’ declared here
+  211 |         struct semaphore_waiter waiter;
+      |                                 ^~~~~~
+kernel/locking/semaphore.c:254:62: note: ‘sem’ declared here
+  254 | static noinline int __sched __down_timeout(struct semaphore *sem, long timeout)
+      |                                            ~~~~~~~~~~~~~~~~~~^~~
+/tmp/ccB6E7x0.s: Assembler messages:
+/tmp/ccB6E7x0.s:623: Error: selected processor does not support `wfe' in ARM mode
+/tmp/ccB6E7x0.s:761: Error: selected processor does not support `dmb' in ARM mode
+/tmp/ccB6E7x0.s:865: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:1243: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccB6E7x0.s:1253: Error: selected processor does not support `cpsid f' in ARM mode
+/tmp/ccB6E7x0.s:1282: Error: selected processor does not support `cpsie f' in ARM mode
+/tmp/ccB6E7x0.s:1295: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccB6E7x0.s:1650: Error: selected processor does not support `dmb' in ARM mode
+/tmp/ccB6E7x0.s:1783: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:1799: Error: selected processor does not support `dmb' in ARM mode
+/tmp/ccB6E7x0.s:1918: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:2223: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccB6E7x0.s:2250: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccB6E7x0.s:2251: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccB6E7x0.s:2254: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccB6E7x0.s:2267: Error: selected processor does not support `ldrex ip,[r2]' in ARM mode
+/tmp/ccB6E7x0.s:2269: Error: selected processor does not support `strex lr,r3,[r2]' in ARM mode
+/tmp/ccB6E7x0.s:2291: Error: selected processor does not support `wfe' in ARM mode
+/tmp/ccB6E7x0.s:2316: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:2437: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:2454: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccB6E7x0.s:2458: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:2482: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccB6E7x0.s:2838: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccB6E7x0.s:2839: Error: selected processor does not support `pldw [fp]' in ARM mode
+/tmp/ccB6E7x0.s:2842: Error: selected processor does not support `pld [fp]' in ARM mode
+/tmp/ccB6E7x0.s:2855: Error: selected processor does not support `ldrex r1,[fp]' in ARM mode
+/tmp/ccB6E7x0.s:2857: Error: selected processor does not support `strex r0,r2,[fp]' in ARM mode
+/tmp/ccB6E7x0.s:2879: Error: selected processor does not support `wfe' in ARM mode
+/tmp/ccB6E7x0.s:2904: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:3117: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:3134: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccB6E7x0.s:3138: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:3169: Error: selected processor does not support `dmb' in ARM mode
+/tmp/ccB6E7x0.s:3273: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:3288: Error: selected processor does not support `wfi' in ARM mode
+/tmp/ccB6E7x0.s:3433: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:3450: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccB6E7x0.s:3454: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:3484: Error: selected processor does not support `dmb' in ARM mode
+/tmp/ccB6E7x0.s:3599: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:3988: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccB6E7x0.s:3989: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccB6E7x0.s:3992: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccB6E7x0.s:4005: Error: selected processor does not support `ldrex ip,[r2]' in ARM mode
+/tmp/ccB6E7x0.s:4007: Error: selected processor does not support `strex r4,r3,[r2]' in ARM mode
+/tmp/ccB6E7x0.s:4029: Error: selected processor does not support `wfe' in ARM mode
+/tmp/ccB6E7x0.s:4054: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:4077: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:4095: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccB6E7x0.s:4099: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccB6E7x0.s:4254: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccB6E7x0.s:4282: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccB6E7x0.s:4283: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccB6E7x0.s:4286: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccB6E7x0.s:4299: Error: selected processor does not support `ldrex r2,[r4]' in ARM mode
+/tmp/ccB6E7x0.s:4301: Error: selected processor does not support `strex ip,r3,[r4]' in ARM mode
+/tmp/ccB6E7x0.s:4323: Error: selected processor does not support `wfe' in ARM mode
+/tmp/ccB6E7x0.s:4348: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:4437: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccB6E7x0.s:4454: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccB6E7x0.s:4458: Error: selected processor does not support `sev' in ARM mode
+In function ‘__list_add’,
+    inlined from ‘list_add_tail’ at ./include/linux/list.h:100:2,
+    inlined from ‘__down_common’ at kernel/locking/semaphore.c:213:2,
+    inlined from ‘__down’ at kernel/locking/semaphore.c:241:2:
+./include/linux/list.h:70:20: warning: storing the address of local variable ‘waiter’ in ‘((struct list_head *)sem)[1].prev’ [-Wdangling-pointer=]
+   70 |         next->prev = new;
+      |         ~~~~~~~~~~~^~~~~
+kernel/locking/semaphore.c: In function ‘__down’:
+kernel/locking/semaphore.c:211:33: note: ‘waiter’ declared here
+  211 |         struct semaphore_waiter waiter;
+      |                                 ^~~~~~
+kernel/locking/semaphore.c:239:55: note: ‘sem’ declared here
+  239 | static noinline void __sched __down(struct semaphore *sem)
+      |                                     ~~~~~~~~~~~~~~~~~~^~~
+In function ‘__list_add’,
+    inlined from ‘list_add_tail’ at ./include/linux/list.h:100:2,
+    inlined from ‘__down_common’ at kernel/locking/semaphore.c:213:2,
+    inlined from ‘__down_interruptible’ at kernel/locking/semaphore.c:246:9:
+./include/linux/list.h:70:20: warning: storing the address of local variable ‘waiter’ in ‘((struct list_head *)sem)[1].prev’ [-Wdangling-pointer=]
+   70 |         next->prev = new;
+      |         ~~~~~~~~~~~^~~~~
+kernel/locking/semaphore.c: In function ‘__down_interruptible’:
+kernel/locking/semaphore.c:211:33: note: ‘waiter’ declared here
+  211 |         struct semaphore_waiter waiter;
+      |                                 ^~~~~~
+kernel/locking/semaphore.c:244:68: note: ‘sem’ declared here
+  244 | static noinline int __sched __down_interruptible(struct semaphore *sem)
+      |                                                  ~~~~~~~~~~~~~~~~~~^~~
+make[1]: *** [scripts/Makefile.build:540: arch/arm/mm] Error 2
+  CC      kernel/rcu/update.o
+make[2]: *** [scripts/Makefile.build:277: arch/arm/common/mcpm_entry.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: arch/arm/common] Error 2
+  CC      init/version.o
+/tmp/cc6sGdUf.s: Assembler messages:
+/tmp/cc6sGdUf.s:372: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6sGdUf.s:389: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc6sGdUf.s:393: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc6sGdUf.s:421: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cc6sGdUf.s:1199: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6sGdUf.s:1216: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc6sGdUf.s:1220: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc6sGdUf.s:1247: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cc6sGdUf.s:1678: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6sGdUf.s:1695: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc6sGdUf.s:1699: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc6sGdUf.s:1726: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cc6sGdUf.s:2184: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc6sGdUf.s:2201: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc6sGdUf.s:2205: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc6sGdUf.s:2232: Error: selected processor does not support `cpsie i' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/locking/semaphore.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  CC      arch/arm/kernel/process.o
+  AR      kernel/livepatch/built-in.a
+  CC      kernel/printk/printk_safe.o
+/tmp/ccm5rkJk.s: Assembler messages:
+/tmp/ccm5rkJk.s:4316: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccm5rkJk.s:5150: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccm5rkJk.s:5434: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccm5rkJk.s:5601: Error: selected processor does not support `dsb' in ARM mode
+/tmp/ccm5rkJk.s:6095: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccm5rkJk.s:6690: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccm5rkJk.s:6737: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/ccm5rkJk.s:6783: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/ccm5rkJk.s:6867: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccm5rkJk.s:6888: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccm5rkJk.s:6892: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccm5rkJk.s:6986: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccm5rkJk.s:6987: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccm5rkJk.s:6990: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccm5rkJk.s:7004: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccm5rkJk.s:7006: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/cceTPYDz.s: Assembler messages:
+/tmp/cceTPYDz.s:1299: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cceTPYDz.s:1321: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cceTPYDz.s:1322: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cceTPYDz.s:1325: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cceTPYDz.s:1337: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/cceTPYDz.s:1339: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/cceTPYDz.s:1353: Error: selected processor does not support `dmb ish' in ARM mode
+make[1]: *** [scripts/Makefile.build:277: init/main.o] Error 1
+  CC      kernel/power/process.o
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [scripts/Makefile.build:277: init/do_mounts.o] Error 1
+  CC      kernel/irq/handle.o
+/tmp/ccyibXs4.s: Assembler messages:
+/tmp/ccyibXs4.s:834: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:835: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:838: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:852: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccyibXs4.s:854: Error: selected processor does not support `strex r2,r3,[r0]' in ARM mode
+/tmp/ccyibXs4.s:1387: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:1407: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:1408: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:1411: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:1427: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:1430: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:1549: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:1566: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:1570: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:1795: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:1815: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:1816: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:1819: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:1835: Error: selected processor does not support `ldrex ip,[r4]' in ARM mode
+/tmp/ccyibXs4.s:1838: Error: selected processor does not support `strexeq r0,r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:1990: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:2010: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:2011: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:2014: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:2032: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccyibXs4.s:2035: Error: selected processor does not support `strexeq ip,r2,[r0]' in ARM mode
+/tmp/ccyibXs4.s:2276: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:2277: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:2280: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:2296: Error: selected processor does not support `ldrex ip,[r0]' in ARM mode
+/tmp/ccyibXs4.s:2299: Error: selected processor does not support `strexeq r1,r2,[r0]' in ARM mode
+/tmp/ccyibXs4.s:2316: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:2856: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:2857: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:2860: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:2876: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:2879: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:2896: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:3446: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:3583: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:3584: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:3587: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:3603: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:3606: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:3623: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:3785: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:3786: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:3789: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:3805: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:3808: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:3825: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:3882: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:4247: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:4264: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:4268: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:4348: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:4478: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:4479: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:4482: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:4498: Error: selected processor does not support `ldrex fp,[r4]' in ARM mode
+/tmp/ccyibXs4.s:4501: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:4518: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:4716: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:4717: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:4720: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:4736: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:4739: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:4756: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:5048: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:5065: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:5069: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:5151: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:5152: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:5155: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:5171: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:5174: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:5191: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:5274: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:5291: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:5295: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:5699: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:5931: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:5932: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:5935: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:5949: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:5951: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:6128: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:6129: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:6132: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:6146: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:6148: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:6367: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:6368: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:6371: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:6387: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/ccyibXs4.s:6390: Error: selected processor does not support `strexeq r0,r2,[r3]' in ARM mode
+/tmp/ccyibXs4.s:6407: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:6461: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:6576: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:6594: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:6598: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:6744: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:6745: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:6748: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:6764: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/ccyibXs4.s:6767: Error: selected processor does not support `strexeq r0,r2,[r3]' in ARM mode
+/tmp/ccyibXs4.s:6784: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:6838: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:6953: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:6971: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:6975: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccGNEb7l.s: Assembler messages:
+/tmp/ccGNEb7l.s:1647: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccyibXs4.s:7434: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:7435: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:7438: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccGNEb7l.s:1682: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccyibXs4.s:7454: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:7457: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:7474: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:7693: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:7694: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:7697: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:7713: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:7716: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:7733: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:7780: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:7797: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:7801: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:7898: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:7899: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:7902: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:7918: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:7921: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:7938: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:8247: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:8376: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:8377: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:8380: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:8396: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:8399: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:8416: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:8627: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:8644: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:8648: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:8728: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:8858: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:8859: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:8862: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:8878: Error: selected processor does not support `ldrex fp,[r4]' in ARM mode
+/tmp/ccyibXs4.s:8881: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:8898: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:9096: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:9097: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:9100: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:9116: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccyibXs4.s:9119: Error: selected processor does not support `strexeq r1,r2,[r4]' in ARM mode
+/tmp/ccyibXs4.s:9136: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:9361: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:9378: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccyibXs4.s:9382: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccyibXs4.s:9687: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:9688: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:9691: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:9705: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:9707: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:9904: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:9905: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:9908: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:9924: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccyibXs4.s:9927: Error: selected processor does not support `strexeq r2,r3,[r0]' in ARM mode
+/tmp/ccyibXs4.s:9944: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10080: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:10081: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:10084: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:10100: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccyibXs4.s:10103: Error: selected processor does not support `strexeq r2,r3,[r0]' in ARM mode
+/tmp/ccyibXs4.s:10120: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10256: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:10257: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:10260: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:10276: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccyibXs4.s:10279: Error: selected processor does not support `strexeq r2,r3,[r0]' in ARM mode
+/tmp/ccyibXs4.s:10296: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10372: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10385: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:10386: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccyibXs4.s:10389: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccyibXs4.s:10405: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccyibXs4.s:10409: Error: selected processor does not support `strex r4,lr,[r0]' in ARM mode
+/tmp/ccyibXs4.s:10425: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10492: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10513: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:10514: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccyibXs4.s:10517: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccyibXs4.s:10531: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/ccyibXs4.s:10533: Error: selected processor does not support `strex r0,r1,[r3]' in ARM mode
+/tmp/ccyibXs4.s:10547: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccyibXs4.s:10677: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccyibXs4.s:10678: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccyibXs4.s:10681: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccyibXs4.s:10697: Error: selected processor does not support `ldrex r1,[r4]' in ARM mode
+/tmp/ccyibXs4.s:10700: Error: selected processor does not support `strexeq r2,r3,[r4]' in ARM mode
+/tmp/ccyibXs4.s:10717: Error: selected processor does not support `dmb ish' in ARM mode
+make: *** [Makefile:1868: init] Error 2
+  CC      kernel/rcu/sync.o
+make[2]: *** [scripts/Makefile.build:277: kernel/power/qos.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  CC      kernel/sched/cputime.o
+  CC      arch/arm/kernel/ptrace.o
+make[2]: *** [scripts/Makefile.build:277: kernel/locking/mutex.o] Error 1
+  CC      kernel/sched/idle.o
+/tmp/ccrXaoSY.s: Assembler messages:
+/tmp/ccrXaoSY.s:713: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccrXaoSY.s:714: Error: selected processor does not support `pldw [ip]' in ARM mode
+/tmp/ccrXaoSY.s:717: Error: selected processor does not support `pld [ip]' in ARM mode
+/tmp/ccrXaoSY.s:748: Error: selected processor does not support `ldrex lr,[ip]' in ARM mode
+/tmp/ccrXaoSY.s:750: Error: selected processor does not support `strex r4,lr,[ip]' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/sched/loadavg.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  CC      kernel/irq/manage.o
+/tmp/ccJ1KQtE.s: Assembler messages:
+/tmp/ccJ1KQtE.s:451: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccJ1KQtE.s:468: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccJ1KQtE.s:472: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccJ1KQtE.s:500: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccJ1KQtE.s:2209: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccJ1KQtE.s:2226: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccJ1KQtE.s:2230: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccJ1KQtE.s:2257: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccJ1KQtE.s:2361: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccJ1KQtE.s:2378: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccJ1KQtE.s:2382: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccJ1KQtE.s:2409: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccJ1KQtE.s:2536: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccJ1KQtE.s:2553: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccJ1KQtE.s:2557: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccJ1KQtE.s:2584: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccJ1KQtE.s:2717: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccJ1KQtE.s:2734: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccJ1KQtE.s:2738: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccJ1KQtE.s:2765: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccJ1KQtE.s:2880: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccJ1KQtE.s:2897: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccJ1KQtE.s:2901: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccJ1KQtE.s:2928: Error: selected processor does not support `cpsie i' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/irq/irqdesc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  CC      kernel/dma/mapping.o
+  CC      arch/arm/kernel/reboot.o
+/tmp/ccVpnbsw.s: Assembler messages:
+/tmp/ccVpnbsw.s:585: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccVpnbsw.s:602: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccVpnbsw.s:606: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccVpnbsw.s:634: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccVpnbsw.s:964: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccVpnbsw.s:981: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccVpnbsw.s:985: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccVpnbsw.s:1012: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccVpnbsw.s:1294: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccVpnbsw.s:1311: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccVpnbsw.s:1315: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccVpnbsw.s:1342: Error: selected processor does not support `cpsie i' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/rcu/sync.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  AR      kernel/entry/built-in.a
+  CC      arch/arm/kernel/io.o
+/tmp/ccsCXD2C.s: Assembler messages:
+/tmp/ccsCXD2C.s:731: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:732: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:735: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:754: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:757: Error: selected processor does not support `strexeq r0,r2,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:774: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:936: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:937: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccsCXD2C.s:940: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccsCXD2C.s:956: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:959: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:976: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:1605: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:1606: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:1609: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:1623: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:1625: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:1669: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:1751: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:1771: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:1772: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:1775: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:1789: Error: selected processor does not support `ldrex r2,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:1791: Error: selected processor does not support `strex ip,r1,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:1805: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:2059: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:2060: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2063: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2077: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:2079: Error: selected processor does not support `strex r1,r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:2244: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:2245: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2248: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2262: Error: selected processor does not support `ldrex r2,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:2264: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:2534: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:2554: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:2555: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2558: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2573: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:2575: Error: selected processor does not support `strex lr,ip,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:2665: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:2685: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:2686: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2689: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:2703: Error: selected processor does not support `ldrex r0,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:2705: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:3018: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:3038: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:3039: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:3042: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:3057: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:3059: Error: selected processor does not support `strex r1,r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:3163: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:3164: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccsCXD2C.s:3167: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccsCXD2C.s:3181: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:3183: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:3645: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:3772: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:3773: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:3776: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:3792: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:3795: Error: selected processor does not support `strexeq r1,r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:3812: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:4030: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:4047: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:4051: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:4079: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:4132: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:4149: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:4153: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:4180: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:4328: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:4677: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:4694: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:4698: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:4725: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:5010: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:5011: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:5014: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:5030: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:5033: Error: selected processor does not support `strexeq r1,r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:5050: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:5208: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:5225: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:5229: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:5256: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:5682: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:5702: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:5703: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccsCXD2C.s:5706: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccsCXD2C.s:5722: Error: selected processor does not support `ldrex r0,[r2]' in ARM mode
+/tmp/ccsCXD2C.s:5725: Error: selected processor does not support `strexeq ip,r1,[r2]' in ARM mode
+/tmp/ccsCXD2C.s:5742: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:5854: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:5855: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:5858: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:5872: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:5874: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:5987: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:5988: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:5991: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:6005: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:6007: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:6047: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:6048: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:6051: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:6066: Error: selected processor does not support `ldrex r2,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:6068: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:6166: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:6167: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:6170: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:6188: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:6191: Error: selected processor does not support `strexeq r2,r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:6208: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:6408: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:6409: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:6412: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:6430: Error: selected processor does not support `ldrex r1,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:6433: Error: selected processor does not support `strexeq r2,r3,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:6450: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:6796: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:6816: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:6817: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:6820: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:6834: Error: selected processor does not support `ldrex r2,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:6836: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:6850: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:6900: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:6917: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:6921: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:6948: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:6998: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7028: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7145: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7175: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7409: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7426: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:7430: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:7457: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:7548: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7576: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7593: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:7597: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:7624: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:7971: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:7988: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:7992: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:8019: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:8108: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:8109: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccsCXD2C.s:8112: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccsCXD2C.s:8126: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:8128: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:8172: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:8173: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccsCXD2C.s:8176: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccsCXD2C.s:8190: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:8192: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccsCXD2C.s:8266: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:8283: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccsCXD2C.s:8287: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccsCXD2C.s:8314: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccsCXD2C.s:8420: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:8421: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:8424: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:8438: Error: selected processor does not support `ldrex r5,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:8440: Error: selected processor does not support `strex r3,r5,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:8454: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:8712: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:8732: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:8733: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccsCXD2C.s:8736: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccsCXD2C.s:8752: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:8755: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:8772: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:8935: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:8936: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:8939: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:8953: Error: selected processor does not support `ldrex r5,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:8955: Error: selected processor does not support `strex r3,r5,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:8969: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:9240: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:9260: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:9261: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccsCXD2C.s:9264: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccsCXD2C.s:9280: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:9283: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:9300: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:9480: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:9481: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccsCXD2C.s:9484: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccsCXD2C.s:9498: Error: selected processor does not support `ldrex r5,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:9500: Error: selected processor does not support `strex r3,r5,[r0]' in ARM mode
+/tmp/ccsCXD2C.s:9514: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:9785: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccsCXD2C.s:9805: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccsCXD2C.s:9806: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccsCXD2C.s:9809: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccsCXD2C.s:9825: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:9828: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/ccsCXD2C.s:9845: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cchSTH2M.s: Assembler messages:
+/tmp/cchSTH2M.s:784: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cchSTH2M.s:785: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cchSTH2M.s:788: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cchSTH2M.s:802: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/cchSTH2M.s:804: Error: selected processor does not support `strex r0,r1,[r3]' in ARM mode
+/tmp/cchSTH2M.s:1212: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cchSTH2M.s:1575: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cchSTH2M.s:1592: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cchSTH2M.s:1596: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccBDJYTh.s: /tmp/ccTECdUK.s: Assembler messages:
+/tmp/ccTECdUK.s:258: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccTECdUK.s:386: Error: selected processor does not support `cpsid i' in ARM mode
+Assembler messages:
+/tmp/ccBDJYTh.s:170: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccBDJYTh.s:171: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccBDJYTh.s:174: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccBDJYTh.s:188: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccBDJYTh.s:190: Error: selected processor does not support `strex r2,r3,[r4]' in ARM mode
+/tmp/ccBDJYTh.s:214: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccBDJYTh.s:233: Error: selected processor does not support `cpsie i' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/sched/clock.o] Error 1
+make[2]: *** [scripts/Makefile.build:277: kernel/irq/handle.o] Error 1
+  CC      kernel/printk/printk_ringbuffer.o
+  CC      arch/arm/kernel/setup.o
+make[2]: *** [scripts/Makefile.build:277: kernel/printk/printk_safe.o] Error 1
+  CC      kernel/dma/direct.o
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [scripts/Makefile.build:277: kernel/locking/rwsem.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: kernel/locking] Error 2
+make[1]: *** Waiting for unfinished jobs....
+  CC      arch/arm/kernel/signal.o
+/tmp/ccxh7V7M.s: Assembler messages:
+/tmp/ccxh7V7M.s:223: Error: selected processor does not support `dsb' in ARM mode
+/tmp/ccxh7V7M.s:323: Error: selected processor does not support `dsb st' in ARM mode
+/tmp/ccxh7V7M.s:409: Error: selected processor does not support `dsb st' in ARM mode
+/tmp/ccxh7V7M.s:485: Error: selected processor does not support `dsb st' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/kernel/io.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  CC      kernel/dma/ops_helpers.o
+/tmp/cc3ogdqi.s: Assembler messages:
+/tmp/cc3ogdqi.s:244: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cc3ogdqi.s:265: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cc3ogdqi.s:296: Error: selected processor does not support `cpsie f' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/kernel/process.o] Error 1
+  CC      kernel/dma/dummy.o
+/tmp/cc42cgAJ.s: Assembler messages:
+/tmp/cc42cgAJ.s:214: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc42cgAJ.s:223: Error: selected processor does not support `cpsid f' in ARM mode
+/tmp/cc42cgAJ.s:401: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc42cgAJ.s:449: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc42cgAJ.s:517: Error: selected processor does not support `cpsid i' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/kernel/reboot.o] Error 1
+  CC      kernel/dma/contiguous.o
+/tmp/ccLDWM3E.s: Assembler messages:
+/tmp/ccLDWM3E.s:37: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLDWM3E.s:52: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccLDWM3E.s:53: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccLDWM3E.s:56: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccLDWM3E.s:69: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:71: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:90: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccLDWM3E.s:94: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccLDWM3E.s:368: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLDWM3E.s:476: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLDWM3E.s:489: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccLDWM3E.s:490: Error: selected processor does not support `pldw [r6]' in ARM mode
+/tmp/ccLDWM3E.s:493: Error: selected processor does not support `pld [r6]' in ARM mode
+/tmp/ccLDWM3E.s:506: Error: selected processor does not support `ldrex r3,[r6]' in ARM mode
+/tmp/ccLDWM3E.s:508: Error: selected processor does not support `strex r2,r3,[r6]' in ARM mode
+/tmp/ccLDWM3E.s:527: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccLDWM3E.s:531: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccLDWM3E.s:1009: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLDWM3E.s:1818: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLDWM3E.s:1832: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccLDWM3E.s:1833: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccLDWM3E.s:1836: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccLDWM3E.s:1849: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:1851: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:1870: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccLDWM3E.s:1874: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccLDWM3E.s:2102: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccLDWM3E.s:2103: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccLDWM3E.s:2106: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccLDWM3E.s:2120: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:2122: Error: selected processor does not support `strex r0,r1,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:2470: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccLDWM3E.s:2471: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccLDWM3E.s:2474: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccLDWM3E.s:2488: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/ccLDWM3E.s:2490: Error: selected processor does not support `strex r0,r1,[r3]' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/power/process.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: kernel/power] Error 2
+  CC      kernel/dma/coherent.o
+/tmp/cc7YhspB.s: Assembler messages:
+/tmp/cc7YhspB.s:625: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:662: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:939: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:1059: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:1081: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:1082: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:1085: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:1101: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:1104: Error: selected processor does not support `strexeq r2,r10,[r3]' in ARM mode
+/tmp/cc7YhspB.s:1121: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:1222: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:1223: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:1226: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:1242: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc7YhspB.s:1245: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:1451: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:1471: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:1472: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc7YhspB.s:1475: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc7YhspB.s:1492: Error: selected processor does not support `ldrex r0,[r4]' in ARM mode
+/tmp/cc7YhspB.s:1495: Error: selected processor does not support `strexeq r1,r5,[r4]' in ARM mode
+/tmp/cc7YhspB.s:1512: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:1839: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:1864: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:2615: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:2639: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:2818: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:2992: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:3012: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:3013: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:3016: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:3032: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc7YhspB.s:3035: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:3052: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:3201: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:3202: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:3205: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:3221: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc7YhspB.s:3224: Error: selected processor does not support `strexeq r0,r2,[r3]' in ARM mode
+/tmp/cc7YhspB.s:3367: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc7YhspB.s:3496: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:3516: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:3517: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc7YhspB.s:3520: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc7YhspB.s:3536: Error: selected processor does not support `ldrex r1,[r4]' in ARM mode
+/tmp/cc7YhspB.s:3539: Error: selected processor does not support `strexeq r2,r5,[r4]' in ARM mode
+/tmp/cc7YhspB.s:3556: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:4205: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:4225: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:4226: Error: selected processor does not support `pldw [r1]' in ARM mode
+/tmp/cc7YhspB.s:4229: Error: selected processor does not support `pld [r1]' in ARM mode
+/tmp/cc7YhspB.s:4245: Error: selected processor does not support `ldrex ip,[r1]' in ARM mode
+/tmp/cc7YhspB.s:4248: Error: selected processor does not support `strexeq r0,r10,[r1]' in ARM mode
+/tmp/cc7YhspB.s:4265: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:4739: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc7YhspB.s:4818: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:4877: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:4897: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:4898: Error: selected processor does not support `pldw [fp]' in ARM mode
+/tmp/cc7YhspB.s:4901: Error: selected processor does not support `pld [fp]' in ARM mode
+/tmp/cc7YhspB.s:4917: Error: selected processor does not support `ldrex r2,[fp]' in ARM mode
+/tmp/cc7YhspB.s:4920: Error: selected processor does not support `strexeq r3,r4,[fp]' in ARM mode
+/tmp/cc7YhspB.s:4937: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:5085: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:5086: Error: selected processor does not support `pldw [r5]' in ARM mode
+/tmp/cc7YhspB.s:5089: Error: selected processor does not support `pld [r5]' in ARM mode
+/tmp/cc7YhspB.s:5103: Error: selected processor does not support `ldrex r3,[r5]' in ARM mode
+/tmp/cc7YhspB.s:5105: Error: selected processor does not support `strex r2,r3,[r5]' in ARM mode
+/tmp/cc7YhspB.s:5212: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:5232: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:5233: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:5236: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:5252: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:5255: Error: selected processor does not support `strexeq r10,r4,[r3]' in ARM mode
+/tmp/cc7YhspB.s:5272: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:5467: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:5468: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:5471: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:5487: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc7YhspB.s:5490: Error: selected processor does not support `strexeq r0,r2,[r3]' in ARM mode
+/tmp/cc7YhspB.s:5711: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:5712: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:5715: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:5731: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc7YhspB.s:5734: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:5783: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:5971: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:5991: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:5992: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:5995: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:6011: Error: selected processor does not support `ldrex r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:6014: Error: selected processor does not support `strexeq r2,r9,[r3]' in ARM mode
+/tmp/cc7YhspB.s:6031: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:6159: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc7YhspB.s:6179: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc7YhspB.s:6180: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc7YhspB.s:6183: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc7YhspB.s:6199: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc7YhspB.s:6202: Error: selected processor does not support `strexeq r0,r1,[r3]' in ARM mode
+/tmp/cc7YhspB.s:6219: Error: selected processor does not support `dmb ish' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/printk/printk_ringbuffer.o] Error 1
+  CC      kernel/dma/remap.o
+/tmp/ccgThyNR.s: Assembler messages:
+/tmp/ccgThyNR.s:137: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccgThyNR.s:138: Error: selected processor does not support `pldw [r1]' in ARM mode
+/tmp/ccgThyNR.s:141: Error: selected processor does not support `pld [r1]' in ARM mode
+/tmp/ccgThyNR.s:155: Error: selected processor does not support `ldrexd r4,r5,[r1]' in ARM mode
+/tmp/ccgThyNR.s:158: Error: selected processor does not support `strexd ip,r4,r5,[r1]' in ARM mode
+/tmp/ccgThyNR.s:581: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccgThyNR.s:582: Error: selected processor does not support `pldw [r1]' in ARM mode
+/tmp/ccgThyNR.s:585: Error: selected processor does not support `pld [r1]' in ARM mode
+/tmp/ccgThyNR.s:599: Error: selected processor does not support `ldrexd r2,r3,[r1]' in ARM mode
+/tmp/ccgThyNR.s:602: Error: selected processor does not support `strexd r5,r2,r3,[r1]' in ARM mode
+/tmp/ccgThyNR.s:818: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccgThyNR.s:819: Error: selected processor does not support `pldw [ip]' in ARM mode
+/tmp/ccgThyNR.s:822: Error: selected processor does not support `pld [ip]' in ARM mode
+/tmp/ccgThyNR.s:836: Error: selected processor does not support `ldrexd r4,r5,[ip]' in ARM mode
+/tmp/ccgThyNR.s:839: Error: selected processor does not support `strexd lr,r4,r5,[ip]' in ARM mode
+/tmp/ccgThyNR.s:1606: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccgThyNR.s:1950: Error: selected processor does not support `dmb ish' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/sched/cputime.o] Error 1
+/tmp/ccBfzl7W.s: Assembler messages:
+/tmp/ccBfzl7W.s:480: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:517: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccBfzl7W.s:757: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:1341: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:1492: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccBfzl7W.s:1517: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:1667: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:1940: Error: selected processor does not support `dsb' in ARM mode
+/tmp/ccBfzl7W.s:1953: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccBfzl7W.s:2245: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:2297: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccBfzl7W.s:2509: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccBfzl7W.s:2543: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cct8kGSX.s: Assembler messages:
+/tmp/cct8kGSX.s:1585: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:1629: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:2687: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:2722: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:3026: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:3059: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:3422: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:3455: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:3587: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:3622: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:4584: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:4640: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:4815: Error: selected processor does not support `isb' in ARM mode
+/tmp/cct8kGSX.s:4873: Error: selected processor does not support `isb' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/sched/idle.o] Error 1
+/tmp/ccwq5S1J.s: Assembler messages:
+/tmp/ccwq5S1J.s:2682: Error: selected processor does not support `isb' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/kernel/ptrace.o] Error 1
+make[2]: *** [scripts/Makefile.build:277: arch/arm/kernel/setup.o] Error 1
+/tmp/ccNyv9Rl.s: Assembler messages:
+/tmp/ccNyv9Rl.s:270: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:326: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:448: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:500: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:724: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:760: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:972: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1011: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1242: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1284: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1365: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1402: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1505: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1561: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1767: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1809: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1904: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:1943: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:2497: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccNyv9Rl.s:2547: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccNyv9Rl.s:2641: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccNyv9Rl.s:3055: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:3115: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:3195: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:3247: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:3555: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccNyv9Rl.s:3613: Error: selected processor does not support `isb' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: arch/arm/kernel/signal.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: arch/arm/kernel] Error 2
+make: *** [Makefile:1868: arch/arm] Error 2
+/tmp/cc5c7Rzk.s: Assembler messages:
+/tmp/cc5c7Rzk.s:518: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:735: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:3517: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:3572: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:4121: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:4180: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:4181: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4184: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4198: Error: selected processor does not support `ldrex r1,[r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4200: Error: selected processor does not support `strex r0,r1,[r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4279: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:4280: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/cc5c7Rzk.s:4283: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/cc5c7Rzk.s:4301: Error: selected processor does not support `ldrex ip,[r3]' in ARM mode
+/tmp/cc5c7Rzk.s:4304: Error: selected processor does not support `strexeq r0,r2,[r3]' in ARM mode
+/tmp/cc5c7Rzk.s:4321: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:4368: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:4369: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4372: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4386: Error: selected processor does not support `ldrex r1,[r2]' in ARM mode
+/tmp/cc5c7Rzk.s:4388: Error: selected processor does not support `strex r0,r1,[r2]' in ARM mode
+/tmp/cc5c7Rzk.s:5030: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:5632: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:6110: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:6400: Error: selected processor does not support `isb' in ARM mode
+/tmp/cc5c7Rzk.s:6436: Error: selected processor does not support `isb' in ARM mode
+/tmp/cc5c7Rzk.s:6537: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:6549: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:6570: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:6582: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:7313: Error: selected processor does not support `isb' in ARM mode
+/tmp/cc5c7Rzk.s:7351: Error: selected processor does not support `isb' in ARM mode
+/tmp/cc5c7Rzk.s:7704: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:7705: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:7708: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:7722: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:7723: Error: selected processor does not support `strexd r2,r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:7824: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:7933: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:8071: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:8072: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8075: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8089: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8090: Error: selected processor does not support `strexd r2,r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8170: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:8223: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:8224: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8227: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8241: Error: selected processor does not support `ldrexd r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8242: Error: selected processor does not support `strexd r0,r5,r6,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8292: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:8293: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8296: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8310: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8311: Error: selected processor does not support `strexd r2,r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8700: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8761: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8803: Error: selected processor does not support `ldrexd r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8865: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:8866: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8869: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8897: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:8898: Error: selected processor does not support `strexd r2,r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:9009: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/cc5c7Rzk.s:9010: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:9013: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/cc5c7Rzk.s:9027: Error: selected processor does not support `ldrexd r0,r1,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:9028: Error: selected processor does not support `strexd r0,r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:9108: Error: selected processor does not support `ldrexd r2,r3,[r4]' in ARM mode
+/tmp/cc5c7Rzk.s:9214: Error: selected processor does not support `isb' in ARM mode
+/tmp/cc5c7Rzk.s:9251: Error: selected processor does not support `isb' in ARM mode
+/tmp/cc5c7Rzk.s:9709: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:9770: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:9787: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:9791: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc5c7Rzk.s:10071: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:10088: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:10092: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc5c7Rzk.s:10559: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:10692: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:12801: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:13527: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:13540: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:13561: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:13573: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:14438: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:15366: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:15576: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:15692: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/cc5c7Rzk.s:15712: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/cc5c7Rzk.s:15716: Error: selected processor does not support `sev' in ARM mode
+/tmp/cc5c7Rzk.s:16420: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:16587: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5c7Rzk.s:17494: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccob9JGq.s: Assembler messages:
+/tmp/ccob9JGq.s:2519: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:2541: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:2542: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccob9JGq.s:2545: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccob9JGq.s:2559: Error: selected processor does not support `ldrex r3,[r2]' in ARM mode
+/tmp/ccob9JGq.s:2561: Error: selected processor does not support `strex r1,r3,[r2]' in ARM mode
+/tmp/ccob9JGq.s:2575: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:2891: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:2892: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccob9JGq.s:2895: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccob9JGq.s:2909: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccob9JGq.s:2911: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccob9JGq.s:3174: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:3194: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:3195: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccob9JGq.s:3198: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccob9JGq.s:3212: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccob9JGq.s:3214: Error: selected processor does not support `strex ip,r1,[r0]' in ARM mode
+/tmp/ccob9JGq.s:3269: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:3431: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:3448: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccob9JGq.s:3452: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccob9JGq.s:3480: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccob9JGq.s:3720: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:3898: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:3915: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccob9JGq.s:3919: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccob9JGq.s:3946: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccob9JGq.s:4713: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:4733: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:4734: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccob9JGq.s:4737: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccob9JGq.s:4751: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccob9JGq.s:4753: Error: selected processor does not support `strex r0,r1,[r4]' in ARM mode
+/tmp/ccob9JGq.s:4824: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:4844: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:4845: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccob9JGq.s:4848: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccob9JGq.s:4862: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccob9JGq.s:4864: Error: selected processor does not support `strex r0,r1,[r4]' in ARM mode
+/tmp/ccob9JGq.s:4912: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:4966: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:5127: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:5144: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccob9JGq.s:5148: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccob9JGq.s:5175: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccob9JGq.s:5259: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:5276: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccob9JGq.s:5280: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccob9JGq.s:5307: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccob9JGq.s:5659: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:5660: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccob9JGq.s:5663: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccob9JGq.s:5677: Error: selected processor does not support `ldrex r1,[r2]' in ARM mode
+/tmp/ccob9JGq.s:5679: Error: selected processor does not support `strex r0,r1,[r2]' in ARM mode
+/tmp/ccob9JGq.s:5818: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccob9JGq.s:5884: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccob9JGq.s:5939: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:5940: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccob9JGq.s:5943: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccob9JGq.s:5957: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccob9JGq.s:5959: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccob9JGq.s:6602: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:6619: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccob9JGq.s:6623: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccob9JGq.s:6908: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:6909: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccob9JGq.s:6912: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccob9JGq.s:6926: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccob9JGq.s:6928: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccob9JGq.s:7208: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:7228: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:7229: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccob9JGq.s:7232: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccob9JGq.s:7246: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccob9JGq.s:7248: Error: selected processor does not support `strex ip,r1,[r0]' in ARM mode
+/tmp/ccob9JGq.s:7316: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:8367: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:8384: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccob9JGq.s:8388: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccob9JGq.s:9719: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:9739: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:9740: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccob9JGq.s:9743: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccob9JGq.s:9757: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccob9JGq.s:9759: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccob9JGq.s:9851: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:9871: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:9872: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccob9JGq.s:9875: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccob9JGq.s:9889: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccob9JGq.s:9891: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccob9JGq.s:10541: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:10795: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:14612: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:14632: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:14633: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccob9JGq.s:14636: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccob9JGq.s:14650: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccob9JGq.s:14652: Error: selected processor does not support `strex ip,r1,[r3]' in ARM mode
+/tmp/ccob9JGq.s:14735: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:14755: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccob9JGq.s:14756: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccob9JGq.s:14759: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccob9JGq.s:14773: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccob9JGq.s:14775: Error: selected processor does not support `strex ip,r1,[r3]' in ARM mode
+/tmp/ccob9JGq.s:14937: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccob9JGq.s:15272: Error: selected processor does not support `dmb ish' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/printk/printk.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: kernel/printk] Error 2
+make[2]: *** [scripts/Makefile.build:277: kernel/irq/manage.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: kernel/irq] Error 2
+/tmp/ccA9QyiW.s: Assembler messages:
+/tmp/ccA9QyiW.s:10191: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccA9QyiW.s:10192: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccA9QyiW.s:10195: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccA9QyiW.s:10209: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccA9QyiW.s:10211: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccA9QyiW.s:10270: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccA9QyiW.s:10271: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccA9QyiW.s:10274: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccA9QyiW.s:10288: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccA9QyiW.s:10290: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccA9QyiW.s:14180: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccA9QyiW.s:14181: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccA9QyiW.s:14184: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccA9QyiW.s:14198: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccA9QyiW.s:14200: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/rcu/update.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: kernel/rcu] Error 2
+  AR      kernel/dma/built-in.a
+/tmp/ccD17QQP.s: Assembler messages:
+/tmp/ccD17QQP.s:10947: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:10972: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:10973: Error: selected processor does not support `pldw [r1]' in ARM mode
+/tmp/ccD17QQP.s:10976: Error: selected processor does not support `pld [r1]' in ARM mode
+/tmp/ccD17QQP.s:10995: Error: selected processor does not support `ldrex ip,[r1]' in ARM mode
+/tmp/ccD17QQP.s:10998: Error: selected processor does not support `strexeq r3,r2,[r1]' in ARM mode
+/tmp/ccD17QQP.s:12120: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:12232: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:12249: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:12253: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:16396: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:16513: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:16530: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:16534: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:16567: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccD17QQP.s:16673: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:16694: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:16695: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccD17QQP.s:16698: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccD17QQP.s:16710: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:16712: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:16726: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:17473: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:18543: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:18544: Error: selected processor does not support `pldw [r8]' in ARM mode
+/tmp/ccD17QQP.s:18547: Error: selected processor does not support `pld [r8]' in ARM mode
+/tmp/ccD17QQP.s:18561: Error: selected processor does not support `ldrex r3,[r8]' in ARM mode
+/tmp/ccD17QQP.s:18563: Error: selected processor does not support `strex r2,r3,[r8]' in ARM mode
+/tmp/ccD17QQP.s:18861: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:18879: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:18883: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:18916: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccD17QQP.s:19256: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:19257: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccD17QQP.s:19260: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccD17QQP.s:19274: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:19276: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:19877: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:20015: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:20032: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:20036: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:20069: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccD17QQP.s:20165: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:20473: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:20486: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:20487: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:20490: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:20503: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:20505: Error: selected processor does not support `strex r2,r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:20524: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:20528: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:20994: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:21011: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:21015: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:21299: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:21316: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:21320: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:21644: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:21645: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:21648: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:21662: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:21664: Error: selected processor does not support `strex ip,r1,[r0]' in ARM mode
+/tmp/ccD17QQP.s:21725: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:21742: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:21746: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:21922: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:21941: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:21945: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:22176: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:22193: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:22197: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:22517: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:22534: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:22538: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:22807: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:22824: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:22828: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:23091: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:23108: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:23112: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:23640: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:23657: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:23661: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:24565: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:24582: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:24586: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:24704: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:24721: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:24725: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:25680: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:25697: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:25701: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:26038: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:26149: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:26166: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:26170: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:26809: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:26848: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:26980: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:26981: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccD17QQP.s:26984: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccD17QQP.s:26998: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccD17QQP.s:27000: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/ccD17QQP.s:27138: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:27158: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:27159: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccD17QQP.s:27162: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccD17QQP.s:27176: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccD17QQP.s:27178: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/ccD17QQP.s:27276: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:28118: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:28119: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:28122: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:28136: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:28138: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccD17QQP.s:28262: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:28282: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:28283: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:28286: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:28300: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:28302: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccD17QQP.s:28354: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:28664: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:28759: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:28776: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:28780: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:28834: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:28851: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:28855: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:29143: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:29160: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:29164: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:29218: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:29235: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:29239: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:29512: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:29633: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:29650: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:29654: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:30803: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:30804: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccD17QQP.s:30807: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccD17QQP.s:30821: Error: selected processor does not support `ldrex ip,[r2]' in ARM mode
+/tmp/ccD17QQP.s:30823: Error: selected processor does not support `strex lr,ip,[r2]' in ARM mode
+/tmp/ccD17QQP.s:31512: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/ccD17QQP.s:31811: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:31828: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:31832: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:32317: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:32334: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:32338: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:32625: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:32642: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:32646: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:32837: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:32838: Error: selected processor does not support `pldw [r7]' in ARM mode
+/tmp/ccD17QQP.s:32841: Error: selected processor does not support `pld [r7]' in ARM mode
+/tmp/ccD17QQP.s:32855: Error: selected processor does not support `ldrex r3,[r7]' in ARM mode
+/tmp/ccD17QQP.s:32857: Error: selected processor does not support `strex r1,r2,[r7]' in ARM mode
+/tmp/ccD17QQP.s:33029: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:33046: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:33050: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:33128: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:33148: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:33149: Error: selected processor does not support `pldw [r7]' in ARM mode
+/tmp/ccD17QQP.s:33152: Error: selected processor does not support `pld [r7]' in ARM mode
+/tmp/ccD17QQP.s:33166: Error: selected processor does not support `ldrex r3,[r7]' in ARM mode
+/tmp/ccD17QQP.s:33168: Error: selected processor does not support `strex r1,r2,[r7]' in ARM mode
+/tmp/ccD17QQP.s:33377: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:33394: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:33398: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:33559: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:33768: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:33785: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:33789: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:33936: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:33937: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:33940: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:33954: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:33956: Error: selected processor does not support `strex ip,r2,[r0]' in ARM mode
+/tmp/ccD17QQP.s:34713: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:34730: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:34734: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:35058: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:35272: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:35289: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:35293: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:35543: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:35560: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:35564: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:36251: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:36268: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:36272: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:36320: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:36337: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:36341: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:36368: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccD17QQP.s:36414: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:36434: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:36435: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:36438: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:36452: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:36454: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccD17QQP.s:36511: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:37015: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:37032: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:37036: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:37083: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:37100: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:37104: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:37131: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccD17QQP.s:37177: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:37197: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:37198: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:37201: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:37215: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:37217: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccD17QQP.s:37383: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:37400: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:37404: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:37445: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38005: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38027: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38068: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38112: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38481: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38498: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:38502: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:38653: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:38670: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:38674: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:39025: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:39026: Error: selected processor does not support `pldw [r2]' in ARM mode
+/tmp/ccD17QQP.s:39029: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccD17QQP.s:39043: Error: selected processor does not support `ldrex r0,[r2]' in ARM mode
+/tmp/ccD17QQP.s:39045: Error: selected processor does not support `strex ip,r0,[r2]' in ARM mode
+/tmp/ccD17QQP.s:39684: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:39704: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:39705: Error: selected processor does not support `pldw [r0]' in ARM mode
+/tmp/ccD17QQP.s:39708: Error: selected processor does not support `pld [r0]' in ARM mode
+/tmp/ccD17QQP.s:39722: Error: selected processor does not support `ldrex r3,[r0]' in ARM mode
+/tmp/ccD17QQP.s:39724: Error: selected processor does not support `strex r1,r2,[r0]' in ARM mode
+/tmp/ccD17QQP.s:39747: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:40148: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:40165: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:40169: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:40271: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:40818: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:41046: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:41063: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:41067: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:41227: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:41530: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:41647: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:41664: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:41668: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:41929: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:42055: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:42072: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:42076: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:42615: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/ccD17QQP.s:43538: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/ccD17QQP.s:43759: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:43776: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:43780: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:44228: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:44285: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:45056: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:45073: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:45077: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:45205: Error: selected processor does not support `pld [r2]' in ARM mode
+/tmp/ccD17QQP.s:45221: Error: selected processor does not support `pld [r2,#32]' in ARM mode
+/tmp/ccD17QQP.s:45462: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:45479: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:45483: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:46073: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccD17QQP.s:46093: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:46627: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:46644: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:46648: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:49023: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:49068: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:49246: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:49283: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:49490: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:49491: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccD17QQP.s:49494: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccD17QQP.s:49508: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccD17QQP.s:49510: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/ccD17QQP.s:49627: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:49647: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:49648: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccD17QQP.s:49651: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccD17QQP.s:49665: Error: selected processor does not support `ldrex r2,[r4]' in ARM mode
+/tmp/ccD17QQP.s:49667: Error: selected processor does not support `strex r0,r1,[r4]' in ARM mode
+/tmp/ccD17QQP.s:49790: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:49994: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:50052: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:50758: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:50795: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:51323: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:51359: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:52153: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:52154: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccD17QQP.s:52157: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccD17QQP.s:52171: Error: selected processor does not support `ldrex r3,[r4]' in ARM mode
+/tmp/ccD17QQP.s:52173: Error: selected processor does not support `strex r1,r2,[r4]' in ARM mode
+/tmp/ccD17QQP.s:52272: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:52292: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:52293: Error: selected processor does not support `pldw [r4]' in ARM mode
+/tmp/ccD17QQP.s:52296: Error: selected processor does not support `pld [r4]' in ARM mode
+/tmp/ccD17QQP.s:52310: Error: selected processor does not support `ldrex r2,[r4]' in ARM mode
+/tmp/ccD17QQP.s:52312: Error: selected processor does not support `strex r0,r1,[r4]' in ARM mode
+/tmp/ccD17QQP.s:52627: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:52962: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:52999: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:53639: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:53676: Error: selected processor does not support `isb' in ARM mode
+/tmp/ccD17QQP.s:55261: Error: selected processor does not support `dmb ishst' in ARM mode
+/tmp/ccD17QQP.s:55327: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:55385: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:55403: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:55407: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:56360: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:56500: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:56517: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:56521: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:56841: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:57051: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:57068: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:57072: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:57499: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:57570: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:57763: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccD17QQP.s:57863: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:57880: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:57884: Error: selected processor does not support `sev' in ARM mode
+/tmp/ccD17QQP.s:57998: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:57999: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccD17QQP.s:58002: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccD17QQP.s:58016: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:58018: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:59080: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:59081: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccD17QQP.s:59084: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccD17QQP.s:59098: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:59100: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:59494: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccD17QQP.s:59508: Error: architectural extension `mp' is not allowed for the current base architecture
+/tmp/ccD17QQP.s:59509: Error: selected processor does not support `pldw [r3]' in ARM mode
+/tmp/ccD17QQP.s:59512: Error: selected processor does not support `pld [r3]' in ARM mode
+/tmp/ccD17QQP.s:59525: Error: selected processor does not support `ldrex r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:59527: Error: selected processor does not support `strex r1,r2,[r3]' in ARM mode
+/tmp/ccD17QQP.s:59546: Error: selected processor does not support `dsb ishst' in ARM mode
+/tmp/ccD17QQP.s:59550: Error: selected processor does not support `sev' in ARM mode
+make[2]: *** [scripts/Makefile.build:277: kernel/sched/core.o] Error 1
+make[1]: *** [scripts/Makefile.build:540: kernel/sched] Error 2
+make: *** [Makefile:1868: kernel] Error 2

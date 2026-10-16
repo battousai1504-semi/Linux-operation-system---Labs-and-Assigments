@@ -1,0 +1,157 @@
+
+
+U-Boot 2022.04 (Sep 20 2026 - 16:03:29 +0700)
+
+DRAM:  512 MiB
+WARNING: Caches not enabled
+Core:  12 devices, 7 uclasses, devicetree: embed
+Flash: 64 MiB
+MMC:   mmci@5000: 0
+Loading Environment from Flash... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   eth0: ethernet@3,02000000
+Hit any key to stop autoboot:  2  1  0 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> 
+=> clear
+Unknown command 'clear' - try 'help'
+=> 
+Unknown command 'clear' - try 'help'
+=> version
+U-Boot 2022.04 (Sep 20 2026 - 16:03:29 +0700)
+
+arm-linux-gnueabihf-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+GNU ld (GNU Binutils for Ubuntu) 2.46
+=> bdinfo
+boot_params = 0x60002000
+DRAM bank   = 0x00000000
+-> start    = 0x60000000
+-> size     = 0x20000000
+DRAM bank   = 0x00000001
+-> start    = 0x80000000
+-> size     = 0x00000004
+flashstart  = 0x40000000
+flashsize   = 0x04000000
+flashoffset = 0x00000000
+baudrate    = 38400 bps
+relocaddr   = 0x7ff6c000
+reloc off   = 0x1f76c000
+Build       = 32-bit
+current eth = ethernet@3,02000000
+ethaddr     = 52:54:00:12:34:56
+IP addr     = <NULL>
+fdt_blob    = 0x7ffe0430
+new_fdt     = 0x00000000
+fdt_size    = 0x00000000
+lmb_dump_all:
+ memory.cnt  = 0x1
+ memory[0]	[0x60000000-0x80000003], 0x20000004 bytes flags: 0
+ reserved.cnt  = 0x2
+ reserved[0]	[0x4c000000-0x4c7fffff], 0x00800000 bytes flags: 4
+ reserved[1]	[0x7fb27c88-0x7fffffff], 0x004d8378 bytes flags: 0
+devicetree  = embed
+arch_number = 0x000008e0
+TLB addr    = 0x7fff0000
+irq_sp      = 0x7fb2bec0
+sp start    = 0x7fb2beb0
+Early malloc usage: 370 / 400
+=> printenv
+arch=arm
+baudrate=38400
+board=vexpress
+board_name=vexpress
+boot_a_script=load ${devtype} ${devnum}:${distro_bootpart} ${scriptaddr} ${prefix}${script}; source ${scriptaddr}
+boot_efi_binary=load ${devtype} ${devnum}:${distro_bootpart} ${kernel_addr_r} efi/boot/bootarm.efi; if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r};else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi
+boot_efi_bootmgr=if fdt addr ${fdt_addr_r}; then bootefi bootmgr ${fdt_addr_r};else bootefi bootmgr;fi
+boot_extlinux=sysboot ${devtype} ${devnum}:${distro_bootpart} any ${scriptaddr} ${prefix}${boot_syslinux_conf}
+boot_prefixes=/ /boot/
+boot_script_dhcp=boot.scr.uimg
+boot_scripts=boot.scr.uimg boot.scr
+boot_syslinux_conf=extlinux/extlinux.conf
+boot_targets=mmc1 mmc0 pxe dhcp 
+bootargs=console=tty0 console=ttyAMA0,38400n8
+bootcmd=run distro_bootcmd; run bootflash
+bootcmd_dhcp=devtype=dhcp; if dhcp ${scriptaddr} ${boot_script_dhcp}; then source ${scriptaddr}; fi;setenv efi_fdtfile ${fdtfile}; if test -z "${fdtfile}" -a -n "${soc}"; then setenv efi_fdtfile ${soc}-${board}${boardver}.dtb; fi; setenv efi_old_vci ${bootp_vci};setenv efi_old_arch ${bootp_arch};setenv bootp_vci PXEClient:Arch:00010:UNDI:003000;setenv bootp_arch 0xa;if dhcp ${kernel_addr_r}; then tftpboot ${fdt_addr_r} dtb/${efi_fdtfile};if fdt addr ${fdt_addr_r}; then bootefi ${kernel_addr_r} ${fdt_addr_r}; else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi;fi;setenv bootp_vci ${efi_old_vci};setenv bootp_arch ${efi_old_arch};setenv efi_fdtfile;setenv efi_old_arch;setenv efi_old_vci;
+bootcmd_mmc0=devnum=0; run mmc_boot
+bootcmd_mmc1=devnum=1; run mmc_boot
+bootcmd_pxe=dhcp; if pxe get; then pxe boot; fi
+bootdelay=2
+bootflash=run flashargs; cp ${ramdisk_addr} ${ramdisk_addr_r} ${maxramdisk}; bootm ${kernel_addr} ${ramdisk_addr_r}
+console=ttyAMA0,38400n8
+cpu=armv7
+distro_bootcmd=for target in ${boot_targets}; do run bootcmd_${target}; done
+dram=1024M
+efi_dtb_prefixes=/ /dtb/ /dtb/current/
+ethaddr=52:54:00:12:34:56
+fdt_addr_r=0x60000000
+fdtcontroladdr=7ffe0430
+fdtfile=vexpress-v2p-ca9.dtb
+flashargs=setenv bootargs root=${root} console=${console} mem=${dram} mtdparts=${mtd} mmci.fmax=190000 devtmpfs.mount=0  vmalloc=256M
+kernel_addr_r=0x60100000
+load_efi_dtb=load ${devtype} ${devnum}:${distro_bootpart} ${fdt_addr_r} ${prefix}${efi_fdtfile}
+loadaddr=0x90000000
+mmc_boot=if mmc dev ${devnum}; then devtype=mmc; run scan_dev_for_boot_part; fi
+mtd=armflash:1M@0x800000(uboot),7M@0x1000000(kernel),24M@0x2000000(initrd)
+root=/dev/sda1 rw
+scan_dev_for_boot=echo Scanning ${devtype} ${devnum}:${distro_bootpart}...; for prefix in ${boot_prefixes}; do run scan_dev_for_extlinux; run scan_dev_for_scripts; done;run scan_dev_for_efi;
+scan_dev_for_boot_part=part list ${devtype} ${devnum} -bootable devplist; env exists devplist || setenv devplist 1; for distro_bootpart in ${devplist}; do if fstype ${devtype} ${devnum}:${distro_bootpart} bootfstype; then run scan_dev_for_boot; fi; done; setenv devplist
+scan_dev_for_efi=setenv efi_fdtfile ${fdtfile}; if test -z "${fdtfile}" -a -n "${soc}"; then setenv efi_fdtfile ${soc}-${board}${boardver}.dtb; fi; for prefix in ${efi_dtb_prefixes}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${efi_fdtfile}; then run load_efi_dtb; fi;done;run boot_efi_bootmgr;if test -e ${devtype} ${devnum}:${distro_bootpart} efi/boot/bootarm.efi; then echo Found EFI removable media binary efi/boot/bootarm.efi; run boot_efi_binary; echo EFI LOAD FAILED: continuing...; fi; setenv efi_fdtfile
+scan_dev_for_extlinux=if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${boot_syslinux_conf}; then echo Found ${prefix}${boot_syslinux_conf}; run boot_extlinux; echo SCRIPT FAILED: continuing...; fi
+scan_dev_for_scripts=for script in ${boot_scripts}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${script}; then echo Found U-Boot script ${prefix}${script}; run boot_a_script; echo SCRIPT FAILED: continuing...; fi; done
+stderr=serial
+stdin=serial
+stdout=serial
+ubifs_boot=env exists bootubipart || env set bootubipart UBI; env exists bootubivol || env set bootubivol boot; if ubi part ${bootubipart} && ubifsmount ubi${devnum}:${bootubivol}; then devtype=ubi; run scan_dev_for_boot; fi
+vendor=armltd
+
+Environment size: 4238/262140 bytes
+=> printenv arch
+arch=arm
+=> printenv board
+board=vexpress
+=> printenv fdtfile
+fdtfile=vexpress-v2p-ca9.dtb
+=> printenv kernel_addr_r
+kernel_addr_r=0x60100000
+=> printenv fdt_addr_r
+fdt_addr_r=0x60000000
+=> printenv ramdisk_addr_r
+## Error: "ramdisk_addr_r" not defined
+=> printenv bootargs
+bootargs=console=tty0 console=ttyAMA0,38400n8
+=> printenv bootcmd
+bootcmd=run distro_bootcmd; run bootflash
+=> setenv fdt_addr_r 0x60000000
+=> setenv kernel_addr_r 0x60100000
+=> setenv ramdisk_addr_r 0x64000000
+=> printenv fdt_addr_r kernel_addr_r ramdisk_addr_r
+fdt_addr_r=0x60000000
+kernel_addr_r=0x60100000
+ramdisk_addr_r=0x64000000
+=> setenv bootargs 'console=ttyAMA0,115200 root=/dev/ram0 rw init=/sbin/init mem=512M'
+=> printenv bootargs
+bootargs=console=ttyAMA0,115200 root=/dev/ram0 rw init=/sbin/init mem=512M
+=> setenv bootcmd 'bootz ${kernel_addr_r} ${ramdisk_addr_r} ${fdt_addr_r}'
+=> printenv bootcmd
+bootcmd=bootz ${kernel_addr_r} ${ramdisk_addr_r} ${fdt_addr_r}
+=> printenv fdt_addr_r kernel_addr_r ramdisk_addr_r bootargs bootcmd
+fdt_addr_r=0x60000000
+kernel_addr_r=0x60100000
+ramdisk_addr_r=0x64000000
+bootargs=console=ttyAMA0,115200 root=/dev/ram0 rw init=/sbin/init mem=512M
+bootcmd=bootz ${kernel_addr_r} ${ramdisk_addr_r} ${fdt_addr_r}
+=> 

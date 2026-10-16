@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t tmpfs tmpfs /tmp
+
+hostname embedded-lab
+
+echo
+echo "Boot completed! Welcome to Embedded Linux Lab 1"
+echo
