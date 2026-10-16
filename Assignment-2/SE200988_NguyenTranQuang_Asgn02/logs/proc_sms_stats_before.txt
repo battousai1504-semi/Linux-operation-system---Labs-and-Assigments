@@ -1,0 +1,12 @@
+SMS Sensor Driver Statistics
+============================
+read_count       : 0
+last_temperature : 28.0 C
+last_humidity    : 60.0 %
+last_timestamp   : 0 ms
+uptime           : 0 s
+interval_ms      : 100
+eagain_count     : 0
+anomaly_count    : 0
+spike_rate       : 5 %
+open_count       : 0

@@ -1,0 +1,720 @@
+Script started on 2026-10-16 07:00:29+07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="204" LINES="55"]
+4625 blocks
+-rw-rw-r-- 1 beacrox beacrox 1,5M Thg 10 16 07:00 /home/beacrox/asgn2/output/initramfs_asgn2.cpio.gz
+pulseaudio: set_sink_input_volume() failed
+pulseaudio: Reason: Invalid argument
+pulseaudio: set_sink_input_mute() failed
+pulseaudio: Reason: Invalid argument
+Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (beacrox@Beacrox) (arm-linux-gnueabihf-gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #2 SMP Fri Oct 16 06:44:57 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30412 r8192 d22836 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14988(91%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 489420K/524288K available (8192K kernel code, 594K rwdata, 1772K rodata, 1024K init, 150K bss, 18484K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4e4/0x69c with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 95.30MHz.
+Calibrating delay loop... 1692.46 BogoMIPS (lpj=8462336)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (3384.93 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+Freeing initrd memory: 1460K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 5 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-10-16T00:00:33 UTC (1792108833)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+[ ASGN2 ] Ready. Run: test_sms.sh  then  jitter_test.sh
+
+Please press Enter to activate this console. 
+/ # # Gõ trong QEMU
+/ # test_sms.sh
+=== DRIVER_TEST START ===
+sms_sensor_driver 16384 0 - Live 0x7f000000 (O)
+crw-rw-rw-    1 root     0          10, 125 Oct 16 00:01 /dev/sms_sensor
+-r--r--r--    1 root     0                0 Oct 16 00:01 /proc/sms_stats
+--- head -n 3 /dev/sms_sensor (blocking read, interval 100 ms):
+76716,28.3,59.8
+76821,27.8,60.7
+76930,28.0,60.4
+SMS Sensor Driver Statistics
+============================
+read_count       : 3
+last_temperature : 28.0 C
+last_humidity    : 60.4 %
+last_timestamp   : 76930 ms
+uptime           : 0 s
+interval_ms      : 100
+eagain_count     : 0
+anomaly_count    : 0
+spike_rate       : 5 %
+open_count       : 1
+=== DRIVER_TEST END ===
+=== EXITCODE_TEST START ===
+Invalid value for -i: 'abc'
+Usage: sms_app [OPTIONS]
+  -i <ms>    Sensor sampling interval (default: 500ms)
+  -t <C>     Temperature alert threshold (default: 40.0)
+  -h <%>     Humidity alert threshold (default: 80.0)
+  -d <sec>   Run duration in seconds, 0 = infinite (default: 60)
+  -v         Verbose mode: print each sample to stdout
+  -s <pol>   Sensor thread policy: fifo | other (default: fifo)
+  -D <path>  Device path, or 'sim' = built-in simulator (default: /dev/sms_sensor)
+  -L <path>  Log file path (default: /tmp/sms.log)
+exit code (invalid argument) = 1
+[main] ERROR: cannot open /dev/not_exist: No such file or directory (is sms_sensor_driver loaded?)
+exit code (device not found) = 2
+=== EXITCODE_TEST END ===
+=== PROC_BEFORE START ===
+SMS Sensor Driver Statistics
+============================
+read_count       : 0
+last_temperature : 28.0 C
+last_humidity    : 60.0 %
+last_timestamp   : 0 ms
+uptime           : 0 s
+interval_ms      : 100
+eagain_count     : 0
+anomaly_count    : 0
+spike_rate       : 5 %
+open_count       : 0
+=== PROC_BEFORE END ===
+sms_app started in background, pid=78 (60 s)
+=== MEM_T5 START ===
+VmPeak:	    3340 kB
+VmSize:	    2836 kB
+VmLck:	    2824 kB
+VmRSS:	    1752 kB
+VmData:	    1312 kB
+VmStk:	     132 kB
+Threads:	5
+=== MEM_T5 END ===
+=== MEM_T30 START ===
+VmPeak:	    3340 kB
+VmSize:	    2836 kB
+VmLck:	    2824 kB
+VmRSS:	    1752 kB
+VmData:	    1312 kB
+VmStk:	     132 kB
+Threads:	5
+=== MEM_T30 END ===
+=== THREADS START ===
+tid=78    (sms_app)       rt_priority=0   policy=SCHED_OTHER
+tid=80    (sms_logger)    rt_priority=0   policy=SCHED_OTHER
+tid=81    (sms_alert)     rt_priority=0   policy=SCHED_OTHER
+tid=82    (sms_processor) rt_priority=0   policy=SCHED_OTHER
+tid=83    (sms_sensor)    rt_priority=50  policy=SCHED_FIFO
+=== THREADS END ===
+=== MAPS_T30 START ===
+00010000-00084000 r-xp 00000000 00:02 229        /usr/bin/sms_app
+00094000-00096000 r--p 00074000 00:02 229        /usr/bin/sms_app
+00096000-00098000 rw-p 00076000 00:02 229        /usr/bin/sms_app
+00098000-000bd000 rw-p 00000000 00:00 0          [heap]
+76d7e000-76d7f000 ---p 00000000 00:00 0 
+76d7f000-76dbf000 rw-p 00000000 00:00 0 
+76dbf000-76dc0000 ---p 00000000 00:00 0 
+76dc0000-76e00000 rw-p 00000000 00:00 0 
+76e00000-76e21000 rw-p 00000000 00:00 0 
+76e21000-76f00000 ---p 00000000 00:00 0 
+76f0c000-76f0d000 ---p 00000000 00:00 0 
+76f0d000-76f4d000 rw-p 00000000 00:00 0 
+76f4d000-76f4e000 ---p 00000000 00:00 0 
+76f4e000-76f8e000 rw-p 00000000 00:00 0 
+7ee35000-7ee56000 rw-p 00000000 00:00 0          [stack]
+7ef65000-7ef66000 r-xp 00000000 00:00 0          [sigpage]
+7ef66000-7ef67000 r--p 00000000 00:00 0          [vvar]
+7ef67000-7ef68000 r-xp 00000000 00:00 0          [vdso]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+=== MAPS_T30 END ===
+=== PROC_DURING START ===
+SMS Sensor Driver Statistics
+============================
+read_count       : 60
+last_temperature : 25.8 C
+last_humidity    : 61.5 %
+last_timestamp   : 107182 ms
+uptime           : 30 s
+interval_ms      : 500
+eagain_count     : 0
+anomaly_count    : 1
+spike_rate       : 5 %
+open_count       : 1
+=== PROC_DURING END ===
+=== MEM_T55 START ===
+VmPeak:	    3340 kB
+VmSize:	    2836 kB
+VmLck:	    2824 kB
+VmRSS:	    1752 kB
+VmData:	    1312 kB
+VmStk:	     132 kB
+Threads:	5
+=== MEM_T55 END ===
+sms_app exit code = 0
+=== PROC_AFTER START ===
+SMS Sensor Driver Statistics
+============================
+read_count       : 120
+last_temperature : 27.3 C
+last_humidity    : 60.9 %
+last_timestamp   : 137182 ms
+uptime           : 60 s
+interval_ms      : 500
+eagain_count     : 0
+anomaly_count    : 3
+spike_rate       : 5 %
+open_count       : 1
+=== PROC_AFTER END ===
+=== SAMPLE_RUN START ===
+[main] driver interval set to 500 ms (ioctl SMS_SET_INTERVAL)
+[main] SMS running (pid 78): interval=500 ms, T>40.0 C, H>80.0 %, duration=60 s. Ctrl+C to stop.
+[SAMPLE #   1] ts=77685 ms  T=28.4 C  H=60.8 %  | avg10 T=28.40 C  H=60.80 %
+[SAMPLE #   2] ts=78182 ms  T=28.9 C  H=61.5 %  | avg10 T=28.65 C  H=61.15 %
+[SAMPLE #   3] ts=78682 ms  T=29.4 C  H=61.8 %  | avg10 T=28.90 C  H=61.37 %
+[SAMPLE #   4] ts=79182 ms  T=28.9 C  H=62.0 %  | avg10 T=28.90 C  H=61.52 %
+[SAMPLE #   5] ts=79682 ms  T=28.9 C  H=61.7 %  | avg10 T=28.90 C  H=61.56 %
+[SAMPLE #   6] ts=80182 ms  T=28.4 C  H=61.7 %  | avg10 T=28.82 C  H=61.58 %
+[SAMPLE #   7] ts=80682 ms  T=28.4 C  H=61.1 %  | avg10 T=28.76 C  H=61.51 %
+[SAMPLE #   8] ts=81182 ms  T=28.8 C  H=60.8 %  | avg10 T=28.76 C  H=61.43 %
+[SAMPLE #   9] ts=81682 ms  T=28.3 C  H=60.4 %  | avg10 T=28.71 C  H=61.31 %
+[SAMPLE #  10] ts=82182 ms  T=28.5 C  H=60.5 %  | avg10 T=28.69 C  H=61.23 %
+[SAMPLE #  11] ts=82682 ms  T=28.3 C  H=60.4 %  | avg10 T=28.68 C  H=61.19 %
+[SAMPLE #  12] ts=83182 ms  T=28.2 C  H=60.9 %  | avg10 T=28.61 C  H=61.13 %
+[SAMPLE #  13] ts=83682 ms  T=28.3 C  H=60.6 %  | avg10 T=28.50 C  H=61.01 %
+[SAMPLE #  14] ts=84182 ms  T=28.1 C  H=59.6 %  | avg10 T=28.42 C  H=60.77 %
+[SAMPLE #  15] ts=84682 ms  T=28.1 C  H=60.6 %  | avg10 T=28.34 C  H=60.66 %
+[SAMPLE #  16] ts=85182 ms  T=28.4 C  H=59.7 %  | avg10 T=28.34 C  H=60.46 %
+[SAMPLE #  17] ts=85682 ms  T=27.9 C  H=59.7 %  | avg10 T=28.29 C  H=60.32 %
+[SAMPLE #  18] ts=86182 ms  T=27.6 C  H=60.2 %  | avg10 T=28.17 C  H=60.26 %
+[SAMPLE #  19] ts=86682 ms  T=27.3 C  H=60.3 %  | avg10 T=28.07 C  H=60.25 %
+[SAMPLE #  20] ts=87182 ms  T=27.1 C  H=60.0 %  | avg10 T=27.93 C  H=60.20 %
+[SAMPLE #  21] ts=87682 ms  T=26.7 C  H=59.2 %  | avg10 T=27.77 C  H=60.08 %
+[SAMPLE #  22] ts=88182 ms  T=26.9 C  H=60.2 %  | avg10 T=27.64 C  H=60.01 %
+[SAMPLE #  23] ts=88683 ms  T=26.9 C  H=59.4 %  | avg10 T=27.50 C  H=59.89 %
+[SAMPLE #  24] ts=89182 ms  T=26.5 C  H=58.7 %  | avg10 T=27.34 C  H=59.80 %
+[SAMPLE #  25] ts=89682 ms  T=27.0 C  H=59.4 %  | avg10 T=27.23 C  H=59.68 %
+[SAMPLE #  26] ts=90182 ms  T=26.8 C  H=59.9 %  | avg10 T=27.07 C  H=59.70 %
+[SAMPLE #  27] ts=90682 ms  T=26.5 C  H=59.9 %  | avg10 T=26.93 C  H=59.72 %
+[SAMPLE #  28] ts=91182 ms  T=27.0 C  H=60.6 %  | avg10 T=26.87 C  H=59.76 %
+[SAMPLE #  29] ts=91683 ms  T=26.8 C  H=60.9 %  | avg10 T=26.82 C  H=59.82 %
+[SAMPLE #  30] ts=92182 ms  T=26.7 C  H=60.7 %  | avg10 T=26.78 C  H=59.89 %
+[SAMPLE #  31] ts=92682 ms  T=26.9 C  H=59.8 %  | avg10 T=26.80 C  H=59.95 %
+[SAMPLE #  32] ts=93182 ms  T=26.6 C  H=59.8 %  | avg10 T=26.77 C  H=59.91 %
+[SAMPLE #  33] ts=93682 ms  T=26.1 C  H=60.8 %  | avg10 T=26.69 C  H=60.05 %
+[SAMPLE #  34] ts=94182 ms  T=26.2 C  H=60.8 %  | avg10 T=26.66 C  H=60.26 %
+[SAMPLE #  35] ts=94682 ms  T=26.0 C  H=59.8 %  | avg10 T=26.56 C  H=60.30 %
+[SAMPLE #  36] ts=95182 ms  T=25.8 C  H=60.3 %  | avg10 T=26.46 C  H=60.34 %
+[SAMPLE #  37] ts=95682 ms  T=25.9 C  H=60.3 %  | avg10 T=26.40 C  H=60.38 %
+[SAMPLE #  38] ts=96182 ms  T=25.4 C  H=61.0 %  | avg10 T=26.24 C  H=60.42 %
+[SAMPLE #  39] ts=96682 ms  T=25.7 C  H=60.5 %  | avg10 T=26.13 C  H=60.38 %
+[SAMPLE #  40] ts=97182 ms  T=26.2 C  H=61.0 %  | avg10 T=26.08 C  H=60.41 %
+[SAMPLE #  41] ts=97682 ms  T=25.8 C  H=60.7 %  | avg10 T=25.97 C  H=60.50 %
+[SAMPLE #  42] ts=98182 ms  T=26.1 C  H=60.0 %  | avg10 T=25.92 C  H=60.52 %
+[SAMPLE #  43] ts=98682 ms  T=26.6 C  H=60.0 %  | avg10 T=25.97 C  H=60.44 %
+[SAMPLE #  44] ts=99182 ms  T=26.4 C  H=60.6 %  | avg10 T=25.99 C  H=60.42 %
+[SAMPLE #  45] ts=99682 ms  T=25.9 C  H=61.6 %  | avg10 T=25.98 C  H=60.60 %
+[SAMPLE #  46] ts=100182 ms  T=26.2 C  H=61.0 %  | avg10 T=26.02 C  H=60.67 %
+[SAMPLE #  47] ts=100682 ms  T=26.6 C  H=60.1 %  | avg10 T=26.09 C  H=60.65 %
+[SAMPLE #  48] ts=101182 ms  T=26.2 C  H=60.4 %  | avg10 T=26.17 C  H=60.59 %
+[SAMPLE #  49] ts=101682 ms  T=26.2 C  H=61.1 %  | avg10 T=26.22 C  H=60.65 %
+[SAMPLE #  50] ts=102182 ms  T=25.9 C  H=61.0 %  | avg10 T=26.19 C  H=60.65 %
+[SAMPLE #  51] ts=102682 ms  T=26.0 C  H=62.0 %  | avg10 T=26.21 C  H=60.78 %
+[SAMPLE #  52] ts=103182 ms  T=26.2 C  H=62.9 %  | avg10 T=26.22 C  H=61.07 %
+[SAMPLE #  53] ts=103682 ms  T=26.1 C  H=62.3 %  | avg10 T=26.17 C  H=61.30 %
+[SAMPLE #  54] ts=104182 ms  T=26.2 C  H=62.9 %  | avg10 T=26.15 C  H=61.53 %
+[SAMPLE #  55] ts=104682 ms  T=26.6 C  H=63.9 %  | avg10 T=26.22 C  H=61.76 %
+[SAMPLE #  56] ts=105182 ms  T=26.2 C  H=63.9 %  | avg10 T=26.22 C  H=62.05 %
+[SAMPLE #  57] ts=105682 ms  T=26.1 C  H=63.1 %  | avg10 T=26.17 C  H=62.35 %
+[ALERT][2026-10-16 00:02:16.405] TYPE: TEMP_HIGH VALUE: 44.3C THRESHOLD: 40.0C (sample #58)
+[ALERT][2026-10-16 00:02:16.407] TYPE: TEMP_SPIKE VALUE: 18.2C THRESHOLD: 5.0C (sample #58)
+[SAMPLE #  58] ts=106182 ms  T=44.3 C  H=62.2 %  | avg10 T=27.98 C  H=62.53 %
+[ALERT][2026-10-16 00:02:16.904] TYPE: TEMP_SPIKE VALUE: 18.9C THRESHOLD: 5.0C (sample #59)
+[SAMPLE #  59] ts=106682 ms  T=25.4 C  H=61.2 %  | avg10 T=27.90 C  H=62.54 %
+[SAMPLE #  60] ts=107182 ms  T=25.8 C  H=61.5 %  | avg10 T=27.89 C  H=62.59 %
+[SAMPLE #  61] ts=107682 ms  T=25.8 C  H=62.5 %  | avg10 T=27.87 C  H=62.64 %
+[SAMPLE #  62] ts=108182 ms  T=26.3 C  H=62.5 %  | avg10 T=27.88 C  H=62.60 %
+[SAMPLE #  63] ts=108682 ms  T=26.3 C  H=63.1 %  | avg10 T=27.90 C  H=62.68 %
+[SAMPLE #  64] ts=109182 ms  T=26.5 C  H=63.7 %  | avg10 T=27.93 C  H=62.76 %
+[SAMPLE #  65] ts=109682 ms  T=26.2 C  H=62.8 %  | avg10 T=27.89 C  H=62.65 %
+[SAMPLE #  66] ts=110182 ms  T=26.6 C  H=62.6 %  | avg10 T=27.93 C  H=62.52 %
+[SAMPLE #  67] ts=110682 ms  T=26.3 C  H=62.3 %  | avg10 T=27.95 C  H=62.44 %
+[SAMPLE #  68] ts=111182 ms  T=25.8 C  H=62.1 %  | avg10 T=26.10 C  H=62.43 %
+[SAMPLE #  69] ts=111682 ms  T=25.8 C  H=62.4 %  | avg10 T=26.14 C  H=62.55 %
+[SAMPLE #  70] ts=112182 ms  T=26.1 C  H=61.6 %  | avg10 T=26.17 C  H=62.56 %
+[SAMPLE #  71] ts=112683 ms  T=26.1 C  H=62.4 %  | avg10 T=26.20 C  H=62.55 %
+[SAMPLE #  72] ts=113182 ms  T=25.7 C  H=62.9 %  | avg10 T=26.14 C  H=62.59 %
+[SAMPLE #  73] ts=113682 ms  T=25.9 C  H=62.1 %  | avg10 T=26.10 C  H=62.49 %
+[SAMPLE #  74] ts=114182 ms  T=25.6 C  H=62.6 %  | avg10 T=26.01 C  H=62.38 %
+[SAMPLE #  75] ts=114682 ms  T=25.7 C  H=62.9 %  | avg10 T=25.96 C  H=62.39 %
+[SAMPLE #  76] ts=115182 ms  T=25.4 C  H=63.6 %  | avg10 T=25.84 C  H=62.49 %
+[SAMPLE #  77] ts=115682 ms  T=25.6 C  H=64.5 %  | avg10 T=25.77 C  H=62.71 %
+[SAMPLE #  78] ts=116182 ms  T=25.6 C  H=64.4 %  | avg10 T=25.75 C  H=62.94 %
+[SAMPLE #  79] ts=116682 ms  T=25.1 C  H=63.8 %  | avg10 T=25.68 C  H=63.08 %
+[SAMPLE #  80] ts=117182 ms  T=24.6 C  H=64.3 %  | avg10 T=25.53 C  H=63.35 %
+[SAMPLE #  81] ts=117682 ms  T=25.0 C  H=63.5 %  | avg10 T=25.42 C  H=63.46 %
+[SAMPLE #  82] ts=118182 ms  T=24.8 C  H=63.7 %  | avg10 T=25.33 C  H=63.54 %
+[SAMPLE #  83] ts=118682 ms  T=25.3 C  H=62.7 %  | avg10 T=25.27 C  H=63.60 %
+[SAMPLE #  84] ts=119182 ms  T=25.2 C  H=62.4 %  | avg10 T=25.23 C  H=63.58 %
+[SAMPLE #  85] ts=119682 ms  T=25.7 C  H=63.1 %  | avg10 T=25.23 C  H=63.60 %
+[SAMPLE #  86] ts=120183 ms  T=26.1 C  H=62.9 %  | avg10 T=25.30 C  H=63.53 %
+[SAMPLE #  87] ts=120682 ms  T=26.1 C  H=63.7 %  | avg10 T=25.35 C  H=63.45 %
+[SAMPLE #  88] ts=121182 ms  T=25.8 C  H=63.7 %  | avg10 T=25.37 C  H=63.38 %
+[SAMPLE #  89] ts=121682 ms  T=26.3 C  H=64.5 %  | avg10 T=25.49 C  H=63.45 %
+[SAMPLE #  90] ts=122182 ms  T=25.8 C  H=64.3 %  | avg10 T=25.61 C  H=63.45 %
+[SAMPLE #  91] ts=122682 ms  T=25.6 C  H=65.3 %  | avg10 T=25.67 C  H=63.63 %
+[SAMPLE #  92] ts=123182 ms  T=25.7 C  H=64.5 %  | avg10 T=25.76 C  H=63.71 %
+[SAMPLE #  93] ts=123682 ms  T=25.6 C  H=63.6 %  | avg10 T=25.79 C  H=63.80 %
+[SAMPLE #  94] ts=124182 ms  T=25.6 C  H=64.6 %  | avg10 T=25.83 C  H=64.02 %
+[SAMPLE #  95] ts=124682 ms  T=26.0 C  H=65.3 %  | avg10 T=25.86 C  H=64.24 %
+[SAMPLE #  96] ts=125182 ms  T=25.7 C  H=65.0 %  | avg10 T=25.82 C  H=64.45 %
+[SAMPLE #  97] ts=125682 ms  T=25.9 C  H=64.9 %  | avg10 T=25.80 C  H=64.57 %
+[SAMPLE #  98] ts=126182 ms  T=26.3 C  H=64.6 %  | avg10 T=25.85 C  H=64.66 %
+[SAMPLE #  99] ts=126682 ms  T=25.8 C  H=64.0 %  | avg10 T=25.80 C  H=64.61 %
+[SAMPLE # 100] ts=127182 ms  T=26.0 C  H=63.5 %  | avg10 T=25.82 C  H=64.53 %
+[SAMPLE # 101] ts=127682 ms  T=25.9 C  H=62.7 %  | avg10 T=25.85 C  H=64.27 %
+[ALERT][2026-10-16 00:02:38.405] TYPE: HUMID_HIGH VALUE: 86.8% THRESHOLD: 80.0% (sample #102)
+[SAMPLE # 102] ts=128182 ms  T=25.8 C  H=86.8 %  | avg10 T=25.86 C  H=66.50 %
+[SAMPLE # 103] ts=128683 ms  T=26.0 C  H=62.0 %  | avg10 T=25.90 C  H=66.34 %
+[SAMPLE # 104] ts=129182 ms  T=26.2 C  H=62.1 %  | avg10 T=25.96 C  H=66.09 %
+[SAMPLE # 105] ts=129682 ms  T=26.6 C  H=61.2 %  | avg10 T=26.02 C  H=65.68 %
+[SAMPLE # 106] ts=130182 ms  T=26.8 C  H=60.6 %  | avg10 T=26.13 C  H=65.24 %
+[SAMPLE # 107] ts=130682 ms  T=27.2 C  H=61.6 %  | avg10 T=26.26 C  H=64.91 %
+[SAMPLE # 108] ts=131182 ms  T=27.5 C  H=60.9 %  | avg10 T=26.38 C  H=64.54 %
+[ALERT][2026-10-16 00:02:41.905] TYPE: TEMP_HIGH VALUE: 40.8C THRESHOLD: 40.0C (sample #109)
+[ALERT][2026-10-16 00:02:41.906] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C (sample #109)
+[SAMPLE # 109] ts=131683 ms  T=40.8 C  H=60.4 %  | avg10 T=27.88 C  H=64.18 %
+[ALERT][2026-10-16 00:02:42.405] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C (sample #110)
+[SAMPLE # 110] ts=132182 ms  T=27.5 C  H=59.4 %  | avg10 T=28.03 C  H=63.77 %
+[SAMPLE # 111] ts=132683 ms  T=27.9 C  H=59.1 %  | avg10 T=28.23 C  H=63.41 %
+[SAMPLE # 112] ts=133182 ms  T=27.6 C  H=59.4 %  | avg10 T=28.41 C  H=60.67 %
+[SAMPLE # 113] ts=133682 ms  T=27.1 C  H=60.0 %  | avg10 T=28.52 C  H=60.47 %
+[SAMPLE # 114] ts=134182 ms  T=27.4 C  H=61.0 %  | avg10 T=28.64 C  H=60.36 %
+[SAMPLE # 115] ts=134682 ms  T=26.9 C  H=61.3 %  | avg10 T=28.67 C  H=60.37 %
+[SAMPLE # 116] ts=135182 ms  T=27.4 C  H=61.3 %  | avg10 T=28.73 C  H=60.44 %
+[SAMPLE # 117] ts=135682 ms  T=27.3 C  H=61.7 %  | avg10 T=28.74 C  H=60.45 %
+[SAMPLE # 118] ts=136182 ms  T=27.3 C  H=61.1 %  | avg10 T=28.72 C  H=60.47 %
+[SAMPLE # 119] ts=136682 ms  T=26.8 C  H=60.5 %  | avg10 T=27.32 C  H=60.48 %
+[SAMPLE # 120] ts=137182 ms  T=27.3 C  H=60.9 %  | avg10 T=27.30 C  H=60.63 %
+
+[main] duration reached -> shutting down...
+[main] all threads joined, /dev/sms_sensor closed
+================ SMS SUMMARY ================
+Stop reason        : duration reached
+Uptime             : 60.5 s
+Samples read       : 120 (EAGAIN retries 0, EINTR 0, EOF 0, errors 0)
+Samples processed  : 120
+Shared buffer      : produced=120 consumed=120 overflow=0 (0.00%) size=0/64
+Alerts             : TEMP_HIGH=2 HUMID_HIGH=1 TEMP_SPIKE=4 (total 7)
+Last avg10         : T=27.30 C  H=60.63 %
+Log file           : /tmp/sms.log (lines=138, flushes=12, rotations=0, dropped=0)
+Memory lock        : mlockall OK
+Sensor overruns    : 0
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_FIFO (prio 50)
+Interval        : 500 ms
+Samples         : 121
+Min / Avg / Max : 178 / 527.2 / 1785 us
+P99             : 850 us
+Histogram:
+  0-100us    :      0 (  0.0%) 
+  100-500us  :     56 ( 46.3%) #######################
+  500-1000us :     64 ( 52.9%) ##########################
+  >1000us    :      1 (  0.8%) 
+=============================================
+=== SAMPLE_RUN END ===
+=== SMS_LOG START ===
+2026-10-16 00:01:47.396 [logger] thread started
+2026-10-16 00:01:47.398 [main] SMS started: pid=78 interval=500 ms T>40.0 H>80.0 duration=60 s policy=fifo
+2026-10-16 00:01:47.399 [processor] thread started (window=10, T>40.0, H>80.0, spike>5.0)
+2026-10-16 00:01:47.404 [alert] thread started, waiting on /sms_alarm
+2026-10-16 00:01:47.406 [sensor] thread started (SCHED_FIFO prio 50, interval 500 ms, device /dev/sms_sensor)
+2026-10-16 00:01:47.919 [processor] sample=#1 ts=77685 T=28.4 H=60.8 avgT=28.40 avgH=60.80
+2026-10-16 00:01:48.405 [processor] sample=#2 ts=78182 T=28.9 H=61.5 avgT=28.65 avgH=61.15
+2026-10-16 00:01:48.905 [processor] sample=#3 ts=78682 T=29.4 H=61.8 avgT=28.90 avgH=61.37
+2026-10-16 00:01:49.405 [processor] sample=#4 ts=79182 T=28.9 H=62.0 avgT=28.90 avgH=61.52
+2026-10-16 00:01:49.906 [processor] sample=#5 ts=79682 T=28.9 H=61.7 avgT=28.90 avgH=61.56
+2026-10-16 00:01:50.405 [processor] sample=#6 ts=80182 T=28.4 H=61.7 avgT=28.82 avgH=61.58
+2026-10-16 00:01:50.905 [processor] sample=#7 ts=80682 T=28.4 H=61.1 avgT=28.76 avgH=61.51
+2026-10-16 00:01:51.405 [processor] sample=#8 ts=81182 T=28.8 H=60.8 avgT=28.76 avgH=61.43
+2026-10-16 00:01:51.905 [processor] sample=#9 ts=81682 T=28.3 H=60.4 avgT=28.71 avgH=61.31
+2026-10-16 00:01:52.404 [processor] sample=#10 ts=82182 T=28.5 H=60.5 avgT=28.69 avgH=61.23
+2026-10-16 00:01:52.906 [processor] sample=#11 ts=82682 T=28.3 H=60.4 avgT=28.68 avgH=61.19
+2026-10-16 00:01:53.405 [processor] sample=#12 ts=83182 T=28.2 H=60.9 avgT=28.61 avgH=61.13
+2026-10-16 00:01:53.905 [processor] sample=#13 ts=83682 T=28.3 H=60.6 avgT=28.50 avgH=61.01
+2026-10-16 00:01:54.405 [processor] sample=#14 ts=84182 T=28.1 H=59.6 avgT=28.42 avgH=60.77
+2026-10-16 00:01:54.905 [processor] sample=#15 ts=84682 T=28.1 H=60.6 avgT=28.34 avgH=60.66
+2026-10-16 00:01:55.405 [processor] sample=#16 ts=85182 T=28.4 H=59.7 avgT=28.34 avgH=60.46
+2026-10-16 00:01:55.905 [processor] sample=#17 ts=85682 T=27.9 H=59.7 avgT=28.29 avgH=60.32
+2026-10-16 00:01:56.405 [processor] sample=#18 ts=86182 T=27.6 H=60.2 avgT=28.17 avgH=60.26
+2026-10-16 00:01:56.905 [processor] sample=#19 ts=86682 T=27.3 H=60.3 avgT=28.07 avgH=60.25
+2026-10-16 00:01:57.405 [processor] sample=#20 ts=87182 T=27.1 H=60.0 avgT=27.93 avgH=60.20
+2026-10-16 00:01:57.905 [processor] sample=#21 ts=87682 T=26.7 H=59.2 avgT=27.77 avgH=60.08
+2026-10-16 00:01:58.405 [processor] sample=#22 ts=88182 T=26.9 H=60.2 avgT=27.64 avgH=60.01
+2026-10-16 00:01:58.906 [processor] sample=#23 ts=88683 T=26.9 H=59.4 avgT=27.50 avgH=59.89
+2026-10-16 00:01:59.405 [processor] sample=#24 ts=89182 T=26.5 H=58.7 avgT=27.34 avgH=59.80
+2026-10-16 00:01:59.905 [processor] sample=#25 ts=89682 T=27.0 H=59.4 avgT=27.23 avgH=59.68
+2026-10-16 00:02:00.405 [processor] sample=#26 ts=90182 T=26.8 H=59.9 avgT=27.07 avgH=59.70
+2026-10-16 00:02:00.905 [processor] sample=#27 ts=90682 T=26.5 H=59.9 avgT=26.93 avgH=59.72
+2026-10-16 00:02:01.405 [processor] sample=#28 ts=91182 T=27.0 H=60.6 avgT=26.87 avgH=59.76
+2026-10-16 00:02:01.906 [processor] sample=#29 ts=91683 T=26.8 H=60.9 avgT=26.82 avgH=59.82
+2026-10-16 00:02:02.405 [processor] sample=#30 ts=92182 T=26.7 H=60.7 avgT=26.78 avgH=59.89
+2026-10-16 00:02:02.905 [processor] sample=#31 ts=92682 T=26.9 H=59.8 avgT=26.80 avgH=59.95
+2026-10-16 00:02:03.405 [processor] sample=#32 ts=93182 T=26.6 H=59.8 avgT=26.77 avgH=59.91
+2026-10-16 00:02:03.905 [processor] sample=#33 ts=93682 T=26.1 H=60.8 avgT=26.69 avgH=60.05
+2026-10-16 00:02:04.405 [processor] sample=#34 ts=94182 T=26.2 H=60.8 avgT=26.66 avgH=60.26
+2026-10-16 00:02:04.905 [processor] sample=#35 ts=94682 T=26.0 H=59.8 avgT=26.56 avgH=60.30
+2026-10-16 00:02:05.405 [processor] sample=#36 ts=95182 T=25.8 H=60.3 avgT=26.46 avgH=60.34
+2026-10-16 00:02:05.905 [processor] sample=#37 ts=95682 T=25.9 H=60.3 avgT=26.40 avgH=60.38
+2026-10-16 00:02:06.405 [processor] sample=#38 ts=96182 T=25.4 H=61.0 avgT=26.24 avgH=60.42
+2026-10-16 00:02:06.905 [processor] sample=#39 ts=96682 T=25.7 H=60.5 avgT=26.13 avgH=60.38
+2026-10-16 00:02:07.404 [processor] sample=#40 ts=97182 T=26.2 H=61.0 avgT=26.08 avgH=60.41
+2026-10-16 00:02:07.904 [processor] sample=#41 ts=97682 T=25.8 H=60.7 avgT=25.97 avgH=60.50
+2026-10-16 00:02:08.404 [processor] sample=#42 ts=98182 T=26.1 H=60.0 avgT=25.92 avgH=60.52
+2026-10-16 00:02:08.905 [processor] sample=#43 ts=98682 T=26.6 H=60.0 avgT=25.97 avgH=60.44
+2026-10-16 00:02:09.405 [processor] sample=#44 ts=99182 T=26.4 H=60.6 avgT=25.99 avgH=60.42
+2026-10-16 00:02:09.905 [processor] sample=#45 ts=99682 T=25.9 H=61.6 avgT=25.98 avgH=60.60
+2026-10-16 00:02:10.405 [processor] sample=#46 ts=100182 T=26.2 H=61.0 avgT=26.02 avgH=60.67
+2026-10-16 00:02:10.905 [processor] sample=#47 ts=100682 T=26.6 H=60.1 avgT=26.09 avgH=60.65
+2026-10-16 00:02:11.405 [processor] sample=#48 ts=101182 T=26.2 H=60.4 avgT=26.17 avgH=60.59
+2026-10-16 00:02:11.905 [processor] sample=#49 ts=101682 T=26.2 H=61.1 avgT=26.22 avgH=60.65
+2026-10-16 00:02:12.405 [processor] sample=#50 ts=102182 T=25.9 H=61.0 avgT=26.19 avgH=60.65
+2026-10-16 00:02:12.905 [processor] sample=#51 ts=102682 T=26.0 H=62.0 avgT=26.21 avgH=60.78
+2026-10-16 00:02:13.406 [processor] sample=#52 ts=103182 T=26.2 H=62.9 avgT=26.22 avgH=61.07
+2026-10-16 00:02:13.905 [processor] sample=#53 ts=103682 T=26.1 H=62.3 avgT=26.17 avgH=61.30
+2026-10-16 00:02:14.405 [processor] sample=#54 ts=104182 T=26.2 H=62.9 avgT=26.15 avgH=61.53
+2026-10-16 00:02:14.905 [processor] sample=#55 ts=104682 T=26.6 H=63.9 avgT=26.22 avgH=61.76
+2026-10-16 00:02:15.405 [processor] sample=#56 ts=105182 T=26.2 H=63.9 avgT=26.22 avgH=62.05
+2026-10-16 00:02:15.905 [processor] sample=#57 ts=105682 T=26.1 H=63.1 avgT=26.17 avgH=62.35
+2026-10-16 00:02:16.407 [alert] TYPE: TEMP_HIGH VALUE: 44.3C THRESHOLD: 40.0C sample=#58 ts=106182
+2026-10-16 00:02:16.408 [alert] TYPE: TEMP_SPIKE VALUE: 18.2C THRESHOLD: 5.0C sample=#58 ts=106182
+2026-10-16 00:02:16.409 [processor] sample=#58 ts=106182 T=44.3 H=62.2 avgT=27.98 avgH=62.53
+2026-10-16 00:02:16.905 [alert] TYPE: TEMP_SPIKE VALUE: 18.9C THRESHOLD: 5.0C sample=#59 ts=106682
+2026-10-16 00:02:16.905 [processor] sample=#59 ts=106682 T=25.4 H=61.2 avgT=27.90 avgH=62.54
+2026-10-16 00:02:17.404 [processor] sample=#60 ts=107182 T=25.8 H=61.5 avgT=27.89 avgH=62.59
+2026-10-16 00:02:17.905 [processor] sample=#61 ts=107682 T=25.8 H=62.5 avgT=27.87 avgH=62.64
+2026-10-16 00:02:18.405 [processor] sample=#62 ts=108182 T=26.3 H=62.5 avgT=27.88 avgH=62.60
+2026-10-16 00:02:18.904 [processor] sample=#63 ts=108682 T=26.3 H=63.1 avgT=27.90 avgH=62.68
+2026-10-16 00:02:19.405 [processor] sample=#64 ts=109182 T=26.5 H=63.7 avgT=27.93 avgH=62.76
+2026-10-16 00:02:19.905 [processor] sample=#65 ts=109682 T=26.2 H=62.8 avgT=27.89 avgH=62.65
+2026-10-16 00:02:20.405 [processor] sample=#66 ts=110182 T=26.6 H=62.6 avgT=27.93 avgH=62.52
+2026-10-16 00:02:20.905 [processor] sample=#67 ts=110682 T=26.3 H=62.3 avgT=27.95 avgH=62.44
+2026-10-16 00:02:21.405 [processor] sample=#68 ts=111182 T=25.8 H=62.1 avgT=26.10 avgH=62.43
+2026-10-16 00:02:21.905 [processor] sample=#69 ts=111682 T=25.8 H=62.4 avgT=26.14 avgH=62.55
+2026-10-16 00:02:22.405 [processor] sample=#70 ts=112182 T=26.1 H=61.6 avgT=26.17 avgH=62.56
+2026-10-16 00:02:22.906 [processor] sample=#71 ts=112683 T=26.1 H=62.4 avgT=26.20 avgH=62.55
+2026-10-16 00:02:23.405 [processor] sample=#72 ts=113182 T=25.7 H=62.9 avgT=26.14 avgH=62.59
+2026-10-16 00:02:23.905 [processor] sample=#73 ts=113682 T=25.9 H=62.1 avgT=26.10 avgH=62.49
+2026-10-16 00:02:24.405 [processor] sample=#74 ts=114182 T=25.6 H=62.6 avgT=26.01 avgH=62.38
+2026-10-16 00:02:24.905 [processor] sample=#75 ts=114682 T=25.7 H=62.9 avgT=25.96 avgH=62.39
+2026-10-16 00:02:25.405 [processor] sample=#76 ts=115182 T=25.4 H=63.6 avgT=25.84 avgH=62.49
+2026-10-16 00:02:25.905 [processor] sample=#77 ts=115682 T=25.6 H=64.5 avgT=25.77 avgH=62.71
+2026-10-16 00:02:26.405 [processor] sample=#78 ts=116182 T=25.6 H=64.4 avgT=25.75 avgH=62.94
+2026-10-16 00:02:26.905 [processor] sample=#79 ts=116682 T=25.1 H=63.8 avgT=25.68 avgH=63.08
+2026-10-16 00:02:27.405 [processor] sample=#80 ts=117182 T=24.6 H=64.3 avgT=25.53 avgH=63.35
+2026-10-16 00:02:27.905 [processor] sample=#81 ts=117682 T=25.0 H=63.5 avgT=25.42 avgH=63.46
+2026-10-16 00:02:28.405 [processor] sample=#82 ts=118182 T=24.8 H=63.7 avgT=25.33 avgH=63.54
+2026-10-16 00:02:28.905 [processor] sample=#83 ts=118682 T=25.3 H=62.7 avgT=25.27 avgH=63.60
+2026-10-16 00:02:29.405 [processor] sample=#84 ts=119182 T=25.2 H=62.4 avgT=25.23 avgH=63.58
+2026-10-16 00:02:29.905 [processor] sample=#85 ts=119682 T=25.7 H=63.1 avgT=25.23 avgH=63.60
+2026-10-16 00:02:30.406 [processor] sample=#86 ts=120183 T=26.1 H=62.9 avgT=25.30 avgH=63.53
+2026-10-16 00:02:30.905 [processor] sample=#87 ts=120682 T=26.1 H=63.7 avgT=25.35 avgH=63.45
+2026-10-16 00:02:31.405 [processor] sample=#88 ts=121182 T=25.8 H=63.7 avgT=25.37 avgH=63.38
+2026-10-16 00:02:31.905 [processor] sample=#89 ts=121682 T=26.3 H=64.5 avgT=25.49 avgH=63.45
+2026-10-16 00:02:32.405 [processor] sample=#90 ts=122182 T=25.8 H=64.3 avgT=25.61 avgH=63.45
+2026-10-16 00:02:32.905 [processor] sample=#91 ts=122682 T=25.6 H=65.3 avgT=25.67 avgH=63.63
+2026-10-16 00:02:33.405 [processor] sample=#92 ts=123182 T=25.7 H=64.5 avgT=25.76 avgH=63.71
+2026-10-16 00:02:33.905 [processor] sample=#93 ts=123682 T=25.6 H=63.6 avgT=25.79 avgH=63.80
+2026-10-16 00:02:34.405 [processor] sample=#94 ts=124182 T=25.6 H=64.6 avgT=25.83 avgH=64.02
+2026-10-16 00:02:34.905 [processor] sample=#95 ts=124682 T=26.0 H=65.3 avgT=25.86 avgH=64.24
+2026-10-16 00:02:35.405 [processor] sample=#96 ts=125182 T=25.7 H=65.0 avgT=25.82 avgH=64.45
+2026-10-16 00:02:35.905 [processor] sample=#97 ts=125682 T=25.9 H=64.9 avgT=25.80 avgH=64.57
+2026-10-16 00:02:36.405 [processor] sample=#98 ts=126182 T=26.3 H=64.6 avgT=25.85 avgH=64.66
+2026-10-16 00:02:36.906 [processor] sample=#99 ts=126682 T=25.8 H=64.0 avgT=25.80 avgH=64.61
+2026-10-16 00:02:37.405 [processor] sample=#100 ts=127182 T=26.0 H=63.5 avgT=25.82 avgH=64.53
+2026-10-16 00:02:37.906 [processor] sample=#101 ts=127682 T=25.9 H=62.7 avgT=25.85 avgH=64.27
+2026-10-16 00:02:38.406 [alert] TYPE: HUMID_HIGH VALUE: 86.8% THRESHOLD: 80.0% sample=#102 ts=128182
+2026-10-16 00:02:38.407 [processor] sample=#102 ts=128182 T=25.8 H=86.8 avgT=25.86 avgH=66.50
+2026-10-16 00:02:38.906 [processor] sample=#103 ts=128683 T=26.0 H=62.0 avgT=25.90 avgH=66.34
+2026-10-16 00:02:39.405 [processor] sample=#104 ts=129182 T=26.2 H=62.1 avgT=25.96 avgH=66.09
+2026-10-16 00:02:39.905 [processor] sample=#105 ts=129682 T=26.6 H=61.2 avgT=26.02 avgH=65.68
+2026-10-16 00:02:40.406 [processor] sample=#106 ts=130182 T=26.8 H=60.6 avgT=26.13 avgH=65.24
+2026-10-16 00:02:40.906 [processor] sample=#107 ts=130682 T=27.2 H=61.6 avgT=26.26 avgH=64.91
+2026-10-16 00:02:41.405 [processor] sample=#108 ts=131182 T=27.5 H=60.9 avgT=26.38 avgH=64.54
+2026-10-16 00:02:41.906 [alert] TYPE: TEMP_HIGH VALUE: 40.8C THRESHOLD: 40.0C sample=#109 ts=131683
+2026-10-16 00:02:41.908 [alert] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C sample=#109 ts=131683
+2026-10-16 00:02:41.908 [processor] sample=#109 ts=131683 T=40.8 H=60.4 avgT=27.88 avgH=64.18
+2026-10-16 00:02:42.406 [alert] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C sample=#110 ts=132182
+2026-10-16 00:02:42.406 [processor] sample=#110 ts=132182 T=27.5 H=59.4 avgT=28.03 avgH=63.77
+2026-10-16 00:02:42.905 [processor] sample=#111 ts=132683 T=27.9 H=59.1 avgT=28.23 avgH=63.41
+2026-10-16 00:02:43.405 [processor] sample=#112 ts=133182 T=27.6 H=59.4 avgT=28.41 avgH=60.67
+2026-10-16 00:02:43.905 [processor] sample=#113 ts=133682 T=27.1 H=60.0 avgT=28.52 avgH=60.47
+2026-10-16 00:02:44.405 [processor] sample=#114 ts=134182 T=27.4 H=61.0 avgT=28.64 avgH=60.36
+2026-10-16 00:02:44.905 [processor] sample=#115 ts=134682 T=26.9 H=61.3 avgT=28.67 avgH=60.37
+2026-10-16 00:02:45.405 [processor] sample=#116 ts=135182 T=27.4 H=61.3 avgT=28.73 avgH=60.44
+2026-10-16 00:02:45.905 [processor] sample=#117 ts=135682 T=27.3 H=61.7 avgT=28.74 avgH=60.45
+2026-10-16 00:02:46.405 [processor] sample=#118 ts=136182 T=27.3 H=61.1 avgT=28.72 avgH=60.47
+2026-10-16 00:02:46.905 [processor] sample=#119 ts=136682 T=26.8 H=60.5 avgT=27.32 avgH=60.48
+2026-10-16 00:02:47.405 [processor] sample=#120 ts=137182 T=27.3 H=60.9 avgT=27.30 avgH=60.63
+2026-10-16 00:02:47.441 [main] shutdown requested (duration reached)
+2026-10-16 00:02:47.904 [sensor] thread stopped (reads=120, eagain=0, dropped=0)
+2026-10-16 00:02:47.915 [processor] thread stopped (processed=120, alarms=7, dropped=0)
+2026-10-16 00:02:47.917 [alert] thread stopped (TEMP_HIGH=2, HUMID_HIGH=1, TEMP_SPIKE=4)
+2026-10-16 00:02:47.918 [main] summary: samples=120 processed=120 alerts=7 overflow=0 uptime=60.5 s
+2026-10-16 00:02:47.918 [logger] thread stopped (lines=137, flushes=12, rotations=0, dropped=0)
+=== SMS_LOG END ===
+=== SIGINT_TEST START ===
+exit code after SIGINT = 0
+[main] driver interval set to 500 ms (ioctl SMS_SET_INTERVAL)
+[main] SMS running (pid 99): interval=500 ms, T>40.0 C, H>80.0 %, duration=infinite. Ctrl+C to stop.
+
+[main] SIGINT -> shutting down...
+[main] all threads joined, /dev/sms_sensor closed
+================ SMS SUMMARY ================
+Stop reason        : SIGINT
+Uptime             : 3.5 s
+Samples read       : 6 (EAGAIN retries 0, EINTR 0, EOF 0, errors 0)
+Samples processed  : 6
+Shared buffer      : produced=6 consumed=6 overflow=0 (0.00%) size=0/64
+Alerts             : TEMP_HIGH=0 HUMID_HIGH=0 TEMP_SPIKE=0 (total 0)
+Last avg10         : T=27.33 C  H=61.27 %
+Log file           : /tmp/sms_sigint.log (lines=17, flushes=0, rotations=0, dropped=0)
+Memory lock        : mlockall OK
+Sensor overruns    : 0
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_FIFO (prio 50)
+Interval        : 500 ms
+Samples         : 7
+Min / Avg / Max : 559 / 732.3 / 1401 us
+P99             : 1401 us
+Histogram:
+  0-100us    :      0 (  0.0%) 
+  100-500us  :      0 (  0.0%) 
+  500-1000us :      6 ( 85.7%) ##########################################
+  >1000us    :      1 ( 14.3%) #######
+=============================================
+--- /dev/mqueue after exit (empty = queues removed):
+=== SIGINT_TEST END ===
+=== DMESG START ===
+sms_sensor_driver: loading out-of-tree module taints kernel.
+sms_sensor: loaded, /dev/sms_sensor (major 10, minor 125), interval=100 ms, spike_rate=5%
+sms_sensor: unloaded (read_count=3)
+sms_sensor: loaded, /dev/sms_sensor (major 10, minor 125), interval=100 ms, spike_rate=5%
+sms_sensor: ioctl SET_INTERVAL -> 500 ms
+sms_sensor: ioctl SET_INTERVAL -> 500 ms
+=== DMESG END ===
+test_sms.sh finished
+/ # # Gõ trong QEMU
+/ # jitter_test.sh
+=== JITTER_TEST START ===
+interval=10 ms, duration=15 s per run, CPUs=2
+
+########## policy=fifo  background_load=0 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_FIFO (prio 50)
+Interval        : 10 ms
+Samples         : 1501
+Min / Avg / Max : 91 / 442.7 / 892 us
+P99             : 684 us
+Histogram:
+  0-100us    :      1 (  0.1%) 
+  100-500us  :   1040 ( 69.3%) ##################################
+  500-1000us :    460 ( 30.6%) ###############
+  >1000us    :      0 (  0.0%) 
+
+########## policy=other  background_load=0 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_OTHER (prio 0)
+Interval        : 10 ms
+Samples         : 1501
+Min / Avg / Max : 182 / 492.8 / 1021 us
+P99             : 725 us
+Histogram:
+  0-100us    :      0 (  0.0%) 
+  100-500us  :    870 ( 58.0%) ############################
+  500-1000us :    630 ( 42.0%) ####################
+  >1000us    :      1 (  0.1%) 
+
+########## policy=fifo  background_load=4 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_FIFO (prio 50)
+Interval        : 10 ms
+Samples         : 1498
+Min / Avg / Max : 78 / 127.7 / 2103 us
+P99             : 185 us
+Histogram:
+  0-100us    :    399 ( 26.6%) #############
+  100-500us  :   1098 ( 73.3%) ####################################
+  500-1000us :      0 (  0.0%) 
+  >1000us    :      1 (  0.1%) 
+
+########## policy=other  background_load=4 busy loop(s)  (exit code 0) ##########
+===== JITTER REPORT (Sensor Thread) =====
+Policy          : SCHED_OTHER (prio 0)
+Interval        : 10 ms
+Samples         : 1501
+Min / Avg / Max : 136 / 161.0 / 342 us
+P99             : 248 us
+Histogram:
+  0-100us    :      0 (  0.0%) 
+  100-500us  :   1501 (100.0%) ##################################################
+  500-1000us :      0 (  0.0%) 
+  >1000us    :      0 (  0.0%) 
+=== JITTER_TEST END ===
+/ # 
+/ # QEMU: Terminated
+
+Script done on 2026-10-16 07:16:14+07:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,14 @@
+#!/bin/sh
+# /etc/init.d/rcS - ASSIGNMENT-02: mount filesystem ảo, không tự nạp driver
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t tmpfs none /tmp
+mount -t devtmpfs none /dev 2>/dev/null || true
+mkdir -p /dev/mqueue
+mount -t mqueue none /dev/mqueue 2>/dev/null
+[ -c /dev/console ] || mknod /dev/console c 5 1
+[ -c /dev/null ] || mknod /dev/null c 1 3
+hostname asgn2
+# Không in log kernel chen vào màn hình; xem bằng lệnh dmesg
+dmesg -n 1
+echo '[ ASGN2 ] Ready. Run: test_sms.sh  then  jitter_test.sh'

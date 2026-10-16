@@ -1,0 +1,50 @@
+--- T=5s
+VmPeak:	    3340 kB
+VmSize:	    2836 kB
+VmLck:	    2824 kB
+VmRSS:	    1752 kB
+VmData:	    1312 kB
+VmStk:	     132 kB
+Threads:	5
+--- T=30s
+VmPeak:	    3340 kB
+VmSize:	    2836 kB
+VmLck:	    2824 kB
+VmRSS:	    1752 kB
+VmData:	    1312 kB
+VmStk:	     132 kB
+Threads:	5
+--- T=55s
+VmPeak:	    3340 kB
+VmSize:	    2836 kB
+VmLck:	    2824 kB
+VmRSS:	    1752 kB
+VmData:	    1312 kB
+VmStk:	     132 kB
+Threads:	5
+--- threads (T=30s)
+tid=78    (sms_app)       rt_priority=0   policy=SCHED_OTHER
+tid=80    (sms_logger)    rt_priority=0   policy=SCHED_OTHER
+tid=81    (sms_alert)     rt_priority=0   policy=SCHED_OTHER
+tid=82    (sms_processor) rt_priority=0   policy=SCHED_OTHER
+tid=83    (sms_sensor)    rt_priority=50  policy=SCHED_FIFO
+--- /proc/PID/maps (T=30s)
+00010000-00084000 r-xp 00000000 00:02 229        /usr/bin/sms_app
+00094000-00096000 r--p 00074000 00:02 229        /usr/bin/sms_app
+00096000-00098000 rw-p 00076000 00:02 229        /usr/bin/sms_app
+00098000-000bd000 rw-p 00000000 00:00 0          [heap]
+76d7e000-76d7f000 ---p 00000000 00:00 0 
+76d7f000-76dbf000 rw-p 00000000 00:00 0 
+76dbf000-76dc0000 ---p 00000000 00:00 0 
+76dc0000-76e00000 rw-p 00000000 00:00 0 
+76e00000-76e21000 rw-p 00000000 00:00 0 
+76e21000-76f00000 ---p 00000000 00:00 0 
+76f0c000-76f0d000 ---p 00000000 00:00 0 
+76f0d000-76f4d000 rw-p 00000000 00:00 0 
+76f4d000-76f4e000 ---p 00000000 00:00 0 
+76f4e000-76f8e000 rw-p 00000000 00:00 0 
+7ee35000-7ee56000 rw-p 00000000 00:00 0          [stack]
+7ef65000-7ef66000 r-xp 00000000 00:00 0          [sigpage]
+7ef66000-7ef67000 r--p 00000000 00:00 0          [vvar]
+7ef67000-7ef68000 r-xp 00000000 00:00 0          [vdso]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
