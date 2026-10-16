@@ -1,0 +1,61 @@
+#!/bin/sh
+
+echo '=== LAB-02 SYSTEM INITIALIZATION ==='
+
+# Prepare runtime filesystems.
+mkdir -p /tmp /dev
+
+grep -qs ' /tmp ' /proc/mounts ||
+    mount -t tmpfs tmpfs /tmp
+
+grep -qs ' /dev ' /proc/mounts ||
+    mount -t devtmpfs devtmpfs /dev
+
+MODULE="/lib/modules/$(uname -r)/lab2_driver.ko"
+
+echo "[LAB2] Target kernel: $(uname -r)"
+echo "[LAB2] Module path: $MODULE"
+
+# Load the module only when it is not already loaded.
+if grep -q '^lab2_driver ' /proc/modules; then
+    echo '[LAB2] lab2_driver is already loaded'
+elif [ ! -f "$MODULE" ]; then
+    echo "[LAB2] ERROR: module not found: $MODULE"
+elif insmod "$MODULE"; then
+    echo '[LAB2] Module loaded successfully'
+else
+    echo '[LAB2] ERROR: insmod failed'
+fi
+
+# DEVICE_NAME may appear as lab2 or lab2_driver in /proc/devices.
+MAJOR_NUMBER="$(
+    awk '$2 == "lab2" || $2 == "lab2_driver" {
+        print $1
+        exit
+    }' /proc/devices
+)"
+
+if grep -q '^lab2_driver ' /proc/modules &&
+   [ -n "$MAJOR_NUMBER" ]; then
+
+    # devtmpfs normally creates this automatically.
+    # mknod is retained as a fallback for minimal systems.
+    if [ ! -e /dev/lab2 ]; then
+        mknod /dev/lab2 c "$MAJOR_NUMBER" 0
+    fi
+
+    chmod 666 /dev/lab2
+
+    echo "[LAB2] Device ready: /dev/lab2 major=$MAJOR_NUMBER minor=0"
+else
+    echo '[LAB2] ERROR: driver or major number unavailable'
+fi
+
+hostname embedded-lab2
+
+echo 'Boot completed! Welcome to Embedded Linux Lab 2'
+echo '=== LAB-02 INITIALIZATION FINISHED ==='
+
+exit 0
+
+exit 0
