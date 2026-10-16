@@ -3,7 +3,7 @@ KDIR := $(HOME)/embedded_lab1/kernel/linux-5.15
 ARCH := arm
 CROSS_COMPILE := arm-linux-gnueabihf-
 
-# Tên module (phải khớp với tên file .c)
+# Tên module 
 obj-m += sms_sensor_driver.o
 ccflags-y += -march=armv7-a
 
