@@ -1,11 +1,6 @@
 /*
- * sensor_thread.c - Sensor Thread: doc /dev/sms_sensor theo chu ky, day vao shared_buffer
+ * sensor_thread.c
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * - SCHED_FIFO priority 50 (Task 4)
- * - clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME) de giu dung chu ky
- * - Do jitter = thoi diem thuc day thuc te - thoi diem du kien
  */
 #include <stdlib.h>
 #include <string.h>
@@ -17,12 +12,12 @@
 #include "sms.h"
 #include "sms_sensor.h"
 
-static int sensor_fd = -1;                 /* -1 = che do gia lap (-D sim) */
+static int sensor_fd = -1;         
 static long jitter_us[MAX_JITTER];
 static int jitter_n;
 static const char *policy_name = "SCHED_OTHER";
 
-/* Mo driver va dat interval qua ioctl. Tra ve -1 neu khong mo duoc. */
+
 int sensor_open(const char *path, int interval_ms)
 {
 	if (strcmp(path, SIM_DEV) == 0) {
@@ -46,7 +41,6 @@ void sensor_close(void)
 	sensor_fd = -1;
 }
 
-/* Gia lap cam bien khi chay tren PC (Valgrind/perf/GDB) - cung kieu random walk nhu driver */
 static void simulate_sample(SensorData *d)
 {
 	static float t = 30.0f, h = 60.0f;
@@ -67,7 +61,6 @@ static void simulate_sample(SensorData *d)
 	d->humid = h;
 }
 
-/* Doc 1 dong CSV tu driver. Tra ve 0 neu ok, -1 neu loi (da ghi log). */
 static int read_sample(SensorData *d)
 {
 	char line[64];
@@ -78,7 +71,6 @@ static int read_sample(SensorData *d)
 		return 0;
 	}
 
-	/* pread offset 0: driver tra 1 dong moi o moi lan doc tu dau file */
 	n = pread(sensor_fd, line, sizeof(line) - 1, 0);
 	if (n < 0) {
 		if (errno == EAGAIN)
@@ -159,7 +151,6 @@ static int cmp_long(const void *a, const void *b)
 	return (x > y) - (x < y);
 }
 
-/* Goi sau khi Sensor Thread da join -> khong can lock */
 void print_jitter_report(FILE *out)
 {
 	long sum = 0;
