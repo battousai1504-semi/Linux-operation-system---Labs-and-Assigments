@@ -115,34 +115,4 @@ Trên PC (x86) không có driver ARM, nên chạy `./sms_app_x86 -D sim`: Sensor
 
 Histogram đầy đủ: [jitter_report.txt](SE200988_NguyenTranQuang_Asgn02/logs/jitter_report.txt).
 
-## Ghi chú
-
-**Đồng bộ và deadlock.** App chỉ có **1 mutex** (`shared_buffer.lock`). Không chỗ nào giữ 2 lock cùng lúc, nên không có vòng chờ → không deadlock. Hai queue do kernel tự đồng bộ. Các biến dùng chung khác:
-- `running`: kiểu `volatile sig_atomic_t`, chỉ signal handler và main ghi.
-- `dropped_logs`: nhiều thread cùng tăng → dùng `__atomic_fetch_add`.
-- `alert_count[]`, mảng jitter: chỉ 1 thread ghi; main chỉ đọc **sau khi join** thread đó.
-- Driver: 1 mutex `sms_lock`; `copy_to_user` gọi sau khi đã unlock.
-
-**Lỗi ** Valgrind báo `mq_timedsend(msg_ptr) points to uninitialised byte(s)`: struct `Alarm` có 4 byte đệm giữa `int type` và `long long ts_ms`, gửi qua queue là gửi cả byte rác. Sửa bằng `memset` trước khi gán field (`alert_thread.c`).
-
-**Vì sao chọn như vậy.**
-- Circular buffer: cấp phát 1 lần, không `malloc` mỗi mẫu, nên không phân mảnh heap và không leak. Linked list thì mỗi mẫu phải malloc/free.
-- POSIX mq cho alarm: kernel lo việc chặn/đánh thức, không cần tự viết lock như shared memory.
-- Logger tách riêng: ghi file chậm và có thể bị chặn. Gửi log bằng `mq_send` kiểu `O_NONBLOCK`, nên Sensor Thread không bao giờ bị chặn vì ghi log; queue đầy thì bỏ log và tăng `dropped_logs`.
-
-**Memory.** RSS không đổi ở 3 thời điểm vì mọi bộ nhớ cấp phát lúc khởi động. Mảng jitter là mảng tĩnh, buffer malloc 1 lần. `VmLck ≈ VmSize` vì có `mlockall`. Trong `maps`:
-- `r-xp sms_app` là text.
-- `r--p` là rodata, `rw-p` là data/bss.
-- `[heap]`.
-- 4 vùng `rw-p` 256 KB kèm trang `---p` 4 KB là stack + guard page của 4 thread.
-- Vùng 1 MB `76d00000` là malloc arena của thread.
-- `[stack]` của main, `[vdso]`, `[vectors]`.
-- Không có thư viện `.so` vì binary ARM link `-static`.
-
-**strace.** `mq_timedreceive`: Logger và Alert chờ queue (glibc cài `mq_receive` bằng syscall này). `clock_nanosleep`: chu kỳ Sensor + `sleep(1)` của main. `futex`: mutex/cond của buffer. `mq_timedsend`: `log_msg` và `send_alarm`. `lseek`: do `ftell()` của Logger, mỗi dòng log gọi 1 lần (có thể tự cộng số byte để bỏ syscall này). Trên QEMU còn có `pread64` đọc driver; bản x86 `-D sim` không có. App thiên về chờ I/O và sleep, không phải CPU-bound.
-
-**perf.** Phần lớn mẫu nằm trong scheduler kernel (ngủ/thức), đúng với app chờ là chính. Trong user-space, tốn nhất là `strftime` (Logger format thời gian cho mỗi dòng) và `printf` số thực. Có thể cải tiến bằng cách chỉ gọi `strftime` 1 lần mỗi giây, rồi ghép thêm phần mili giây.
-
-**Jitter.** Trên QEMU TCG, SCHED_FIFO không cho kết quả tốt hơn rõ rệt: P99 không tải 2555 µs so với 2343 µs, có tải 4375 µs so với 3733 µs. Lý do: CPU ARM ảo là thread trên máy host, nên độ ưu tiên trong máy ảo không ảnh hưởng tới việc host chia CPU. Thêm vào đó kernel cấu hình `PREEMPT_NONE`. Với chu kỳ 500 ms, jitter vài ms (< 1 % chu kỳ) vẫn chấp nhận được. Muốn giảm thêm thì dùng kernel PREEMPT_RT, `isolcpus` dành riêng 1 CPU cho Sensor Thread, và đặt IRQ affinity sang CPU khác. Phải đo trên board thật mới thấy rõ hiệu quả.
-
-**EAGAIN.** Driver trả `EAGAIN` nếu 2 lần đọc cách nhau dưới 90 % interval. Ở chu kỳ 10 ms, một lần thức dậy trễ vài ms sẽ làm lần đọc sau đến sớm, nên Sensor Thread ghi log "driver not ready" và bỏ chu kỳ đó. Vì vậy `produced` (~1430–1480) nhỏ hơn số mẫu jitter (1501).
+Driver trả `EAGAIN` nếu 2 lần đọc cách nhau dưới 90 % interval. Ở chu kỳ 10 ms, một lần thức dậy trễ vài ms sẽ làm lần đọc sau đến sớm, nên Sensor Thread ghi log "driver not ready" và bỏ chu kỳ đó. Vì vậy `produced` (~1430–1480) nhỏ hơn số mẫu jitter (1501).
