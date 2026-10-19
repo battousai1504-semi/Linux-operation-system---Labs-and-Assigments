@@ -1,14 +1,7 @@
 /*
- * sms_app.c - Sensor Monitoring System: main, doc tham so, tao/dung 4 thread
+ * sms_app.c 
  * Author : Nguyen Tran Quang - SE200988
  * Date   : 2026-10-16
- *
- * Trang thai: INIT (doc tham so, mo driver, tao buffer/queue)
- *          -> RUNNING (4 thread chay, main ngu tung giay)
- *          -> SHUTDOWN (het thoi gian -d hoac Ctrl+C: dung thread theo thu tu, don dep)
- *
- * Exit code: 0 binh thuong, 1 tham so sai, 2 khong mo duoc driver,
- *            3 loi khoi tao (buffer/queue/log), 4 khong tao duoc thread.
  */
 #include <stdlib.h>
 #include <string.h>
