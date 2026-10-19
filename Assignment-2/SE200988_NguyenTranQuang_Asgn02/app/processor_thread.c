@@ -1,7 +1,6 @@
-/*
- * processor_thread.c
+/* processor_thread.c - Processor Thread: tinh trung binh va phat hien bat thuong
  * Author : Nguyen Tran Quang - SE200988
- */
+ * Date   : 2026-10-16 */
 #include <math.h>
 #include "sms.h"
 
@@ -32,7 +31,6 @@ void *processor_thread(void *arg)
 	while (cb_pop(&shared_buffer, &d) == 0) {
 		float sum_t = 0.0f, sum_h = 0.0f, avg_t, avg_h;
 
-		/* Cua so 10 mau gan nhat (mang vong nho) */
 		temps[idx] = d.temp;
 		hums[idx] = d.humid;
 		idx = (idx + 1) % AVG_WINDOW;

@@ -1,7 +1,6 @@
-/*
- * circular_buffer.c
+/* circular_buffer.c - Buffer vong an toan da luong (shared_buffer)
  * Author : Nguyen Tran Quang - SE200988
- */
+ * Date   : 2026-10-16 */
 #include <stdlib.h>
 #include "sms.h"
 
@@ -39,7 +38,7 @@ int cb_push(CircularBuffer *cb, const SensorData *d)
 		cb->head = (cb->head + 1) % BUFFER_SIZE;
 		cb->count++;
 		cb->produced++;
-		pthread_cond_signal(&cb->not_empty); 
+		pthread_cond_signal(&cb->not_empty);
 	}
 	pthread_mutex_unlock(&cb->lock);
 	return ret;
@@ -51,7 +50,7 @@ int cb_pop(CircularBuffer *cb, SensorData *d)
 	while (cb->count == 0 && !cb->stopped)
 		pthread_cond_wait(&cb->not_empty, &cb->lock);
 
-	if (cb->count == 0) {    
+	if (cb->count == 0) {
 		pthread_mutex_unlock(&cb->lock);
 		return -1;
 	}
@@ -62,7 +61,6 @@ int cb_pop(CircularBuffer *cb, SensorData *d)
 	pthread_mutex_unlock(&cb->lock);
 	return 0;
 }
-
 
 void cb_stop(CircularBuffer *cb)
 {

@@ -1,4 +1,4 @@
-# gdb_alert.gdb
+# gdb_alert.gdb - GDB kich ban B: gia lap nhiet do vuot nguong
 set pagination off
 set print thread-events off
 break detect_anomaly
@@ -17,7 +17,7 @@ echo \n===== [3] set variable temperature = 45.0 =====\n
 set variable temperature = 45.0
 print temperature
 delete 1
-break alert_thread.c:82
+break alert_thread.c:73
 continue
 
 echo \n===== [4] Alert Thread thuc day sau mq_receive =====\n

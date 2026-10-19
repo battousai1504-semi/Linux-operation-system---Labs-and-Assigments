@@ -1,7 +1,6 @@
-/*
- * logger_thread.c 
+/* logger_thread.c - Logger Thread + log_queue (POSIX message queue)
  * Author : Nguyen Tran Quang - SE200988
- */
+ * Date   : 2026-10-16 */
 #include <errno.h>
 #include <fcntl.h>
 #include <mqueue.h>
@@ -10,9 +9,9 @@
 #include <time.h>
 #include "sms.h"
 
-unsigned long dropped_logs;      
-static mqd_t log_q_send = (mqd_t)-1; 
-static mqd_t log_q_recv = (mqd_t)-1;     
+unsigned long dropped_logs;
+static mqd_t log_q_send = (mqd_t)-1;
+static mqd_t log_q_recv = (mqd_t)-1;
 static FILE *log_fp;
 static const char *log_path;
 
@@ -38,7 +37,6 @@ int logger_init(const char *path)
 	return 0;
 }
 
-
 void log_msg(const char *fmt, ...)
 {
 	char msg[LOG_MSG_LEN];
@@ -49,12 +47,11 @@ void log_msg(const char *fmt, ...)
 	va_end(ap);
 
 	if (mq_send(log_q_send, msg, strlen(msg) + 1, 0) != 0)
-		__atomic_fetch_add(&dropped_logs, 1, __ATOMIC_RELAXED);   /* nhieu thread cung tang */
+		__atomic_fetch_add(&dropped_logs, 1, __ATOMIC_RELAXED);
 }
 
 void logger_stop(void)
 {
-	/* Message rong = lenh dung. Queue day thi doi 1 ms roi thu lai. */
 	while (mq_send(log_q_send, "", 0, 0) != 0 && errno == EAGAIN) {
 		struct timespec ms = { 0, 1000000 };
 		nanosleep(&ms, NULL);
@@ -102,7 +99,7 @@ void *logger_thread(void *arg)
 				continue;
 			break;
 		}
-		if (n == 0)               
+		if (n == 0)
 			break;
 
 		clock_gettime(CLOCK_REALTIME, &now);
