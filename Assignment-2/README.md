@@ -1,4 +1,4 @@
-# Assignment 02 — Sensor Monitoring System (SMS) — bản đơn giản
+# Assignment 02 — Sensor Monitoring System (SMS)
 
 Sinh viên: **Nguyễn Trần Quang** — MSSV **SE200988** — Embedded Linux Systems
 
