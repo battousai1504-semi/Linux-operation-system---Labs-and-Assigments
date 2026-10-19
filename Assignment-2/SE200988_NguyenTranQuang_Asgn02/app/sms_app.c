@@ -33,7 +33,7 @@ CircularBuffer shared_buffer;
 static void on_signal(int sig)
 {
 	(void)sig;
-	running = 0;           /* chi dat co; cac thread tu kiem tra va thoat */
+	running = 0; 
 }
 
 static void usage(const char *prog)
@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
 		perror("WARNING: mlockall");
 
 	memset(&sa, 0, sizeof(sa));
-	sa.sa_handler = on_signal;          /* khong SA_RESTART: sleep() bi ngat ngay */
+	sa.sa_handler = on_signal;        
 	sigaction(SIGINT, &sa, NULL);
 	sigaction(SIGTERM, &sa, NULL);
 
@@ -188,13 +188,13 @@ int main(int argc, char *argv[])
 
 	/* ===== SHUTDOWN: dung theo chieu dong du lieu ===== */
 	printf("\n[main] shutting down...\n");
-	pthread_join(t_sensor, NULL);       /* 1. Sensor tu thoat vi running = 0   */
-	cb_stop(&shared_buffer);            /* 2. Processor xu ly not mau con lai  */
+	pthread_join(t_sensor, NULL);   
+	cb_stop(&shared_buffer);         
 	pthread_join(t_proc, NULL);
-	alert_stop();                       /* 3. Alert nhan ALARM_STOP            */
+	alert_stop();          
 	pthread_join(t_alert, NULL);
 	print_summary((long)(time(NULL) - start));
-	logger_stop();                      /* 4. Logger ghi het log roi thoat     */
+	logger_stop();                
 	pthread_join(t_logger, NULL);
 
 	pthread_attr_destroy(&attr);
