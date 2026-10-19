@@ -63,6 +63,4 @@ Khi có tải, SCHED_FIFO giảm P99 khoảng 25 %. Max vẫn 1.5–2.5 ms vì Q
 
 Chi tiết trong thư mục [logs/](SE200988_NguyenTranQuang_Asgn02/logs/).
 
----
 
-*Ghi chú: bài có sử dụng công cụ AI hỗ trợ trong quá trình thực hiện (môn học cho phép).*
