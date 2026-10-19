@@ -1,11 +1,6 @@
 /*
- * alert_thread.c - Alert Thread + alarm_queue (POSIX message queue)
+ * alert_thread.c
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * Processor goi send_alarm() -> mq_send vao /sms_alarm.
- * Alert Thread block tren mq_receive, in canh bao ra stderr, dem theo loai,
- * ghi log qua Logger Thread. Shutdown: main gui 1 alarm loai ALARM_STOP.
  */
 #include <errno.h>
 #include <fcntl.h>
