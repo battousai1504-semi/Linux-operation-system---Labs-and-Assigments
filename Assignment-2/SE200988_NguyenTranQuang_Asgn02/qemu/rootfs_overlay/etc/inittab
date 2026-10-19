@@ -1,6 +1,5 @@
 # /etc/inittab - ASSIGNMENT-02
 ::sysinit:/etc/init.d/rcS
-# Shell tren ttyAMA0 -> co job control, Ctrl+C gui duoc SIGINT cho sms_app
 ttyAMA0::askfirst:-/bin/sh
 ::ctrlaltdel:/sbin/reboot
 ::shutdown:/bin/umount -a -r

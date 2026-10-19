@@ -1,7 +1,6 @@
-/*
- * sensor_thread.c
+/* sensor_thread.c - Sensor Thread: doc /dev/sms_sensor theo chu ky, day vao shared_buffer
  * Author : Nguyen Tran Quang - SE200988
- */
+ * Date   : 2026-10-16 */
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
@@ -12,11 +11,10 @@
 #include "sms.h"
 #include "sms_sensor.h"
 
-static int sensor_fd = -1;         
+static int sensor_fd = -1;
 static long jitter_us[MAX_JITTER];
 static int jitter_n;
 static const char *policy_name = "SCHED_OTHER";
-
 
 int sensor_open(const char *path, int interval_ms)
 {
@@ -130,7 +128,7 @@ void *sensor_thread(void *arg)
 	while (running) {
 		add_ms(&expected, cfg.interval_ms);
 		if (clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &expected, NULL) != 0)
-			continue;                     /* bi signal danh thuc (Ctrl+C) */
+			continue;
 		clock_gettime(CLOCK_MONOTONIC, &actual);
 
 		if (jitter_n < MAX_JITTER)

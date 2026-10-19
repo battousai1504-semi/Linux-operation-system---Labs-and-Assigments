@@ -1,16 +1,6 @@
-/*
- * sms_sensor_driver.c - Cam bien nhiet do / do am gia lap (ASSIGNMENT-02)
+/* sms_sensor_driver.c - Cam bien nhiet do / do am gia lap (ASSIGNMENT-02)
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * Dua tren LAB-02 (character device + procfs) va ASSIGNMENT-01 (ioctl):
- *   /dev/sms_sensor  : moi lan read() tra ve 1 dong "<timestamp_ms>,<temp>,<humid>\n"
- *   /proc/sms_stats  : read_count, last_temperature, last_humidity, interval, uptime
- *   ioctl SMS_SET_INTERVAL : khoang thoi gian toi thieu giua 2 lan doc (ms)
- *
- * Kernel khong dung float, nen nhiet do / do am luu theo don vi 0.1
- * (vi du 253 nghia la 25.3).
- */
+ * Date   : 2026-10-16 */
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/fs.h>
@@ -35,10 +25,10 @@ MODULE_DESCRIPTION("ASSIGNMENT-02 simulated temperature/humidity sensor");
 static int major;
 static struct class *sms_class;
 static struct proc_dir_entry *proc_entry;
-static DEFINE_MUTEX(sms_lock);          /* bao ve toan bo bien ben duoi */
+static DEFINE_MUTEX(sms_lock);
 
-static int temp_x10  = 300;             /* 30.0 C  */
-static int humid_x10 = 600;             /* 60.0 %  */
+static int temp_x10  = 300;
+static int humid_x10 = 600;
 static unsigned long read_count;
 static int interval_ms = 100;
 static s64 load_time_ms;
@@ -49,16 +39,11 @@ static s64 now_ms(void)
 	return ktime_to_ms(ktime_get());
 }
 
-/* So ngau nhien trong [min, max] */
 static int rand_range(int min, int max)
 {
 	return min + (int)(get_random_u32() % (u32)(max - min + 1));
 }
 
-/*
- * Tao mau moi: gia tri thay doi tu tu (random walk) cho giong cam bien that.
- * Khoang 1/20 lan nhiet do nhay 6 do de demo canh bao TEMP_SPIKE.
- */
 static void make_new_sample(void)
 {
 	if (rand_range(1, 20) == 1)
@@ -68,8 +53,8 @@ static void make_new_sample(void)
 
 	humid_x10 += rand_range(-20, 20);
 
-	temp_x10  = clamp(temp_x10, 150, 450);    /* 15.0 - 45.0 C */
-	humid_x10 = clamp(humid_x10, 300, 900);   /* 30.0 - 90.0 % */
+	temp_x10  = clamp(temp_x10, 150, 450);
+	humid_x10 = clamp(humid_x10, 300, 900);
 }
 
 static int sms_open(struct inode *inode, struct file *file)
@@ -89,14 +74,12 @@ static ssize_t sms_read(struct file *file, char __user *buf,
 	int len;
 	s64 now;
 
-	/* Moi lan doc chi tra 1 dong, lan sau tra 0 (EOF) de "cat" dung lai */
 	if (*ppos > 0)
 		return 0;
 
 	mutex_lock(&sms_lock);
 	now = now_ms();
 
-	/* Doc qua nhanh (chua du 90% interval) -> bao chua san sang */
 	if (now - last_read_ms < interval_ms * 9 / 10) {
 		mutex_unlock(&sms_lock);
 		return -EAGAIN;
@@ -148,7 +131,6 @@ static const struct file_operations sms_fops = {
 	.unlocked_ioctl = sms_ioctl,
 };
 
-/* ---------- /proc/sms_stats (giong lab2_proc_show o LAB-02) ---------- */
 static int sms_proc_show(struct seq_file *m, void *v)
 {
 	mutex_lock(&sms_lock);
@@ -178,7 +160,7 @@ static int __init sms_init(void)
 {
 	struct device *dev;
 
-	major = register_chrdev(0, DEVICE_NAME, &sms_fops);   /* 0 = kernel tu cap major */
+	major = register_chrdev(0, DEVICE_NAME, &sms_fops);
 	if (major < 0) {
 		pr_err("sms_sensor: register_chrdev failed\n");
 		return major;
@@ -190,7 +172,6 @@ static int __init sms_init(void)
 		return PTR_ERR(sms_class);
 	}
 
-	/* devtmpfs tu tao /dev/sms_sensor */
 	dev = device_create(sms_class, NULL, MKDEV(major, 0), NULL, DEVICE_NAME);
 	if (IS_ERR(dev)) {
 		class_destroy(sms_class);

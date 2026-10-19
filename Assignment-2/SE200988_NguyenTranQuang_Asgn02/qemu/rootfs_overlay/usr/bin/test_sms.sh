@@ -1,6 +1,5 @@
 #!/bin/sh
 # test_sms.sh - ASSIGNMENT-02: kiem thu driver + sms_app tren QEMU
-# Moi phan in giua === XXX START/END === de tach ra file trong logs/
 MOD=/lib/modules/$(uname -r)/sms_sensor_driver.ko
 
 echo '=== DRIVER_TEST START ==='
@@ -22,7 +21,6 @@ sms_app -D /dev/not_exist -d 1
 echo "exit code (device not found) = $?"
 echo '=== EXITCODE_TEST END ==='
 
-# Nap lai driver de read_count bat dau tu 0
 rmmod sms_sensor_driver
 insmod $MOD
 rm -f /tmp/sms.log /tmp/sms.log.1

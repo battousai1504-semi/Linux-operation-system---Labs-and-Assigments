@@ -1,8 +1,6 @@
-/*
- * sms_app.c 
+/* sms_app.c - Sensor Monitoring System: main, doc tham so, tao/dung 4 thread
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- */
+ * Date   : 2026-10-16 */
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -26,7 +24,7 @@ CircularBuffer shared_buffer;
 static void on_signal(int sig)
 {
 	(void)sig;
-	running = 0; 
+	running = 0;
 }
 
 static void usage(const char *prog)
@@ -44,7 +42,6 @@ static void usage(const char *prog)
 		prog, DEFAULT_DEV, DEFAULT_LOG);
 }
 
-/* Doi chuoi sang so, sai dinh dang -> -1 */
 static int to_int(const char *s, int *out)
 {
 	char *end;
@@ -134,7 +131,6 @@ int main(int argc, char *argv[])
 	struct sigaction sa;
 	time_t start;
 
-	/* ===== INIT ===== */
 	if (parse_args(argc, argv) != 0) {
 		usage(argv[0]);
 		return 1;
@@ -149,12 +145,11 @@ int main(int argc, char *argv[])
 		return 3;
 	}
 
-	/* Khoa bo nho trong RAM, tranh page fault lam tre Sensor Thread */
 	if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0)
 		perror("WARNING: mlockall");
 
 	memset(&sa, 0, sizeof(sa));
-	sa.sa_handler = on_signal;        
+	sa.sa_handler = on_signal;
 	sigaction(SIGINT, &sa, NULL);
 	sigaction(SIGTERM, &sa, NULL);
 
@@ -165,10 +160,9 @@ int main(int argc, char *argv[])
 	    pthread_create(&t_proc, &attr, processor_thread, NULL) ||
 	    pthread_create(&t_sensor, &attr, sensor_thread, NULL)) {
 		fprintf(stderr, "ERROR: pthread_create failed\n");
-		exit(4);                        /* he dieu hanh tu thu hoi tai nguyen */
+		exit(4);
 	}
 
-	/* ===== RUNNING ===== */
 	printf("[main] SMS running (pid %d): interval=%d ms, T>%.1f, H>%.1f, duration=%d s. Ctrl+C to stop.\n",
 	       getpid(), cfg.interval_ms, cfg.temp_thr, cfg.humid_thr, cfg.duration_s);
 	log_msg("[main] started pid=%d dev=%s", getpid(), cfg.dev_path);
@@ -179,15 +173,14 @@ int main(int argc, char *argv[])
 			running = 0;
 	}
 
-	/* ===== SHUTDOWN: dung theo chieu dong du lieu ===== */
 	printf("\n[main] shutting down...\n");
-	pthread_join(t_sensor, NULL);   
-	cb_stop(&shared_buffer);         
+	pthread_join(t_sensor, NULL);
+	cb_stop(&shared_buffer);
 	pthread_join(t_proc, NULL);
-	alert_stop();          
+	alert_stop();
 	pthread_join(t_alert, NULL);
 	print_summary((long)(time(NULL) - start));
-	logger_stop();                
+	logger_stop();
 	pthread_join(t_logger, NULL);
 
 	pthread_attr_destroy(&attr);

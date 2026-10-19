@@ -8,9 +8,8 @@ mount -t devtmpfs none /dev 2>/dev/null
 mkdir -p /dev/mqueue
 mount -t mqueue none /dev/mqueue
 hostname asgn2
-dmesg -n 1        # khong cho log kernel chen vao man hinh, xem bang dmesg
+dmesg -n 1
 
-# Chay tu dong toan bo test roi tat may (run_qemu.sh autotest)
 if grep -q autotest /proc/cmdline; then
     test_sms.sh
     jitter_test.sh
