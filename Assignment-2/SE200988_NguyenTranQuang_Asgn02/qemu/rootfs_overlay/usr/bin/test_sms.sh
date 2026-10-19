@@ -1,6 +1,6 @@
 #!/bin/sh
-# test_sms.sh - ASSIGNMENT-02: kiểm thử driver + sms_app trên QEMU
-# In ra các khối có đánh dấu === XXX START/END === để tách log sau này.
+# test_sms.sh - ASSIGNMENT-02: kiem thu driver + sms_app tren QEMU
+# Moi phan in giua === XXX START/END === de tach ra file trong logs/
 MOD=/lib/modules/$(uname -r)/sms_sensor_driver.ko
 
 echo '=== DRIVER_TEST START ==='
@@ -8,8 +8,10 @@ grep -q '^sms_sensor_driver ' /proc/modules && rmmod sms_sensor_driver
 insmod $MOD || { echo 'ERROR: insmod failed'; exit 1; }
 lsmod | grep sms
 ls -l /dev/sms_sensor /proc/sms_stats
-echo '--- head -n 3 /dev/sms_sensor (blocking read, interval 100 ms):'
-head -n 3 /dev/sms_sensor
+echo '--- 3 lan cat /dev/sms_sensor (cach nhau 200 ms):'
+for i in 1 2 3; do cat /dev/sms_sensor; usleep 200000; done
+echo '--- 2 lan doc lien tiep (lan 2 qua som -> EAGAIN):'
+cat /dev/sms_sensor; cat /dev/sms_sensor
 cat /proc/sms_stats
 echo '=== DRIVER_TEST END ==='
 
@@ -20,7 +22,7 @@ sms_app -D /dev/not_exist -d 1
 echo "exit code (device not found) = $?"
 echo '=== EXITCODE_TEST END ==='
 
-# Nạp lại driver để read_count bắt đầu từ 0 cho lần chạy 60 giây
+# Nap lai driver de read_count bat dau tu 0
 rmmod sms_sensor_driver
 insmod $MOD
 rm -f /tmp/sms.log /tmp/sms.log.1
@@ -31,20 +33,20 @@ echo '=== PROC_BEFORE END ==='
 
 sms_app -d 60 -v > /tmp/sms_run.txt 2>&1 &
 PID=$!
-echo "sms_app started in background, pid=$PID (60 s)"
+echo "sms_app started, pid=$PID (60 s)"
 
 sleep 5
 echo '=== MEM_T5 START ==='
-grep -E 'VmPeak|VmSize|VmLck|VmRSS|VmData|VmStk|Threads' /proc/$PID/status
+grep -E 'VmSize|VmLck|VmRSS|Threads' /proc/$PID/status
 echo '=== MEM_T5 END ==='
 
 sleep 25
 echo '=== MEM_T30 START ==='
-grep -E 'VmPeak|VmSize|VmLck|VmRSS|VmData|VmStk|Threads' /proc/$PID/status
+grep -E 'VmSize|VmLck|VmRSS|Threads' /proc/$PID/status
 echo '=== MEM_T30 END ==='
 echo '=== THREADS START ==='
 for T in /proc/$PID/task/*; do
-    awk '{ printf "tid=%-5s %-15s rt_priority=%-3s policy=%s\n", $1, $2, $40, ($41==1 ? "SCHED_FIFO" : "SCHED_OTHER") }' $T/stat
+    awk '{ printf "tid=%-5s %-16s rt_priority=%-3s policy=%s\n", $1, $2, $40, ($41==1 ? "SCHED_FIFO" : "SCHED_OTHER") }' $T/stat
 done
 echo '=== THREADS END ==='
 echo '=== MAPS_T30 START ==='
@@ -56,7 +58,7 @@ echo '=== PROC_DURING END ==='
 
 sleep 25
 echo '=== MEM_T55 START ==='
-grep -E 'VmPeak|VmSize|VmLck|VmRSS|VmData|VmStk|Threads' /proc/$PID/status
+grep -E 'VmSize|VmLck|VmRSS|Threads' /proc/$PID/status
 echo '=== MEM_T55 END ==='
 
 wait $PID
@@ -82,11 +84,10 @@ kill -INT $PID
 wait $PID
 echo "exit code after SIGINT = $?"
 cat /tmp/sms_sigint.txt
-echo "--- /dev/mqueue after exit (empty = queues removed):"
+echo "--- /dev/mqueue sau khi thoat (rong = da xoa queue):"
 ls /dev/mqueue
 echo '=== SIGINT_TEST END ==='
 
 echo '=== DMESG START ==='
 dmesg | grep sms_sensor
 echo '=== DMESG END ==='
-echo 'test_sms.sh finished'

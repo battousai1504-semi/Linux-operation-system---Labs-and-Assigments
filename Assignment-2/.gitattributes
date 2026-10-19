@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.ko binary
+*.gz binary
+*.pdf binary
+*.mp4 binary
+sms_app binary
+sms_app_x86 binary

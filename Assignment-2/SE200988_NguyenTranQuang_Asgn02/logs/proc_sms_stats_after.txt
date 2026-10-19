@@ -1,12 +1,6 @@
-SMS Sensor Driver Statistics
-============================
+# cat /proc/sms_stats sau 60s (interval 500 ms -> ky vong ~120)
 read_count       : 120
-last_temperature : 27.3 C
-last_humidity    : 60.9 %
-last_timestamp   : 137182 ms
-uptime           : 60 s
+last_temperature : 45.0 C
+last_humidity    : 69.6 %
 interval_ms      : 500
-eagain_count     : 0
-anomaly_count    : 3
-spike_rate       : 5 %
-open_count       : 1
+uptime_s         : 60

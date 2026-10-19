@@ -1,119 +1,91 @@
-Breakpoint 1 at 0x4ecb: file processor_thread.c, line 55.
+Breakpoint 1 at 0x3c94: file processor_thread.c, line 17.
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
-[main] device 'sim': built-in simulator, no driver (x86 host test)
-[New Thread 0x7ffff7fa3640 (LWP 63081)]
-[New Thread 0x7ffff7f62640 (LWP 63082)]
-[New Thread 0x7ffff7f21640 (LWP 63083)]
-[main] SMS running (pid 63078): interval=500 ms, T>40.0 C, H>80.0 %, duration=8 s. Ctrl+C to stop.
-[New Thread 0x7ffff7ee0640 (LWP 63084)]
-[Switching to Thread 0x7ffff7f21640 (LWP 63083)]
+[Switching to Thread 0x7ffff7f276c0 (LWP 27595)]
 
-Thread 4 "sms_processor" hit Breakpoint 1, processor_check_alarms (p=0x7fffffffdd80, seq=1, ts_ms=27472304, temperature=27.600000000000001, humidity=59.799999999999997) at processor_thread.c:55
-55	    int fired = 0;
+Thread 4 "sms_processor" hit Breakpoint 1, detect_anomaly (ts=1340002, temperature=29.1000004, humidity=58, prev_temp=0, has_prev=0) at processor_thread.c:17
+17		if (temperature > cfg.temp_thr)
 
-===== [1] Processor Thread dung tai processor_check_alarms =====
+===== [1] Processor Thread dung tai detect_anomaly =====
   Id   Target Id                                         Frame 
-  1    Thread 0x7ffff7fa4740 (LWP 63078) "sms_app_x86"   0x00007ffff7c4321a in __GI___sigtimedwait (set=0x7fffffffdc70, info=0x0, timeout=0x7fffffffdb10) at ../sysdeps/unix/sysv/linux/sigtimedwait.c:61
-  2    Thread 0x7ffff7fa3640 (LWP 63081) "sms_logger"    ___mq_timedreceive_time64 (abs_timeout=0x7ffff7fa2c50, msg_prio=0x0, msg_len=204, msg_ptr=0x7ffff7fa2c70 "", mqdes=3) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
-  3    Thread 0x7ffff7f62640 (LWP 63082) "sms_alert"     ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=32, msg_ptr=0x7ffff7f61e20 "", mqdes=5) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
-* 4    Thread 0x7ffff7f21640 (LWP 63083) "sms_processor" processor_check_alarms (p=0x7fffffffdd80, seq=1, ts_ms=27472304, temperature=27.600000000000001, humidity=59.799999999999997) at processor_thread.c:55
-  5    Thread 0x7ffff7ee0640 (LWP 63084) "sms_sensor"    0x00007ffff7ce57b8 in __GI___clock_nanosleep (clock_id=1, flags=1, req=0x7ffff7edfe00, rem=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+  1    Thread 0x7ffff7faa740 (LWP 27590) "sms_app_x86"   0x00007ffff7cecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffff8640, rem=rem@entry=0x7fffffff8640) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+  2    Thread 0x7ffff7fa96c0 (LWP 27593) "sms_logger"    0x00007ffff7ca87ed in ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=200, msg_ptr=0x7ffff7fa8df0 "[sensor] started, policy=SCHED_FIFO, interval=500 ms", mqdes=5) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+  3    Thread 0x7ffff7f686c0 (LWP 27594) "sms_alert"     0x00007ffff7ca87ed in ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=24, msg_ptr=0x7ffff7f67ea0 "", mqdes=3) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+* 4    Thread 0x7ffff7f276c0 (LWP 27595) "sms_processor" detect_anomaly (ts=1340002, temperature=29.1000004, humidity=58, prev_temp=0, has_prev=0) at processor_thread.c:17
+  5    Thread 0x7ffff7ee66c0 (LWP 27596) "sms_sensor"    0x00007ffff7cecbdf in __GI___clock_nanosleep (clock_id=1, flags=1, req=0x7ffff7ee5e70, rem=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
 
-Thread 5 (Thread 0x7ffff7ee0640 (LWP 63084) "sms_sensor"):
-#0  0x00007ffff7ce57b8 in __GI___clock_nanosleep (clock_id=1, flags=1, req=0x7ffff7edfe00, rem=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
-#1  0x00005555555586e7 in sensor_thread_main (arg=0x7fffffffdb70) at sensor_thread.c:178
-#2  0x00007ffff7c94a83 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
-#3  0x00007ffff7d268e0 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+Thread 5 (Thread 0x7ffff7ee66c0 (LWP 27596) "sms_sensor"):
+#0  0x00007ffff7cecbdf in __GI___clock_nanosleep (clock_id=1, flags=1, req=0x7ffff7ee5e70, rem=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x000055555555787b in sensor_thread (arg=0x0) at sensor_thread.c:140
+#2  0x00007ffff7c9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
 
-Thread 4 (Thread 0x7ffff7f21640 (LWP 63083) "sms_processor"):
-#0  processor_check_alarms (p=0x7fffffffdd80, seq=1, ts_ms=27472304, temperature=27.600000000000001, humidity=59.799999999999997) at processor_thread.c:55
-#1  0x0000555555559264 in processor_thread_main (arg=0x7fffffffdd80) at processor_thread.c:114
-#2  0x00007ffff7c94a83 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
-#3  0x00007ffff7d268e0 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+Thread 4 (Thread 0x7ffff7f276c0 (LWP 27595) "sms_processor"):
+#0  detect_anomaly (ts=1340002, temperature=29.1000004, humidity=58, prev_temp=0, has_prev=0) at processor_thread.c:17
+#1  0x0000555555557f15 in processor_thread (arg=0x0) at processor_thread.c:54
+#2  0x00007ffff7c9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
 
-Thread 3 (Thread 0x7ffff7f62640 (LWP 63082) "sms_alert"):
-#0  ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=32, msg_ptr=0x7ffff7f61e20 "", mqdes=5) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
-#1  ___mq_timedreceive_time64 (mqdes=5, msg_ptr=0x7ffff7f61e20 "", msg_len=32, msg_prio=0x0, abs_timeout=0x0) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:26
-#2  0x00005555555595b9 in alert_thread_main (arg=0x7fffffffdc00) at alert_thread.c:56
-#3  0x00007ffff7c94a83 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
-#4  0x00007ffff7d268e0 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+Thread 3 (Thread 0x7ffff7f686c0 (LWP 27594) "sms_alert"):
+#0  0x00007ffff7ca87ed in ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=24, msg_ptr=0x7ffff7f67ea0 "", mqdes=3) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+#1  ___mq_timedreceive_time64 (mqdes=3, msg_ptr=0x7ffff7f67ea0 "", msg_len=24, msg_prio=0x0, abs_timeout=0x0) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:26
+#2  0x000055555555826b in alert_thread (arg=0x0) at alert_thread.c:73
 
-Thread 2 (Thread 0x7ffff7fa3640 (LWP 63081) "sms_logger"):
-#0  ___mq_timedreceive_time64 (abs_timeout=0x7ffff7fa2c50, msg_prio=0x0, msg_len=204, msg_ptr=0x7ffff7fa2c70 "", mqdes=3) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
-#1  ___mq_timedreceive_time64 (mqdes=3, msg_ptr=0x7ffff7fa2c70 "", msg_len=204, msg_prio=0x0, abs_timeout=0x7ffff7fa2c50) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:26
-#2  0x0000555555559ec2 in logger_thread_main (arg=0x7fffffffdaf0) at logger_thread.c:196
-#3  0x00007ffff7c94a83 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
-#4  0x00007ffff7d268e0 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+Thread 2 (Thread 0x7ffff7fa96c0 (LWP 27593) "sms_logger"):
+#0  0x00007ffff7ca87ed in ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=200, msg_ptr=0x7ffff7fa8df0 "[sensor] started, policy=SCHED_FIFO, interval=500 ms", mqdes=5) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+#1  ___mq_timedreceive_time64 (mqdes=5, msg_ptr=0x7ffff7fa8df0 "[sensor] started, policy=SCHED_FIFO, interval=500 ms", msg_len=200, msg_prio=0x0, abs_timeout=0x0) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:26
+#2  0x000055555555883e in logger_thread (arg=0x0) at logger_thread.c:105
 
-Thread 1 (Thread 0x7ffff7fa4740 (LWP 63078) "sms_app_x86"):
-#0  0x00007ffff7c4321a in __GI___sigtimedwait (set=0x7fffffffdc70, info=0x0, timeout=0x7fffffffdb10) at ../sysdeps/unix/sysv/linux/sigtimedwait.c:61
-#1  0x000055555555785f in main (argc=5, argv=0x7fffffffdfd8) at sms_app.c:351
+Thread 1 (Thread 0x7ffff7faa740 (LWP 27590) "sms_app_x86"):
+#0  0x00007ffff7cecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffff8640, rem=rem@entry=0x7fffffff8640) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff7cf9b27 in __GI___nanosleep (req=req@entry=0x7fffffff8640, rem=rem@entry=0x7fffffff8640) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#2  0x00007ffff7d0ed93 in __sleep (seconds=0) at ../sysdeps/posix/sleep.c:55
 
 ===== [2] Gia tri that va nguong =====
-$1 = 27.600000000000001
-$2 = 59.799999999999997
+$1 = 29.1000004
+$2 = 58
 $3 = 40
+$4 = {0, 0, 0}
 
-===== [3] Gia lap cam bien vuot nguong: set variable temperature=45.0 =====
-$4 = 45
+===== [3] set variable temperature = 45.0 =====
+$5 = 45
+Breakpoint 2 at 0x5555555582b6: file alert_thread.c, line 82.
+[Switching to Thread 0x7ffff7f686c0 (LWP 27594)]
 
-===== [4] Dat breakpoint o Alert Thread roi chay tiep =====
-Breakpoint 2 at 0x5555555593b5: file alert_thread.c, line 24.
-[Switching to Thread 0x7ffff7f62640 (LWP 63082)]
+Thread 3 "sms_alert" hit Breakpoint 2, alert_thread (arg=0x0) at alert_thread.c:82
+82			alert_count[a.type]++;
 
-Thread 3 "sms_alert" hit Breakpoint 2, alert_handle (ctx=0x7fffffffdc00, msg=0x7ffff7f61e20) at alert_thread.c:24
-24	{
-
-===== [5] Alert Thread da thuc day sau mq_receive =====
+===== [4] Alert Thread thuc day sau mq_receive =====
   Id   Target Id                                         Frame 
-  1    Thread 0x7ffff7fa4740 (LWP 63078) "sms_app_x86"   0x00007ffff7c4321a in __GI___sigtimedwait (set=0x7fffffffdc70, info=0x0, timeout=0x7fffffffdb10) at ../sysdeps/unix/sysv/linux/sigtimedwait.c:61
-  2    Thread 0x7ffff7fa3640 (LWP 63081) "sms_logger"    ___mq_timedreceive_time64 (abs_timeout=0x7ffff7fa2c50, msg_prio=0x0, msg_len=204, msg_ptr=0x7ffff7fa2c70 "", mqdes=3) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
-* 3    Thread 0x7ffff7f62640 (LWP 63082) "sms_alert"     alert_handle (ctx=0x7fffffffdc00, msg=0x7ffff7f61e20) at alert_thread.c:24
-  4    Thread 0x7ffff7f21640 (LWP 63083) "sms_processor" __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7fffffffdd7c) at ./nptl/futex-internal.c:57
-  5    Thread 0x7ffff7ee0640 (LWP 63084) "sms_sensor"    0x00007ffff7ce57b8 in __GI___clock_nanosleep (clock_id=1, flags=1, req=0x7ffff7edfe00, rem=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
-#0  alert_handle (ctx=0x7fffffffdc00, msg=0x7ffff7f61e20) at alert_thread.c:24
-#1  0x000055555555961c in alert_thread_main (arg=0x7fffffffdc00) at alert_thread.c:66
-#2  0x00007ffff7c94a83 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
-#3  0x00007ffff7d268e0 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
-$5 = {type = 0, seq = 1, ts_ms = 27472304, value = 45, threshold = 40}
-$6 = 0x55555555b008 "TEMP_HIGH"
-$7 = {0, 0, 0}
-[ALERT][2026-10-16 06:58:02.064] TYPE: TEMP_HIGH VALUE: 45.0C THRESHOLD: 40.0C (sample #1)
-0x000055555555961c in alert_thread_main (arg=0x7fffffffdc00) at alert_thread.c:66
-66	        alert_handle(ctx, &msg);
+  1    Thread 0x7ffff7faa740 (LWP 27590) "sms_app_x86"   0x00007ffff7cecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffff8640, rem=rem@entry=0x7fffffff8640) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+  2    Thread 0x7ffff7fa96c0 (LWP 27593) "sms_logger"    0x00007ffff7ca87ed in ___mq_timedreceive_time64 (abs_timeout=0x0, msg_prio=0x0, msg_len=200, msg_ptr=0x7ffff7fa8df0 "[processor] ts=1340002 T=29.1 H=58.0 avgT=29.10 avgH=58.00", mqdes=5) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+* 3    Thread 0x7ffff7f686c0 (LWP 27594) "sms_alert"     alert_thread (arg=0x0) at alert_thread.c:82
+  4    Thread 0x7ffff7f276c0 (LWP 27595) "sms_processor" 0x00007ffff7c98e51 in __futex_abstimed_wait_common64 (private=826110836, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x55555555c184 <shared_buffer+132>) at ./nptl/futex-internal.c:57
+  5    Thread 0x7ffff7ee66c0 (LWP 27596) "sms_sensor"    0x00007ffff7cecbdf in __GI___clock_nanosleep (clock_id=1, flags=1, req=0x7ffff7ee5e70, rem=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+$6 = {type = 0, ts_ms = 1340002, value = 45, threshold = 40}
+$7 = 0x555555559908 "TEMP_HIGH"
+84				a.ts_ms, alarm_names[a.type], a.value, a.threshold);
 $8 = {1, 0, 0}
+[ALERT][1340002] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][1342502] TYPE: TEMP_SPIKE VALUE: -6.3 THRESHOLD: 5.0
+[sensor] simulation mode, no driver
+[main] SMS running (pid 27590): interval=500 ms, T>40.0, H>80.0, duration=8 s. Ctrl+C to stop.
 
-===== [6] Bo breakpoint, chay tiep toi khi het -d 8 giay =====
-[ALERT][2026-10-16 06:58:02.475] TYPE: TEMP_SPIKE VALUE: 17.1C THRESHOLD: 5.0C (sample #2)
+[main] shutting down...
 
-[main] duration reached -> shutting down...
-[Thread 0x7ffff7ee0640 (LWP 63084) exited]
-[Thread 0x7ffff7f21640 (LWP 63083) exited]
-[Thread 0x7ffff7f62640 (LWP 63082) exited]
-[main] all threads joined
-[Thread 0x7ffff7fa3640 (LWP 63081) exited]
-================ SMS SUMMARY ================
-Stop reason        : duration reached
-Uptime             : 8.0 s
-Samples read       : 15 (EAGAIN retries 0, EINTR 0, EOF 0, errors 0)
-Samples processed  : 15
-Shared buffer      : produced=15 consumed=15 overflow=0 (0.00%) size=0/64
-Alerts             : TEMP_HIGH=1 HUMID_HIGH=0 TEMP_SPIKE=1 (total 2)
-Last avg10         : T=27.57 C  H=58.25 %
-Log file           : /tmp/sms.log (lines=28, flushes=1, rotations=0, dropped=0)
-Memory lock        : not used
-Sensor overruns    : 0
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_OTHER (prio 0)
-Interval        : 500 ms
-Samples         : 16
-Min / Avg / Max : 71 / 215.6 / 529 us
-P99             : 529 us
-Histogram:
-  0-100us    :      2 ( 12.5%) ######
-  100-500us  :     12 ( 75.0%) #####################################
-  500-1000us :      2 ( 12.5%) ######
-  >1000us    :      0 (  0.0%) 
-=============================================
-[Inferior 1 (process 63078) exited normally]
+===== SMS SUMMARY =====
+uptime          : 9 s
+samples         : produced=17 consumed=17 in_buffer=0 overflow=0
+alerts          : TEMP_HIGH=1 HUMID_HIGH=0 TEMP_SPIKE=1
+dropped logs    : 0
+===== JITTER REPORT (SCHED_FIFO, interval 500 ms) =====
+samples : 17
+min     : 29 us
+avg     : 99.9 us
+max     : 337 us
+p99     : 337 us
+histogram:
+  0-100us    : 11
+  100-500us  : 6
+  500-1000us : 0
+  >1000us    : 0
+[main] all threads stopped, exit 0
+[Inferior 1 (process 27590) exited normally]

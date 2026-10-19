@@ -1,41 +1,31 @@
-# gdb_alert.gdb - ASSIGNMENT-02 Task 3, Kịch bản B: debug alert logic
-# Author: Nguyen Tran Quang - SE200988
-# Chạy: gdb -q -batch -x gdb_alert.gdb --args ./sms_app_x86 -d 8 -s other
-set debuginfod enabled off
+# gdb_alert.gdb - GDB kich ban B: gia lap nhiet do vuot nguong
+# Chay: gdb -q -batch -x gdb_alert.gdb --args ./sms_app_x86 -D sim -d 8 -L /tmp/gdb.log
 set pagination off
-set confirm off
-set print thread-events on
-
-break processor_check_alarms
+set print thread-events off
+break detect_anomaly
 run
 
-echo \n===== [1] Processor Thread dung tai processor_check_alarms =====\n
+echo \n===== [1] Processor Thread dung tai detect_anomaly =====\n
 info threads
-thread apply all bt
-
+thread apply all bt 3
 echo \n===== [2] Gia tri that va nguong =====\n
 print temperature
 print humidity
-print p->cfg->temp_th
+print cfg.temp_thr
+print alert_count
 
-echo \n===== [3] Gia lap cam bien vuot nguong: set variable temperature=45.0 =====\n
+echo \n===== [3] set variable temperature = 45.0 =====\n
 set variable temperature = 45.0
 print temperature
-
-echo \n===== [4] Dat breakpoint o Alert Thread roi chay tiep =====\n
 delete 1
-break alert_handle
+break alert_thread.c:82
 continue
 
-echo \n===== [5] Alert Thread da thuc day sau mq_receive =====\n
+echo \n===== [4] Alert Thread thuc day sau mq_receive =====\n
 info threads
-bt
-print *msg
-print alarm_type_name(msg->type)
-print ctx->counts
-finish
-print ctx->counts
-
-echo \n===== [6] Bo breakpoint, chay tiep toi khi het -d 8 giay =====\n
+print a
+print alarm_names[a.type]
+next
+print alert_count
 delete
 continue
