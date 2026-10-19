@@ -1,73 +1,90 @@
 /*
- * alert_thread.c - Alert Thread: chờ trên alarm_queue, in cảnh báo, đếm theo loại
- *
+ * alert_thread.c - Alert Thread + alarm_queue (POSIX message queue)
  * Author : Nguyen Tran Quang - SE200988
  * Date   : 2026-10-16
  *
- * Thread block trong mq_receive() và chỉ thức dậy khi Processor gửi alarm
- * (hoặc main gửi ALARM_SHUTDOWN lúc tắt). counts[] chỉ thread này ghi;
- * main chỉ đọc sau pthread_join -> không cần khóa.
+ * Processor goi send_alarm() -> mq_send vao /sms_alarm.
+ * Alert Thread block tren mq_receive, in canh bao ra stderr, dem theo loai,
+ * ghi log qua Logger Thread. Shutdown: main gui 1 alarm loai ALARM_STOP.
  */
-#include <stdio.h>
-#include <string.h>
 #include <errno.h>
-#include <pthread.h>
-#include "alert_thread.h"
-#include "logger_thread.h"
+#include <fcntl.h>
+#include <mqueue.h>
+#include <string.h>
+#include "sms.h"
 
-/*
- * alert_handle - xử lý 1 alarm: đếm, in ra stderr, gửi sang Logger
- * @ctx: trạng thái Alert Thread, @msg: alarm nhận được
- * Return: không có
- */
-void alert_handle(AlertCtx *ctx, const AlarmMsg *msg)
+unsigned long alert_count[3];             /* chi Alert Thread ghi, main doc sau khi join */
+static mqd_t alarm_q = (mqd_t)-1;
+static const char *alarm_names[] = { "TEMP_HIGH", "HUMID_HIGH", "TEMP_SPIKE" };
+
+int alert_init(void)
 {
-    char ts[32];
-    const char *unit = (msg->type == ALARM_HUMID_HIGH) ? "%" : "C";
+	struct mq_attr attr = { 0 };
 
-    if (msg->type < 0 || msg->type >= ALARM_TYPE_COUNT)
-        return;
-    ctx->counts[msg->type]++;
-    ctx->total++;
-
-    now_wall_str(ts, sizeof(ts));
-    fprintf(stderr, "[ALERT][%s] TYPE: %s VALUE: %.1f%s THRESHOLD: %.1f%s (sample #%u)\n",
-            ts, alarm_type_name(msg->type), msg->value, unit,
-            msg->threshold, unit, msg->seq);
-    log_post("[alert] TYPE: %s VALUE: %.1f%s THRESHOLD: %.1f%s sample=#%u ts=%lld",
-             alarm_type_name(msg->type), msg->value, unit,
-             msg->threshold, unit, msg->seq, msg->ts_ms);
+	attr.mq_maxmsg = 10;
+	attr.mq_msgsize = sizeof(Alarm);
+	mq_unlink(ALARM_QUEUE_NAME);              /* xoa queue cu neu lan truoc bi kill */
+	alarm_q = mq_open(ALARM_QUEUE_NAME, O_CREAT | O_RDWR, 0600, &attr);
+	if (alarm_q == (mqd_t)-1) {
+		perror("mq_open alarm_queue");
+		return -1;
+	}
+	return 0;
 }
 
-/*
- * alert_thread_main - vòng lặp của Alert Thread
- * @arg: AlertCtx*
- * Return: NULL
- */
-void *alert_thread_main(void *arg)
+void send_alarm(int type, long long ts, float value, float threshold)
 {
-    AlertCtx *ctx = arg;
-    AlarmMsg msg;
+	Alarm a;
 
-    pthread_setname_np(pthread_self(), "sms_alert");
-    log_post("[alert] thread started, waiting on %s", SMS_ALARM_MQ_NAME);
+	/* memset ca struct: xoa ca byte dem (padding) giua cac field,
+	 * neu khong Valgrind bao "uninitialised byte(s)" khi mq_send */
+	memset(&a, 0, sizeof(a));
+	a.type = type;
+	a.ts_ms = ts;
+	a.value = value;
+	a.threshold = threshold;
 
-    for (;;) {
-        ssize_t n = mq_receive(ctx->alarm_q, (char *)&msg, sizeof(msg), NULL);
+	if (mq_send(alarm_q, (const char *)&a, sizeof(a), 0) != 0)
+		log_msg("[processor] mq_send alarm failed: %s", strerror(errno));
+}
 
-        if (n < 0) {
-            if (errno == EINTR)
-                continue;
-            fprintf(stderr, "[alert] mq_receive: %s\n", strerror(errno));
-            break;
-        }
-        if (msg.type == ALARM_SHUTDOWN)
-            break;
-        alert_handle(ctx, &msg);
-    }
+void alert_stop(void)
+{
+	send_alarm(ALARM_STOP, 0, 0.0f, 0.0f);
+}
 
-    log_post("[alert] thread stopped (TEMP_HIGH=%lu, HUMID_HIGH=%lu, TEMP_SPIKE=%lu)",
-             ctx->counts[ALARM_TEMP_HIGH], ctx->counts[ALARM_HUMID_HIGH],
-             ctx->counts[ALARM_TEMP_SPIKE]);
-    return NULL;
+void alert_cleanup(void)
+{
+	if (alarm_q != (mqd_t)-1) {
+		mq_close(alarm_q);
+		mq_unlink(ALARM_QUEUE_NAME);
+	}
+}
+
+void *alert_thread(void *arg)
+{
+	Alarm a;
+	(void)arg;
+
+	pthread_setname_np(pthread_self(), "sms_alert");
+	log_msg("[alert] started");
+
+	while (1) {
+		if (mq_receive(alarm_q, (char *)&a, sizeof(a), NULL) < 0) {
+			if (errno == EINTR)
+				continue;
+			log_msg("[alert] mq_receive error: %s", strerror(errno));
+			break;
+		}
+		if (a.type == ALARM_STOP)
+			break;
+
+		alert_count[a.type]++;
+		fprintf(stderr, "[ALERT][%lld] TYPE: %s VALUE: %.1f THRESHOLD: %.1f\n",
+			a.ts_ms, alarm_names[a.type], a.value, a.threshold);
+		log_msg("[alert] %s value=%.1f threshold=%.1f ts=%lld",
+			alarm_names[a.type], a.value, a.threshold, a.ts_ms);
+	}
+	log_msg("[alert] stopped");
+	return NULL;
 }

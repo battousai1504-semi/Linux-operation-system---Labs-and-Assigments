@@ -1,51 +1,19 @@
-==62913== Memcheck, a memory error detector
-==62913== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==62913== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==62913== Command: ./sms_app_x86 -d 0 -s other -L /tmp/sms_vg.log
-==62913== 
-[main] device 'sim': built-in simulator, no driver (x86 host test)
-[main] SMS running (pid 62913): interval=500 ms, T>40.0 C, H>80.0 %, duration=infinite. Ctrl+C to stop.
-[ALERT][2026-10-16 06:53:22.883] TYPE: HUMID_HIGH VALUE: 83.0% THRESHOLD: 80.0% (sample #5)
-[ALERT][2026-10-16 06:53:24.377] TYPE: HUMID_HIGH VALUE: 87.9% THRESHOLD: 80.0% (sample #8)
-[ALERT][2026-10-16 06:53:35.381] TYPE: TEMP_HIGH VALUE: 42.2C THRESHOLD: 40.0C (sample #30)
-[ALERT][2026-10-16 06:53:35.382] TYPE: TEMP_SPIKE VALUE: 12.1C THRESHOLD: 5.0C (sample #30)
-[ALERT][2026-10-16 06:53:35.877] TYPE: TEMP_SPIKE VALUE: 11.5C THRESHOLD: 5.0C (sample #31)
-[ALERT][2026-10-16 06:53:40.377] TYPE: HUMID_HIGH VALUE: 83.3% THRESHOLD: 80.0% (sample #40)
-[ALERT][2026-10-16 06:53:43.377] TYPE: HUMID_HIGH VALUE: 84.1% THRESHOLD: 80.0% (sample #46)
-
-[main] SIGINT -> shutting down...
-[main] all threads joined
-================ SMS SUMMARY ================
-Stop reason        : SIGINT
-Uptime             : 35.0 s
-Samples read       : 69 (EAGAIN retries 0, EINTR 0, EOF 0, errors 0)
-Samples processed  : 69
-Shared buffer      : produced=69 consumed=69 overflow=0 (0.00%) size=0/64
-Alerts             : TEMP_HIGH=1 HUMID_HIGH=4 TEMP_SPIKE=2 (total 7)
-Last avg10         : T=32.01 C  H=63.57 %
-Log file           : /tmp/sms_vg.log (lines=87, flushes=7, rotations=0, dropped=0)
-Memory lock        : not used
-Sensor overruns    : 0
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_OTHER (prio 0)
-Interval        : 500 ms
-Samples         : 70
-Min / Avg / Max : 76 / 306.7 / 2142 us
-P99             : 2142 us
-Histogram:
-  0-100us    :      9 ( 12.9%) ######
-  100-500us  :     42 ( 60.0%) ##############################
-  500-1000us :     17 ( 24.3%) ############
-  >1000us    :      2 (  2.9%) #
-=============================================
-==62913== 
-==62913== FILE DESCRIPTORS: 3 open (3 std) at exit.
-==62913== 
-==62913== HEAP SUMMARY:
-==62913==     in use at exit: 0 bytes in 0 blocks
-==62913==   total heap usage: 18 allocs, 18 frees, 416,651 bytes allocated
-==62913== 
-==62913== All heap blocks were freed -- no leaks are possible
-==62913== 
-==62913== For lists of detected and suppressed errors, rerun with: -s
-==62913== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==27568== Memcheck, a memory error detector
+==27568== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==27568== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==27568== Command: ./sms_app_x86 -D sim -d 0 -L /tmp/vg.log
+==27568== 
+[ALERT][1294054] TYPE: TEMP_SPIKE VALUE: -6.3 THRESHOLD: 5.0
+[ALERT][1300054] TYPE: TEMP_SPIKE VALUE: -6.3 THRESHOLD: 5.0
+[ALERT][1311054] TYPE: TEMP_SPIKE VALUE: 5.8 THRESHOLD: 5.0
+==27568== 
+==27568== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==27568== 
+==27568== HEAP SUMMARY:
+==27568==     in use at exit: 0 bytes in 0 blocks
+==27568==   total heap usage: 12 allocs, 12 frees, 11,313 bytes allocated
+==27568== 
+==27568== All heap blocks were freed -- no leaks are possible
+==27568== 
+==27568== For lists of detected and suppressed errors, rerun with: -s
+==27568== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

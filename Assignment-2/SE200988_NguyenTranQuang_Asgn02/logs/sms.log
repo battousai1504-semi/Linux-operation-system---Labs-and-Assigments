@@ -1,138 +1,195 @@
-2026-10-16 00:01:47.396 [logger] thread started
-2026-10-16 00:01:47.398 [main] SMS started: pid=78 interval=500 ms T>40.0 H>80.0 duration=60 s policy=fifo
-2026-10-16 00:01:47.399 [processor] thread started (window=10, T>40.0, H>80.0, spike>5.0)
-2026-10-16 00:01:47.404 [alert] thread started, waiting on /sms_alarm
-2026-10-16 00:01:47.406 [sensor] thread started (SCHED_FIFO prio 50, interval 500 ms, device /dev/sms_sensor)
-2026-10-16 00:01:47.919 [processor] sample=#1 ts=77685 T=28.4 H=60.8 avgT=28.40 avgH=60.80
-2026-10-16 00:01:48.405 [processor] sample=#2 ts=78182 T=28.9 H=61.5 avgT=28.65 avgH=61.15
-2026-10-16 00:01:48.905 [processor] sample=#3 ts=78682 T=29.4 H=61.8 avgT=28.90 avgH=61.37
-2026-10-16 00:01:49.405 [processor] sample=#4 ts=79182 T=28.9 H=62.0 avgT=28.90 avgH=61.52
-2026-10-16 00:01:49.906 [processor] sample=#5 ts=79682 T=28.9 H=61.7 avgT=28.90 avgH=61.56
-2026-10-16 00:01:50.405 [processor] sample=#6 ts=80182 T=28.4 H=61.7 avgT=28.82 avgH=61.58
-2026-10-16 00:01:50.905 [processor] sample=#7 ts=80682 T=28.4 H=61.1 avgT=28.76 avgH=61.51
-2026-10-16 00:01:51.405 [processor] sample=#8 ts=81182 T=28.8 H=60.8 avgT=28.76 avgH=61.43
-2026-10-16 00:01:51.905 [processor] sample=#9 ts=81682 T=28.3 H=60.4 avgT=28.71 avgH=61.31
-2026-10-16 00:01:52.404 [processor] sample=#10 ts=82182 T=28.5 H=60.5 avgT=28.69 avgH=61.23
-2026-10-16 00:01:52.906 [processor] sample=#11 ts=82682 T=28.3 H=60.4 avgT=28.68 avgH=61.19
-2026-10-16 00:01:53.405 [processor] sample=#12 ts=83182 T=28.2 H=60.9 avgT=28.61 avgH=61.13
-2026-10-16 00:01:53.905 [processor] sample=#13 ts=83682 T=28.3 H=60.6 avgT=28.50 avgH=61.01
-2026-10-16 00:01:54.405 [processor] sample=#14 ts=84182 T=28.1 H=59.6 avgT=28.42 avgH=60.77
-2026-10-16 00:01:54.905 [processor] sample=#15 ts=84682 T=28.1 H=60.6 avgT=28.34 avgH=60.66
-2026-10-16 00:01:55.405 [processor] sample=#16 ts=85182 T=28.4 H=59.7 avgT=28.34 avgH=60.46
-2026-10-16 00:01:55.905 [processor] sample=#17 ts=85682 T=27.9 H=59.7 avgT=28.29 avgH=60.32
-2026-10-16 00:01:56.405 [processor] sample=#18 ts=86182 T=27.6 H=60.2 avgT=28.17 avgH=60.26
-2026-10-16 00:01:56.905 [processor] sample=#19 ts=86682 T=27.3 H=60.3 avgT=28.07 avgH=60.25
-2026-10-16 00:01:57.405 [processor] sample=#20 ts=87182 T=27.1 H=60.0 avgT=27.93 avgH=60.20
-2026-10-16 00:01:57.905 [processor] sample=#21 ts=87682 T=26.7 H=59.2 avgT=27.77 avgH=60.08
-2026-10-16 00:01:58.405 [processor] sample=#22 ts=88182 T=26.9 H=60.2 avgT=27.64 avgH=60.01
-2026-10-16 00:01:58.906 [processor] sample=#23 ts=88683 T=26.9 H=59.4 avgT=27.50 avgH=59.89
-2026-10-16 00:01:59.405 [processor] sample=#24 ts=89182 T=26.5 H=58.7 avgT=27.34 avgH=59.80
-2026-10-16 00:01:59.905 [processor] sample=#25 ts=89682 T=27.0 H=59.4 avgT=27.23 avgH=59.68
-2026-10-16 00:02:00.405 [processor] sample=#26 ts=90182 T=26.8 H=59.9 avgT=27.07 avgH=59.70
-2026-10-16 00:02:00.905 [processor] sample=#27 ts=90682 T=26.5 H=59.9 avgT=26.93 avgH=59.72
-2026-10-16 00:02:01.405 [processor] sample=#28 ts=91182 T=27.0 H=60.6 avgT=26.87 avgH=59.76
-2026-10-16 00:02:01.906 [processor] sample=#29 ts=91683 T=26.8 H=60.9 avgT=26.82 avgH=59.82
-2026-10-16 00:02:02.405 [processor] sample=#30 ts=92182 T=26.7 H=60.7 avgT=26.78 avgH=59.89
-2026-10-16 00:02:02.905 [processor] sample=#31 ts=92682 T=26.9 H=59.8 avgT=26.80 avgH=59.95
-2026-10-16 00:02:03.405 [processor] sample=#32 ts=93182 T=26.6 H=59.8 avgT=26.77 avgH=59.91
-2026-10-16 00:02:03.905 [processor] sample=#33 ts=93682 T=26.1 H=60.8 avgT=26.69 avgH=60.05
-2026-10-16 00:02:04.405 [processor] sample=#34 ts=94182 T=26.2 H=60.8 avgT=26.66 avgH=60.26
-2026-10-16 00:02:04.905 [processor] sample=#35 ts=94682 T=26.0 H=59.8 avgT=26.56 avgH=60.30
-2026-10-16 00:02:05.405 [processor] sample=#36 ts=95182 T=25.8 H=60.3 avgT=26.46 avgH=60.34
-2026-10-16 00:02:05.905 [processor] sample=#37 ts=95682 T=25.9 H=60.3 avgT=26.40 avgH=60.38
-2026-10-16 00:02:06.405 [processor] sample=#38 ts=96182 T=25.4 H=61.0 avgT=26.24 avgH=60.42
-2026-10-16 00:02:06.905 [processor] sample=#39 ts=96682 T=25.7 H=60.5 avgT=26.13 avgH=60.38
-2026-10-16 00:02:07.404 [processor] sample=#40 ts=97182 T=26.2 H=61.0 avgT=26.08 avgH=60.41
-2026-10-16 00:02:07.904 [processor] sample=#41 ts=97682 T=25.8 H=60.7 avgT=25.97 avgH=60.50
-2026-10-16 00:02:08.404 [processor] sample=#42 ts=98182 T=26.1 H=60.0 avgT=25.92 avgH=60.52
-2026-10-16 00:02:08.905 [processor] sample=#43 ts=98682 T=26.6 H=60.0 avgT=25.97 avgH=60.44
-2026-10-16 00:02:09.405 [processor] sample=#44 ts=99182 T=26.4 H=60.6 avgT=25.99 avgH=60.42
-2026-10-16 00:02:09.905 [processor] sample=#45 ts=99682 T=25.9 H=61.6 avgT=25.98 avgH=60.60
-2026-10-16 00:02:10.405 [processor] sample=#46 ts=100182 T=26.2 H=61.0 avgT=26.02 avgH=60.67
-2026-10-16 00:02:10.905 [processor] sample=#47 ts=100682 T=26.6 H=60.1 avgT=26.09 avgH=60.65
-2026-10-16 00:02:11.405 [processor] sample=#48 ts=101182 T=26.2 H=60.4 avgT=26.17 avgH=60.59
-2026-10-16 00:02:11.905 [processor] sample=#49 ts=101682 T=26.2 H=61.1 avgT=26.22 avgH=60.65
-2026-10-16 00:02:12.405 [processor] sample=#50 ts=102182 T=25.9 H=61.0 avgT=26.19 avgH=60.65
-2026-10-16 00:02:12.905 [processor] sample=#51 ts=102682 T=26.0 H=62.0 avgT=26.21 avgH=60.78
-2026-10-16 00:02:13.406 [processor] sample=#52 ts=103182 T=26.2 H=62.9 avgT=26.22 avgH=61.07
-2026-10-16 00:02:13.905 [processor] sample=#53 ts=103682 T=26.1 H=62.3 avgT=26.17 avgH=61.30
-2026-10-16 00:02:14.405 [processor] sample=#54 ts=104182 T=26.2 H=62.9 avgT=26.15 avgH=61.53
-2026-10-16 00:02:14.905 [processor] sample=#55 ts=104682 T=26.6 H=63.9 avgT=26.22 avgH=61.76
-2026-10-16 00:02:15.405 [processor] sample=#56 ts=105182 T=26.2 H=63.9 avgT=26.22 avgH=62.05
-2026-10-16 00:02:15.905 [processor] sample=#57 ts=105682 T=26.1 H=63.1 avgT=26.17 avgH=62.35
-2026-10-16 00:02:16.407 [alert] TYPE: TEMP_HIGH VALUE: 44.3C THRESHOLD: 40.0C sample=#58 ts=106182
-2026-10-16 00:02:16.408 [alert] TYPE: TEMP_SPIKE VALUE: 18.2C THRESHOLD: 5.0C sample=#58 ts=106182
-2026-10-16 00:02:16.409 [processor] sample=#58 ts=106182 T=44.3 H=62.2 avgT=27.98 avgH=62.53
-2026-10-16 00:02:16.905 [alert] TYPE: TEMP_SPIKE VALUE: 18.9C THRESHOLD: 5.0C sample=#59 ts=106682
-2026-10-16 00:02:16.905 [processor] sample=#59 ts=106682 T=25.4 H=61.2 avgT=27.90 avgH=62.54
-2026-10-16 00:02:17.404 [processor] sample=#60 ts=107182 T=25.8 H=61.5 avgT=27.89 avgH=62.59
-2026-10-16 00:02:17.905 [processor] sample=#61 ts=107682 T=25.8 H=62.5 avgT=27.87 avgH=62.64
-2026-10-16 00:02:18.405 [processor] sample=#62 ts=108182 T=26.3 H=62.5 avgT=27.88 avgH=62.60
-2026-10-16 00:02:18.904 [processor] sample=#63 ts=108682 T=26.3 H=63.1 avgT=27.90 avgH=62.68
-2026-10-16 00:02:19.405 [processor] sample=#64 ts=109182 T=26.5 H=63.7 avgT=27.93 avgH=62.76
-2026-10-16 00:02:19.905 [processor] sample=#65 ts=109682 T=26.2 H=62.8 avgT=27.89 avgH=62.65
-2026-10-16 00:02:20.405 [processor] sample=#66 ts=110182 T=26.6 H=62.6 avgT=27.93 avgH=62.52
-2026-10-16 00:02:20.905 [processor] sample=#67 ts=110682 T=26.3 H=62.3 avgT=27.95 avgH=62.44
-2026-10-16 00:02:21.405 [processor] sample=#68 ts=111182 T=25.8 H=62.1 avgT=26.10 avgH=62.43
-2026-10-16 00:02:21.905 [processor] sample=#69 ts=111682 T=25.8 H=62.4 avgT=26.14 avgH=62.55
-2026-10-16 00:02:22.405 [processor] sample=#70 ts=112182 T=26.1 H=61.6 avgT=26.17 avgH=62.56
-2026-10-16 00:02:22.906 [processor] sample=#71 ts=112683 T=26.1 H=62.4 avgT=26.20 avgH=62.55
-2026-10-16 00:02:23.405 [processor] sample=#72 ts=113182 T=25.7 H=62.9 avgT=26.14 avgH=62.59
-2026-10-16 00:02:23.905 [processor] sample=#73 ts=113682 T=25.9 H=62.1 avgT=26.10 avgH=62.49
-2026-10-16 00:02:24.405 [processor] sample=#74 ts=114182 T=25.6 H=62.6 avgT=26.01 avgH=62.38
-2026-10-16 00:02:24.905 [processor] sample=#75 ts=114682 T=25.7 H=62.9 avgT=25.96 avgH=62.39
-2026-10-16 00:02:25.405 [processor] sample=#76 ts=115182 T=25.4 H=63.6 avgT=25.84 avgH=62.49
-2026-10-16 00:02:25.905 [processor] sample=#77 ts=115682 T=25.6 H=64.5 avgT=25.77 avgH=62.71
-2026-10-16 00:02:26.405 [processor] sample=#78 ts=116182 T=25.6 H=64.4 avgT=25.75 avgH=62.94
-2026-10-16 00:02:26.905 [processor] sample=#79 ts=116682 T=25.1 H=63.8 avgT=25.68 avgH=63.08
-2026-10-16 00:02:27.405 [processor] sample=#80 ts=117182 T=24.6 H=64.3 avgT=25.53 avgH=63.35
-2026-10-16 00:02:27.905 [processor] sample=#81 ts=117682 T=25.0 H=63.5 avgT=25.42 avgH=63.46
-2026-10-16 00:02:28.405 [processor] sample=#82 ts=118182 T=24.8 H=63.7 avgT=25.33 avgH=63.54
-2026-10-16 00:02:28.905 [processor] sample=#83 ts=118682 T=25.3 H=62.7 avgT=25.27 avgH=63.60
-2026-10-16 00:02:29.405 [processor] sample=#84 ts=119182 T=25.2 H=62.4 avgT=25.23 avgH=63.58
-2026-10-16 00:02:29.905 [processor] sample=#85 ts=119682 T=25.7 H=63.1 avgT=25.23 avgH=63.60
-2026-10-16 00:02:30.406 [processor] sample=#86 ts=120183 T=26.1 H=62.9 avgT=25.30 avgH=63.53
-2026-10-16 00:02:30.905 [processor] sample=#87 ts=120682 T=26.1 H=63.7 avgT=25.35 avgH=63.45
-2026-10-16 00:02:31.405 [processor] sample=#88 ts=121182 T=25.8 H=63.7 avgT=25.37 avgH=63.38
-2026-10-16 00:02:31.905 [processor] sample=#89 ts=121682 T=26.3 H=64.5 avgT=25.49 avgH=63.45
-2026-10-16 00:02:32.405 [processor] sample=#90 ts=122182 T=25.8 H=64.3 avgT=25.61 avgH=63.45
-2026-10-16 00:02:32.905 [processor] sample=#91 ts=122682 T=25.6 H=65.3 avgT=25.67 avgH=63.63
-2026-10-16 00:02:33.405 [processor] sample=#92 ts=123182 T=25.7 H=64.5 avgT=25.76 avgH=63.71
-2026-10-16 00:02:33.905 [processor] sample=#93 ts=123682 T=25.6 H=63.6 avgT=25.79 avgH=63.80
-2026-10-16 00:02:34.405 [processor] sample=#94 ts=124182 T=25.6 H=64.6 avgT=25.83 avgH=64.02
-2026-10-16 00:02:34.905 [processor] sample=#95 ts=124682 T=26.0 H=65.3 avgT=25.86 avgH=64.24
-2026-10-16 00:02:35.405 [processor] sample=#96 ts=125182 T=25.7 H=65.0 avgT=25.82 avgH=64.45
-2026-10-16 00:02:35.905 [processor] sample=#97 ts=125682 T=25.9 H=64.9 avgT=25.80 avgH=64.57
-2026-10-16 00:02:36.405 [processor] sample=#98 ts=126182 T=26.3 H=64.6 avgT=25.85 avgH=64.66
-2026-10-16 00:02:36.906 [processor] sample=#99 ts=126682 T=25.8 H=64.0 avgT=25.80 avgH=64.61
-2026-10-16 00:02:37.405 [processor] sample=#100 ts=127182 T=26.0 H=63.5 avgT=25.82 avgH=64.53
-2026-10-16 00:02:37.906 [processor] sample=#101 ts=127682 T=25.9 H=62.7 avgT=25.85 avgH=64.27
-2026-10-16 00:02:38.406 [alert] TYPE: HUMID_HIGH VALUE: 86.8% THRESHOLD: 80.0% sample=#102 ts=128182
-2026-10-16 00:02:38.407 [processor] sample=#102 ts=128182 T=25.8 H=86.8 avgT=25.86 avgH=66.50
-2026-10-16 00:02:38.906 [processor] sample=#103 ts=128683 T=26.0 H=62.0 avgT=25.90 avgH=66.34
-2026-10-16 00:02:39.405 [processor] sample=#104 ts=129182 T=26.2 H=62.1 avgT=25.96 avgH=66.09
-2026-10-16 00:02:39.905 [processor] sample=#105 ts=129682 T=26.6 H=61.2 avgT=26.02 avgH=65.68
-2026-10-16 00:02:40.406 [processor] sample=#106 ts=130182 T=26.8 H=60.6 avgT=26.13 avgH=65.24
-2026-10-16 00:02:40.906 [processor] sample=#107 ts=130682 T=27.2 H=61.6 avgT=26.26 avgH=64.91
-2026-10-16 00:02:41.405 [processor] sample=#108 ts=131182 T=27.5 H=60.9 avgT=26.38 avgH=64.54
-2026-10-16 00:02:41.906 [alert] TYPE: TEMP_HIGH VALUE: 40.8C THRESHOLD: 40.0C sample=#109 ts=131683
-2026-10-16 00:02:41.908 [alert] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C sample=#109 ts=131683
-2026-10-16 00:02:41.908 [processor] sample=#109 ts=131683 T=40.8 H=60.4 avgT=27.88 avgH=64.18
-2026-10-16 00:02:42.406 [alert] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C sample=#110 ts=132182
-2026-10-16 00:02:42.406 [processor] sample=#110 ts=132182 T=27.5 H=59.4 avgT=28.03 avgH=63.77
-2026-10-16 00:02:42.905 [processor] sample=#111 ts=132683 T=27.9 H=59.1 avgT=28.23 avgH=63.41
-2026-10-16 00:02:43.405 [processor] sample=#112 ts=133182 T=27.6 H=59.4 avgT=28.41 avgH=60.67
-2026-10-16 00:02:43.905 [processor] sample=#113 ts=133682 T=27.1 H=60.0 avgT=28.52 avgH=60.47
-2026-10-16 00:02:44.405 [processor] sample=#114 ts=134182 T=27.4 H=61.0 avgT=28.64 avgH=60.36
-2026-10-16 00:02:44.905 [processor] sample=#115 ts=134682 T=26.9 H=61.3 avgT=28.67 avgH=60.37
-2026-10-16 00:02:45.405 [processor] sample=#116 ts=135182 T=27.4 H=61.3 avgT=28.73 avgH=60.44
-2026-10-16 00:02:45.905 [processor] sample=#117 ts=135682 T=27.3 H=61.7 avgT=28.74 avgH=60.45
-2026-10-16 00:02:46.405 [processor] sample=#118 ts=136182 T=27.3 H=61.1 avgT=28.72 avgH=60.47
-2026-10-16 00:02:46.905 [processor] sample=#119 ts=136682 T=26.8 H=60.5 avgT=27.32 avgH=60.48
-2026-10-16 00:02:47.405 [processor] sample=#120 ts=137182 T=27.3 H=60.9 avgT=27.30 avgH=60.63
-2026-10-16 00:02:47.441 [main] shutdown requested (duration reached)
-2026-10-16 00:02:47.904 [sensor] thread stopped (reads=120, eagain=0, dropped=0)
-2026-10-16 00:02:47.915 [processor] thread stopped (processed=120, alarms=7, dropped=0)
-2026-10-16 00:02:47.917 [alert] thread stopped (TEMP_HIGH=2, HUMID_HIGH=1, TEMP_SPIKE=4)
-2026-10-16 00:02:47.918 [main] summary: samples=120 processed=120 alerts=7 overflow=0 uptime=60.5 s
-2026-10-16 00:02:47.918 [logger] thread stopped (lines=137, flushes=12, rotations=0, dropped=0)
+----- sms_app start -----
+2026-10-16 01:48:06.365 [alert] started
+2026-10-16 01:48:06.386 [processor] started
+2026-10-16 01:48:06.387 [main] started pid=87 dev=/dev/sms_sensor
+2026-10-16 01:48:06.389 [sensor] started, policy=SCHED_FIFO, interval=500 ms
+2026-10-16 01:48:06.860 [processor] ts=6955 T=29.6 H=59.8 avgT=29.60 avgH=59.80
+2026-10-16 01:48:07.321 [processor] ts=7451 T=29.2 H=61.8 avgT=29.40 avgH=60.80
+2026-10-16 01:48:07.822 [processor] ts=7952 T=28.2 H=61.1 avgT=29.00 avgH=60.90
+2026-10-16 01:48:08.322 [processor] ts=8452 T=28.0 H=62.8 avgT=28.75 avgH=61.38
+2026-10-16 01:48:08.823 [processor] ts=8953 T=27.9 H=63.6 avgT=28.58 avgH=61.82
+2026-10-16 01:48:09.322 [processor] ts=9452 T=27.2 H=64.1 avgT=28.35 avgH=62.20
+2026-10-16 01:48:09.822 [processor] ts=9952 T=26.2 H=64.1 avgT=28.04 avgH=62.47
+2026-10-16 01:48:10.324 [alert] TEMP_SPIKE value=6.0 threshold=5.0 ts=10452
+2026-10-16 01:48:10.326 [processor] ts=10452 T=32.2 H=62.9 avgT=28.56 avgH=62.53
+2026-10-16 01:48:10.821 [processor] ts=10951 T=31.4 H=64.9 avgT=28.88 avgH=62.79
+2026-10-16 01:48:11.323 [processor] ts=11453 T=32.2 H=63.0 avgT=29.21 avgH=62.81
+2026-10-16 01:48:11.822 [processor] ts=11951 T=31.6 H=64.4 avgT=29.41 avgH=63.27
+2026-10-16 01:48:12.321 [processor] ts=12452 T=32.3 H=64.9 avgT=29.72 avgH=63.58
+2026-10-16 01:48:12.821 [processor] ts=12951 T=31.7 H=63.5 avgT=30.07 avgH=63.82
+2026-10-16 01:48:13.325 [alert] TEMP_SPIKE value=6.0 threshold=5.0 ts=13453
+2026-10-16 01:48:13.325 [processor] ts=13453 T=37.7 H=62.1 avgT=31.04 avgH=63.75
+2026-10-16 01:48:13.893 [processor] ts=14023 T=37.1 H=63.4 avgT=31.96 avgH=63.73
+2026-10-16 01:48:14.321 [sensor] driver not ready (EAGAIN), skip this cycle
+2026-10-16 01:48:14.823 [processor] ts=14953 T=36.1 H=63.6 avgT=32.85 avgH=63.68
+2026-10-16 01:48:15.321 [processor] ts=15451 T=36.4 H=62.9 avgT=33.87 avgH=63.56
+2026-10-16 01:48:15.821 [processor] ts=15951 T=35.5 H=61.3 avgT=34.20 avgH=63.40
+2026-10-16 01:48:16.322 [processor] ts=16452 T=34.5 H=61.6 avgT=34.51 avgH=63.07
+2026-10-16 01:48:16.821 [processor] ts=16951 T=34.6 H=63.2 avgT=34.75 avgH=63.09
+2026-10-16 01:48:17.331 [processor] ts=17460 T=34.5 H=61.6 avgT=35.04 avgH=62.81
+2026-10-16 01:48:17.821 [processor] ts=17951 T=35.0 H=60.4 avgT=35.31 avgH=62.36
+2026-10-16 01:48:18.321 [processor] ts=18451 T=34.2 H=59.8 avgT=35.56 avgH=61.99
+2026-10-16 01:48:18.821 [processor] ts=18952 T=33.8 H=58.6 avgT=35.17 avgH=61.64
+2026-10-16 01:48:19.330 [processor] ts=19460 T=32.8 H=59.0 avgT=34.74 avgH=61.20
+2026-10-16 01:48:19.824 [processor] ts=19953 T=32.5 H=58.0 avgT=34.38 avgH=60.64
+2026-10-16 01:48:20.323 [processor] ts=20453 T=32.2 H=56.5 avgT=33.96 avgH=60.00
+2026-10-16 01:48:20.821 [processor] ts=20951 T=31.9 H=57.8 avgT=33.60 avgH=59.65
+2026-10-16 01:48:21.321 [processor] ts=21451 T=32.9 H=57.3 avgT=33.44 avgH=59.22
+2026-10-16 01:48:21.821 [processor] ts=21951 T=33.3 H=55.9 avgT=33.31 avgH=58.49
+2026-10-16 01:48:22.321 [processor] ts=22451 T=33.6 H=55.4 avgT=33.22 avgH=57.87
+2026-10-16 01:48:22.821 [processor] ts=22952 T=33.6 H=55.7 avgT=33.08 avgH=57.40
+2026-10-16 01:48:23.321 [processor] ts=23451 T=33.3 H=56.9 avgT=32.99 avgH=57.11
+2026-10-16 01:48:23.821 [processor] ts=23951 T=32.7 H=56.2 avgT=32.88 avgH=56.87
+2026-10-16 01:48:24.321 [processor] ts=24451 T=33.6 H=55.0 avgT=32.96 avgH=56.47
+2026-10-16 01:48:24.821 [processor] ts=24951 T=33.2 H=54.9 avgT=33.03 avgH=56.16
+2026-10-16 01:48:25.322 [processor] ts=25452 T=33.3 H=54.5 avgT=33.14 avgH=55.96
+2026-10-16 01:48:25.822 [processor] ts=25951 T=34.2 H=53.3 avgT=33.37 avgH=55.51
+2026-10-16 01:48:26.321 [processor] ts=26451 T=33.3 H=55.3 avgT=33.41 avgH=55.31
+2026-10-16 01:48:26.822 [processor] ts=26952 T=34.1 H=55.5 avgT=33.49 avgH=55.27
+2026-10-16 01:48:27.321 [processor] ts=27451 T=34.3 H=56.6 avgT=33.56 avgH=55.39
+2026-10-16 01:48:27.821 [processor] ts=27951 T=33.5 H=58.2 avgT=33.55 avgH=55.64
+2026-10-16 01:48:28.321 [processor] ts=28452 T=33.3 H=56.8 avgT=33.55 avgH=55.63
+2026-10-16 01:48:28.821 [processor] ts=28951 T=34.0 H=58.1 avgT=33.68 avgH=55.82
+2026-10-16 01:48:29.323 [processor] ts=29453 T=34.2 H=56.3 avgT=33.74 avgH=55.95
+2026-10-16 01:48:29.822 [processor] ts=29952 T=33.7 H=58.3 avgT=33.79 avgH=56.29
+2026-10-16 01:48:30.322 [processor] ts=30452 T=33.0 H=57.0 avgT=33.76 avgH=56.54
+2026-10-16 01:48:30.821 [processor] ts=30951 T=33.7 H=55.1 avgT=33.71 avgH=56.72
+2026-10-16 01:48:31.322 [processor] ts=31451 T=33.6 H=56.7 avgT=33.74 avgH=56.86
+2026-10-16 01:48:31.821 [processor] ts=31952 T=34.3 H=58.1 avgT=33.76 avgH=57.12
+2026-10-16 01:48:32.322 [alert] TEMP_HIGH value=40.3 threshold=40.0 ts=32451
+2026-10-16 01:48:32.323 [alert] TEMP_SPIKE value=6.0 threshold=5.0 ts=32451
+2026-10-16 01:48:32.323 [processor] ts=32451 T=40.3 H=59.6 avgT=34.36 avgH=57.42
+2026-10-16 01:48:32.821 [processor] ts=32951 T=40.0 H=58.0 avgT=35.01 avgH=57.40
+2026-10-16 01:48:33.321 [processor] ts=33451 T=39.9 H=57.0 avgT=35.67 avgH=57.42
+2026-10-16 01:48:33.822 [alert] TEMP_HIGH value=40.6 threshold=40.0 ts=33951
+2026-10-16 01:48:33.822 [processor] ts=33951 T=40.6 H=57.7 avgT=36.33 avgH=57.38
+2026-10-16 01:48:34.322 [alert] TEMP_HIGH value=41.6 threshold=40.0 ts=34451
+2026-10-16 01:48:34.322 [processor] ts=34451 T=41.6 H=56.5 avgT=37.07 avgH=57.40
+2026-10-16 01:48:34.822 [alert] TEMP_HIGH value=42.1 threshold=40.0 ts=34951
+2026-10-16 01:48:34.823 [processor] ts=34951 T=42.1 H=56.4 avgT=37.91 avgH=57.21
+2026-10-16 01:48:35.322 [alert] TEMP_HIGH value=41.2 threshold=40.0 ts=35451
+2026-10-16 01:48:35.322 [processor] ts=35451 T=41.2 H=54.5 avgT=38.73 avgH=56.96
+2026-10-16 01:48:35.822 [alert] TEMP_HIGH value=41.3 threshold=40.0 ts=35951
+2026-10-16 01:48:35.822 [processor] ts=35951 T=41.3 H=54.6 avgT=39.49 avgH=56.91
+2026-10-16 01:48:36.322 [processor] ts=36451 T=40.4 H=54.1 avgT=40.17 avgH=56.65
+2026-10-16 01:48:36.322 [alert] TEMP_HIGH value=40.4 threshold=40.0 ts=36451
+2026-10-16 01:48:36.822 [processor] ts=36952 T=41.4 H=52.7 avgT=40.88 avgH=56.11
+2026-10-16 01:48:36.822 [alert] TEMP_HIGH value=41.4 threshold=40.0 ts=36952
+2026-10-16 01:48:37.322 [processor] ts=37451 T=40.8 H=51.8 avgT=40.93 avgH=55.33
+2026-10-16 01:48:37.322 [alert] TEMP_HIGH value=40.8 threshold=40.0 ts=37451
+2026-10-16 01:48:37.822 [processor] ts=37951 T=40.5 H=53.8 avgT=40.98 avgH=54.91
+2026-10-16 01:48:37.822 [alert] TEMP_HIGH value=40.5 threshold=40.0 ts=37951
+2026-10-16 01:48:38.322 [processor] ts=38451 T=40.1 H=54.5 avgT=41.00 avgH=54.66
+2026-10-16 01:48:38.322 [alert] TEMP_HIGH value=40.1 threshold=40.0 ts=38451
+2026-10-16 01:48:38.822 [processor] ts=38951 T=40.2 H=54.4 avgT=40.96 avgH=54.33
+2026-10-16 01:48:38.822 [alert] TEMP_HIGH value=40.2 threshold=40.0 ts=38951
+2026-10-16 01:48:39.324 [processor] ts=39453 T=40.4 H=53.2 avgT=40.84 avgH=54.00
+2026-10-16 01:48:39.324 [alert] TEMP_HIGH value=40.4 threshold=40.0 ts=39453
+2026-10-16 01:48:39.822 [processor] ts=39952 T=40.0 H=54.8 avgT=40.63 avgH=53.84
+2026-10-16 01:48:40.322 [processor] ts=40451 T=39.3 H=55.4 avgT=40.44 avgH=53.93
+2026-10-16 01:48:40.821 [processor] ts=40951 T=39.7 H=56.1 avgT=40.28 avgH=54.08
+2026-10-16 01:48:41.322 [alert] TEMP_HIGH value=40.5 threshold=40.0 ts=41452
+2026-10-16 01:48:41.322 [processor] ts=41452 T=40.5 H=57.2 avgT=40.29 avgH=54.39
+2026-10-16 01:48:41.822 [alert] TEMP_HIGH value=40.1 threshold=40.0 ts=41951
+2026-10-16 01:48:41.822 [processor] ts=41951 T=40.1 H=58.0 avgT=40.16 avgH=54.92
+2026-10-16 01:48:42.332 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=42461
+2026-10-16 01:48:42.332 [processor] ts=42461 T=45.0 H=58.3 avgT=40.58 avgH=55.57
+2026-10-16 01:48:42.822 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=42952
+2026-10-16 01:48:42.822 [processor] ts=42952 T=45.0 H=59.3 avgT=41.03 avgH=56.12
+2026-10-16 01:48:43.322 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=43451
+2026-10-16 01:48:43.322 [processor] ts=43451 T=45.0 H=60.5 avgT=41.52 avgH=56.72
+2026-10-16 01:48:43.822 [alert] TEMP_HIGH value=44.6 threshold=40.0 ts=43951
+2026-10-16 01:48:43.822 [processor] ts=43951 T=44.6 H=62.2 avgT=41.96 avgH=57.50
+2026-10-16 01:48:44.322 [alert] TEMP_SPIKE value=-6.0 threshold=5.0 ts=44451
+2026-10-16 01:48:44.322 [processor] ts=44451 T=38.6 H=60.3 avgT=41.78 avgH=58.21
+2026-10-16 01:48:44.821 [processor] ts=44951 T=39.1 H=59.8 avgT=41.69 avgH=58.71
+2026-10-16 01:48:45.321 [processor] ts=45451 T=39.9 H=59.9 avgT=41.75 avgH=59.16
+2026-10-16 01:48:45.822 [alert] TEMP_HIGH value=40.7 threshold=40.0 ts=45952
+2026-10-16 01:48:45.822 [processor] ts=45952 T=40.7 H=60.3 avgT=41.85 avgH=59.58
+2026-10-16 01:48:46.323 [alert] TEMP_HIGH value=41.5 threshold=40.0 ts=46452
+2026-10-16 01:48:46.324 [processor] ts=46452 T=41.5 H=62.2 avgT=41.95 avgH=60.08
+2026-10-16 01:48:46.822 [alert] TEMP_HIGH value=42.4 threshold=40.0 ts=46951
+2026-10-16 01:48:46.822 [processor] ts=46951 T=42.4 H=62.6 avgT=42.18 avgH=60.54
+2026-10-16 01:48:47.322 [alert] TEMP_HIGH value=42.9 threshold=40.0 ts=47451
+2026-10-16 01:48:47.322 [processor] ts=47451 T=42.9 H=62.1 avgT=41.97 avgH=60.92
+2026-10-16 01:48:47.822 [alert] TEMP_SPIKE value=-6.0 threshold=5.0 ts=47951
+2026-10-16 01:48:47.822 [processor] ts=47951 T=36.9 H=64.1 avgT=41.16 avgH=61.40
+2026-10-16 01:48:48.321 [processor] ts=48451 T=36.2 H=64.0 avgT=40.28 avgH=61.75
+2026-10-16 01:48:48.821 [processor] ts=48951 T=35.7 H=64.5 avgT=39.39 avgH=61.98
+2026-10-16 01:48:49.321 [processor] ts=49451 T=35.7 H=62.5 avgT=39.10 avgH=62.20
+2026-10-16 01:48:49.822 [alert] TEMP_HIGH value=41.7 threshold=40.0 ts=49951
+2026-10-16 01:48:49.823 [alert] TEMP_SPIKE value=6.0 threshold=5.0 ts=49951
+2026-10-16 01:48:49.823 [processor] ts=49951 T=41.7 H=63.4 avgT=39.36 avgH=62.56
+2026-10-16 01:48:50.322 [alert] TEMP_HIGH value=42.5 threshold=40.0 ts=50451
+2026-10-16 01:48:50.322 [processor] ts=50451 T=42.5 H=63.3 avgT=39.62 avgH=62.90
+2026-10-16 01:48:50.823 [alert] TEMP_HIGH value=42.0 threshold=40.0 ts=50953
+2026-10-16 01:48:50.824 [processor] ts=50953 T=42.0 H=64.7 avgT=39.75 avgH=63.34
+2026-10-16 01:48:51.322 [alert] TEMP_HIGH value=41.2 threshold=40.0 ts=51451
+2026-10-16 01:48:51.323 [processor] ts=51451 T=41.2 H=65.2 avgT=39.72 avgH=63.64
+2026-10-16 01:48:51.822 [alert] TEMP_HIGH value=41.7 threshold=40.0 ts=51951
+2026-10-16 01:48:51.822 [processor] ts=51951 T=41.7 H=65.0 avgT=39.65 avgH=63.88
+2026-10-16 01:48:52.322 [alert] TEMP_HIGH value=40.8 threshold=40.0 ts=52451
+2026-10-16 01:48:52.322 [processor] ts=52451 T=40.8 H=66.3 avgT=39.44 avgH=64.30
+2026-10-16 01:48:52.822 [alert] TEMP_HIGH value=41.0 threshold=40.0 ts=52951
+2026-10-16 01:48:52.823 [processor] ts=52951 T=41.0 H=66.6 avgT=39.85 avgH=64.55
+2026-10-16 01:48:53.322 [alert] TEMP_HIGH value=41.4 threshold=40.0 ts=53451
+2026-10-16 01:48:53.322 [processor] ts=53451 T=41.4 H=67.3 avgT=40.37 avgH=64.88
+2026-10-16 01:48:53.822 [alert] TEMP_HIGH value=41.5 threshold=40.0 ts=53952
+2026-10-16 01:48:53.823 [processor] ts=53952 T=41.5 H=67.6 avgT=40.95 avgH=65.19
+2026-10-16 01:48:54.322 [alert] TEMP_HIGH value=40.9 threshold=40.0 ts=54452
+2026-10-16 01:48:54.322 [processor] ts=54452 T=40.9 H=67.6 avgT=41.47 avgH=65.70
+2026-10-16 01:48:54.822 [alert] TEMP_HIGH value=41.5 threshold=40.0 ts=54952
+2026-10-16 01:48:54.823 [processor] ts=54952 T=41.5 H=66.8 avgT=41.45 avgH=66.04
+2026-10-16 01:48:55.322 [alert] TEMP_HIGH value=42.2 threshold=40.0 ts=55451
+2026-10-16 01:48:55.322 [processor] ts=55451 T=42.2 H=65.1 avgT=41.42 avgH=66.22
+2026-10-16 01:48:55.822 [alert] TEMP_HIGH value=42.5 threshold=40.0 ts=55952
+2026-10-16 01:48:55.822 [processor] ts=55952 T=42.5 H=66.9 avgT=41.47 avgH=66.44
+2026-10-16 01:48:56.322 [alert] TEMP_HIGH value=43.5 threshold=40.0 ts=56451
+2026-10-16 01:48:56.322 [processor] ts=56451 T=43.5 H=66.9 avgT=41.70 avgH=66.61
+2026-10-16 01:48:56.822 [alert] TEMP_HIGH value=42.8 threshold=40.0 ts=56952
+2026-10-16 01:48:56.823 [processor] ts=56952 T=42.8 H=67.8 avgT=41.81 avgH=66.89
+2026-10-16 01:48:57.322 [alert] TEMP_HIGH value=43.0 threshold=40.0 ts=57452
+2026-10-16 01:48:57.323 [processor] ts=57452 T=43.0 H=69.0 avgT=42.03 avgH=67.16
+2026-10-16 01:48:57.822 [alert] TEMP_HIGH value=42.0 threshold=40.0 ts=57952
+2026-10-16 01:48:57.822 [processor] ts=57952 T=42.0 H=70.0 avgT=42.13 avgH=67.50
+2026-10-16 01:48:58.322 [alert] TEMP_HIGH value=42.0 threshold=40.0 ts=58451
+2026-10-16 01:48:58.322 [processor] ts=58451 T=42.0 H=70.5 avgT=42.19 avgH=67.82
+2026-10-16 01:48:58.822 [alert] TEMP_HIGH value=41.0 threshold=40.0 ts=58951
+2026-10-16 01:48:58.822 [processor] ts=58951 T=41.0 H=71.2 avgT=42.14 avgH=68.18
+2026-10-16 01:48:59.322 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=59451
+2026-10-16 01:48:59.322 [processor] ts=59451 T=45.0 H=71.7 avgT=42.55 avgH=68.59
+2026-10-16 01:48:59.822 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=59951
+2026-10-16 01:48:59.823 [processor] ts=59951 T=45.0 H=71.6 avgT=42.90 avgH=69.07
+2026-10-16 01:49:00.322 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=60451
+2026-10-16 01:49:00.322 [processor] ts=60451 T=45.0 H=71.8 avgT=43.18 avgH=69.74
+2026-10-16 01:49:00.822 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=60951
+2026-10-16 01:49:00.822 [processor] ts=60951 T=45.0 H=69.8 avgT=43.43 avgH=70.03
+2026-10-16 01:49:01.321 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=61451
+2026-10-16 01:49:01.322 [processor] ts=61451 T=45.0 H=69.9 avgT=43.58 avgH=70.33
+2026-10-16 01:49:01.822 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=61951
+2026-10-16 01:49:01.822 [processor] ts=61951 T=45.0 H=70.7 avgT=43.80 avgH=70.62
+2026-10-16 01:49:02.322 [alert] TEMP_HIGH value=44.8 threshold=40.0 ts=62451
+2026-10-16 01:49:02.322 [processor] ts=62451 T=44.8 H=69.7 avgT=43.98 avgH=70.69
+2026-10-16 01:49:02.822 [alert] TEMP_HIGH value=43.9 threshold=40.0 ts=62951
+2026-10-16 01:49:02.822 [processor] ts=62951 T=43.9 H=68.8 avgT=44.17 avgH=70.57
+2026-10-16 01:49:03.324 [alert] TEMP_HIGH value=43.2 threshold=40.0 ts=63453
+2026-10-16 01:49:03.324 [processor] ts=63453 T=43.2 H=70.1 avgT=44.29 avgH=70.53
+2026-10-16 01:49:03.822 [alert] TEMP_HIGH value=43.8 threshold=40.0 ts=63951
+2026-10-16 01:49:03.822 [processor] ts=63951 T=43.8 H=68.7 avgT=44.57 avgH=70.28
+2026-10-16 01:49:04.331 [processor] ts=64460 T=43.7 H=67.1 avgT=44.44 avgH=69.82
+2026-10-16 01:49:04.331 [alert] TEMP_HIGH value=43.7 threshold=40.0 ts=64460
+2026-10-16 01:49:04.821 [processor] ts=64951 T=44.4 H=68.0 avgT=44.38 avgH=69.46
+2026-10-16 01:49:04.822 [alert] TEMP_HIGH value=44.4 threshold=40.0 ts=64951
+2026-10-16 01:49:05.321 [processor] ts=65451 T=45.0 H=69.4 avgT=44.38 avgH=69.22
+2026-10-16 01:49:05.322 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=65451
+2026-10-16 01:49:05.822 [processor] ts=65952 T=45.0 H=70.3 avgT=44.38 avgH=69.27
+2026-10-16 01:49:05.822 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=65952
+2026-10-16 01:49:06.322 [processor] ts=66452 T=45.0 H=71.6 avgT=44.38 avgH=69.44
+2026-10-16 01:49:06.323 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=66452
+2026-10-16 01:49:06.826 [sensor] stopped
+2026-10-16 01:49:06.828 [processor] ts=66951 T=45.0 H=69.6 avgT=44.38 avgH=69.33
+2026-10-16 01:49:06.829 [processor] stopped
+2026-10-16 01:49:06.829 [alert] TEMP_HIGH value=45.0 threshold=40.0 ts=66951
+2026-10-16 01:49:06.829 [alert] stopped
+2026-10-16 01:49:06.831 [main] summary: uptime=60 s samples=120 overflow=0 alerts TEMP_HIGH=58 HUMID_HIGH=0 TEMP_SPIKE=6
+----- sms_app stop -----

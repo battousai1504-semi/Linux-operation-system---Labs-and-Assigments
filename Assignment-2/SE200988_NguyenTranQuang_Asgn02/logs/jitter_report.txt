@@ -1,53 +1,72 @@
-interval=10 ms, duration=15 s per run, CPUs=2
+# Jitter Sensor Thread tren QEMU vexpress-a9 (TCG, -smp 2)
+# Phan 1: chu ky 10 ms, 15 s/lan (~1500 mau), SCHED_FIFO vs SCHED_OTHER, khong tai va co 2 vong lap chiem CPU
+interval=10 ms, duration=15 s, CPUs=2
 
-########## policy=fifo  background_load=0 busy loop(s)  (exit code 0) ##########
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_FIFO (prio 50)
-Interval        : 10 ms
-Samples         : 1501
-Min / Avg / Max : 91 / 442.7 / 892 us
-P99             : 684 us
-Histogram:
-  0-100us    :      1 (  0.1%) 
-  100-500us  :   1040 ( 69.3%) ##################################
-  500-1000us :    460 ( 30.6%) ###############
-  >1000us    :      0 (  0.0%) 
+##### policy=fifo  background_load=0 busy loop(s) #####
+===== JITTER REPORT (SCHED_FIFO, interval 10 ms) =====
+samples : 1501
+min     : 168 us
+avg     : 442.8 us
+max     : 4846 us
+p99     : 2555 us
+histogram:
+  0-100us    : 0
+  100-500us  : 1294
+  500-1000us : 176
+  >1000us    : 31
+samples         : produced=1484 consumed=1484 in_buffer=0 overflow=0
 
-########## policy=other  background_load=0 busy loop(s)  (exit code 0) ##########
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_OTHER (prio 0)
-Interval        : 10 ms
-Samples         : 1501
-Min / Avg / Max : 182 / 492.8 / 1021 us
-P99             : 725 us
-Histogram:
-  0-100us    :      0 (  0.0%) 
-  100-500us  :    870 ( 58.0%) ############################
-  500-1000us :    630 ( 42.0%) ####################
-  >1000us    :      1 (  0.1%) 
+##### policy=other  background_load=0 busy loop(s) #####
+===== JITTER REPORT (SCHED_OTHER, interval 10 ms) =====
+samples : 1501
+min     : 292 us
+avg     : 487.9 us
+max     : 6541 us
+p99     : 2343 us
+histogram:
+  0-100us    : 0
+  100-500us  : 1246
+  500-1000us : 221
+  >1000us    : 34
+samples         : produced=1478 consumed=1478 in_buffer=0 overflow=0
 
-########## policy=fifo  background_load=4 busy loop(s)  (exit code 0) ##########
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_FIFO (prio 50)
-Interval        : 10 ms
-Samples         : 1498
-Min / Avg / Max : 78 / 127.7 / 2103 us
-P99             : 185 us
-Histogram:
-  0-100us    :    399 ( 26.6%) #############
-  100-500us  :   1098 ( 73.3%) ####################################
-  500-1000us :      0 (  0.0%) 
-  >1000us    :      1 (  0.1%) 
+##### policy=fifo  background_load=2 busy loop(s) #####
+===== JITTER REPORT (SCHED_FIFO, interval 10 ms) =====
+samples : 1501
+min     : 180 us
+avg     : 463.1 us
+max     : 24277 us
+p99     : 4375 us
+histogram:
+  0-100us    : 0
+  100-500us  : 1398
+  500-1000us : 11
+  >1000us    : 92
+samples         : produced=1425 consumed=1425 in_buffer=0 overflow=0
 
-########## policy=other  background_load=4 busy loop(s)  (exit code 0) ##########
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_OTHER (prio 0)
-Interval        : 10 ms
-Samples         : 1501
-Min / Avg / Max : 136 / 161.0 / 342 us
-P99             : 248 us
-Histogram:
-  0-100us    :      0 (  0.0%) 
-  100-500us  :   1501 (100.0%) ##################################################
-  500-1000us :      0 (  0.0%) 
-  >1000us    :      0 (  0.0%) 
+##### policy=other  background_load=2 busy loop(s) #####
+===== JITTER REPORT (SCHED_OTHER, interval 10 ms) =====
+samples : 1501
+min     : 229 us
+avg     : 405.7 us
+max     : 5840 us
+p99     : 3733 us
+histogram:
+  0-100us    : 0
+  100-500us  : 1417
+  500-1000us : 19
+  >1000us    : 65
+samples         : produced=1473 consumed=1473 in_buffer=0 overflow=0
+
+# Phan 2: lan chay 60 s, chu ky 500 ms (SCHED_FIFO)
+===== JITTER REPORT (SCHED_FIFO, interval 500 ms) =====
+samples : 121
+min     : 269 us
+avg     : 1447.2 us
+max     : 71320 us
+p99     : 10229 us
+histogram:
+  0-100us    : 0
+  100-500us  : 97
+  500-1000us : 6
+  >1000us    : 18

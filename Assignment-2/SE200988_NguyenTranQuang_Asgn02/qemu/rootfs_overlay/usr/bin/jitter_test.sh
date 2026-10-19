@@ -1,7 +1,6 @@
 #!/bin/sh
-# jitter_test.sh - ASSIGNMENT-02 Task 4: so sánh jitter SCHED_FIFO vs SCHED_OTHER
-# Mỗi lần chạy: chu kỳ 10 ms trong 15 s (~1500 mẫu). Chạy 4 lần:
-#   không tải: fifo, other   |   có tải (4 vòng lặp chiếm CPU): fifo, other
+# jitter_test.sh - ASSIGNMENT-02 Task 4: so sanh jitter SCHED_FIFO va SCHED_OTHER
+# Chu ky 10 ms trong 15 s (~1500 mau / lan). 4 lan: (fifo, other) x (khong tai, co tai)
 INTERVAL=${1:-10}
 DUR=${2:-15}
 MOD=/lib/modules/$(uname -r)/sms_sensor_driver.ko
@@ -9,22 +8,21 @@ MOD=/lib/modules/$(uname -r)/sms_sensor_driver.ko
 grep -q '^sms_sensor_driver ' /proc/modules || insmod $MOD
 
 echo '=== JITTER_TEST START ==='
-echo "interval=${INTERVAL} ms, duration=${DUR} s per run, CPUs=$(grep -c ^processor /proc/cpuinfo)"
-for LOAD in 0 4; do
+echo "interval=${INTERVAL} ms, duration=${DUR} s, CPUs=$(grep -c ^processor /proc/cpuinfo)"
+for LOAD in 0 2; do
     PIDS=''
     i=0
-    while [ $i -lt $LOAD ]; do
+    while [ $i -lt $LOAD ]; do          # tao tai: vong lap chiem CPU
         sh -c 'while :; do :; done' &
         PIDS="$PIDS $!"
         i=$((i + 1))
     done
     for POL in fifo other; do
-        sms_app -i $INTERVAL -d $DUR -s $POL -t 100 -h 100 -L /tmp/sms_jitter.log \
-            > /tmp/jitter_${POL}_${LOAD}.txt 2>&1
-        RC=$?
+        sms_app -i $INTERVAL -d $DUR -s $POL -t 100 -h 100 -L /tmp/sms_jitter.log > /tmp/jit.txt 2>&1
         echo ""
-        echo "########## policy=$POL  background_load=$LOAD busy loop(s)  (exit code $RC) ##########"
-        sed -n '/===== JITTER REPORT/,/>1000us/p' /tmp/jitter_${POL}_${LOAD}.txt
+        echo "##### policy=$POL  background_load=$LOAD busy loop(s) #####"
+        sed -n '/===== JITTER REPORT/,/>1000us/p' /tmp/jit.txt
+        grep 'samples  ' /tmp/jit.txt
     done
     [ -n "$PIDS" ] && kill $PIDS
 done

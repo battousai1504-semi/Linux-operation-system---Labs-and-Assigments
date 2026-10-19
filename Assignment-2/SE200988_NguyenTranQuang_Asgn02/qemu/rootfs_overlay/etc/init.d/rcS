@@ -1,14 +1,19 @@
 #!/bin/sh
-# /etc/init.d/rcS - ASSIGNMENT-02: mount filesystem ảo, không tự nạp driver
+# /etc/init.d/rcS - ASSIGNMENT-02: mount filesystem ao, tao link busybox
+/bin/busybox --install -s
 mount -t proc none /proc
 mount -t sysfs none /sys
 mount -t tmpfs none /tmp
-mount -t devtmpfs none /dev 2>/dev/null || true
+mount -t devtmpfs none /dev 2>/dev/null
 mkdir -p /dev/mqueue
-mount -t mqueue none /dev/mqueue 2>/dev/null
-[ -c /dev/console ] || mknod /dev/console c 5 1
-[ -c /dev/null ] || mknod /dev/null c 1 3
+mount -t mqueue none /dev/mqueue
 hostname asgn2
-# Không in log kernel chen vào màn hình; xem bằng lệnh dmesg
-dmesg -n 1
-echo '[ ASGN2 ] Ready. Run: test_sms.sh  then  jitter_test.sh'
+dmesg -n 1        # khong cho log kernel chen vao man hinh, xem bang dmesg
+
+# Chay tu dong toan bo test roi tat may (run_qemu.sh autotest)
+if grep -q autotest /proc/cmdline; then
+    test_sms.sh
+    jitter_test.sh
+    poweroff -f
+fi
+echo '[ ASGN2 ] Ready. insmod /lib/modules/5.15.0/sms_sensor_driver.ko ; sms_app -v'

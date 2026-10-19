@@ -1,155 +1,237 @@
-[main] driver interval set to 500 ms (ioctl SMS_SET_INTERVAL)
-[main] SMS running (pid 78): interval=500 ms, T>40.0 C, H>80.0 %, duration=60 s. Ctrl+C to stop.
-[SAMPLE #   1] ts=77685 ms  T=28.4 C  H=60.8 %  | avg10 T=28.40 C  H=60.80 %
-[SAMPLE #   2] ts=78182 ms  T=28.9 C  H=61.5 %  | avg10 T=28.65 C  H=61.15 %
-[SAMPLE #   3] ts=78682 ms  T=29.4 C  H=61.8 %  | avg10 T=28.90 C  H=61.37 %
-[SAMPLE #   4] ts=79182 ms  T=28.9 C  H=62.0 %  | avg10 T=28.90 C  H=61.52 %
-[SAMPLE #   5] ts=79682 ms  T=28.9 C  H=61.7 %  | avg10 T=28.90 C  H=61.56 %
-[SAMPLE #   6] ts=80182 ms  T=28.4 C  H=61.7 %  | avg10 T=28.82 C  H=61.58 %
-[SAMPLE #   7] ts=80682 ms  T=28.4 C  H=61.1 %  | avg10 T=28.76 C  H=61.51 %
-[SAMPLE #   8] ts=81182 ms  T=28.8 C  H=60.8 %  | avg10 T=28.76 C  H=61.43 %
-[SAMPLE #   9] ts=81682 ms  T=28.3 C  H=60.4 %  | avg10 T=28.71 C  H=61.31 %
-[SAMPLE #  10] ts=82182 ms  T=28.5 C  H=60.5 %  | avg10 T=28.69 C  H=61.23 %
-[SAMPLE #  11] ts=82682 ms  T=28.3 C  H=60.4 %  | avg10 T=28.68 C  H=61.19 %
-[SAMPLE #  12] ts=83182 ms  T=28.2 C  H=60.9 %  | avg10 T=28.61 C  H=61.13 %
-[SAMPLE #  13] ts=83682 ms  T=28.3 C  H=60.6 %  | avg10 T=28.50 C  H=61.01 %
-[SAMPLE #  14] ts=84182 ms  T=28.1 C  H=59.6 %  | avg10 T=28.42 C  H=60.77 %
-[SAMPLE #  15] ts=84682 ms  T=28.1 C  H=60.6 %  | avg10 T=28.34 C  H=60.66 %
-[SAMPLE #  16] ts=85182 ms  T=28.4 C  H=59.7 %  | avg10 T=28.34 C  H=60.46 %
-[SAMPLE #  17] ts=85682 ms  T=27.9 C  H=59.7 %  | avg10 T=28.29 C  H=60.32 %
-[SAMPLE #  18] ts=86182 ms  T=27.6 C  H=60.2 %  | avg10 T=28.17 C  H=60.26 %
-[SAMPLE #  19] ts=86682 ms  T=27.3 C  H=60.3 %  | avg10 T=28.07 C  H=60.25 %
-[SAMPLE #  20] ts=87182 ms  T=27.1 C  H=60.0 %  | avg10 T=27.93 C  H=60.20 %
-[SAMPLE #  21] ts=87682 ms  T=26.7 C  H=59.2 %  | avg10 T=27.77 C  H=60.08 %
-[SAMPLE #  22] ts=88182 ms  T=26.9 C  H=60.2 %  | avg10 T=27.64 C  H=60.01 %
-[SAMPLE #  23] ts=88683 ms  T=26.9 C  H=59.4 %  | avg10 T=27.50 C  H=59.89 %
-[SAMPLE #  24] ts=89182 ms  T=26.5 C  H=58.7 %  | avg10 T=27.34 C  H=59.80 %
-[SAMPLE #  25] ts=89682 ms  T=27.0 C  H=59.4 %  | avg10 T=27.23 C  H=59.68 %
-[SAMPLE #  26] ts=90182 ms  T=26.8 C  H=59.9 %  | avg10 T=27.07 C  H=59.70 %
-[SAMPLE #  27] ts=90682 ms  T=26.5 C  H=59.9 %  | avg10 T=26.93 C  H=59.72 %
-[SAMPLE #  28] ts=91182 ms  T=27.0 C  H=60.6 %  | avg10 T=26.87 C  H=59.76 %
-[SAMPLE #  29] ts=91683 ms  T=26.8 C  H=60.9 %  | avg10 T=26.82 C  H=59.82 %
-[SAMPLE #  30] ts=92182 ms  T=26.7 C  H=60.7 %  | avg10 T=26.78 C  H=59.89 %
-[SAMPLE #  31] ts=92682 ms  T=26.9 C  H=59.8 %  | avg10 T=26.80 C  H=59.95 %
-[SAMPLE #  32] ts=93182 ms  T=26.6 C  H=59.8 %  | avg10 T=26.77 C  H=59.91 %
-[SAMPLE #  33] ts=93682 ms  T=26.1 C  H=60.8 %  | avg10 T=26.69 C  H=60.05 %
-[SAMPLE #  34] ts=94182 ms  T=26.2 C  H=60.8 %  | avg10 T=26.66 C  H=60.26 %
-[SAMPLE #  35] ts=94682 ms  T=26.0 C  H=59.8 %  | avg10 T=26.56 C  H=60.30 %
-[SAMPLE #  36] ts=95182 ms  T=25.8 C  H=60.3 %  | avg10 T=26.46 C  H=60.34 %
-[SAMPLE #  37] ts=95682 ms  T=25.9 C  H=60.3 %  | avg10 T=26.40 C  H=60.38 %
-[SAMPLE #  38] ts=96182 ms  T=25.4 C  H=61.0 %  | avg10 T=26.24 C  H=60.42 %
-[SAMPLE #  39] ts=96682 ms  T=25.7 C  H=60.5 %  | avg10 T=26.13 C  H=60.38 %
-[SAMPLE #  40] ts=97182 ms  T=26.2 C  H=61.0 %  | avg10 T=26.08 C  H=60.41 %
-[SAMPLE #  41] ts=97682 ms  T=25.8 C  H=60.7 %  | avg10 T=25.97 C  H=60.50 %
-[SAMPLE #  42] ts=98182 ms  T=26.1 C  H=60.0 %  | avg10 T=25.92 C  H=60.52 %
-[SAMPLE #  43] ts=98682 ms  T=26.6 C  H=60.0 %  | avg10 T=25.97 C  H=60.44 %
-[SAMPLE #  44] ts=99182 ms  T=26.4 C  H=60.6 %  | avg10 T=25.99 C  H=60.42 %
-[SAMPLE #  45] ts=99682 ms  T=25.9 C  H=61.6 %  | avg10 T=25.98 C  H=60.60 %
-[SAMPLE #  46] ts=100182 ms  T=26.2 C  H=61.0 %  | avg10 T=26.02 C  H=60.67 %
-[SAMPLE #  47] ts=100682 ms  T=26.6 C  H=60.1 %  | avg10 T=26.09 C  H=60.65 %
-[SAMPLE #  48] ts=101182 ms  T=26.2 C  H=60.4 %  | avg10 T=26.17 C  H=60.59 %
-[SAMPLE #  49] ts=101682 ms  T=26.2 C  H=61.1 %  | avg10 T=26.22 C  H=60.65 %
-[SAMPLE #  50] ts=102182 ms  T=25.9 C  H=61.0 %  | avg10 T=26.19 C  H=60.65 %
-[SAMPLE #  51] ts=102682 ms  T=26.0 C  H=62.0 %  | avg10 T=26.21 C  H=60.78 %
-[SAMPLE #  52] ts=103182 ms  T=26.2 C  H=62.9 %  | avg10 T=26.22 C  H=61.07 %
-[SAMPLE #  53] ts=103682 ms  T=26.1 C  H=62.3 %  | avg10 T=26.17 C  H=61.30 %
-[SAMPLE #  54] ts=104182 ms  T=26.2 C  H=62.9 %  | avg10 T=26.15 C  H=61.53 %
-[SAMPLE #  55] ts=104682 ms  T=26.6 C  H=63.9 %  | avg10 T=26.22 C  H=61.76 %
-[SAMPLE #  56] ts=105182 ms  T=26.2 C  H=63.9 %  | avg10 T=26.22 C  H=62.05 %
-[SAMPLE #  57] ts=105682 ms  T=26.1 C  H=63.1 %  | avg10 T=26.17 C  H=62.35 %
-[ALERT][2026-10-16 00:02:16.405] TYPE: TEMP_HIGH VALUE: 44.3C THRESHOLD: 40.0C (sample #58)
-[ALERT][2026-10-16 00:02:16.407] TYPE: TEMP_SPIKE VALUE: 18.2C THRESHOLD: 5.0C (sample #58)
-[SAMPLE #  58] ts=106182 ms  T=44.3 C  H=62.2 %  | avg10 T=27.98 C  H=62.53 %
-[ALERT][2026-10-16 00:02:16.904] TYPE: TEMP_SPIKE VALUE: 18.9C THRESHOLD: 5.0C (sample #59)
-[SAMPLE #  59] ts=106682 ms  T=25.4 C  H=61.2 %  | avg10 T=27.90 C  H=62.54 %
-[SAMPLE #  60] ts=107182 ms  T=25.8 C  H=61.5 %  | avg10 T=27.89 C  H=62.59 %
-[SAMPLE #  61] ts=107682 ms  T=25.8 C  H=62.5 %  | avg10 T=27.87 C  H=62.64 %
-[SAMPLE #  62] ts=108182 ms  T=26.3 C  H=62.5 %  | avg10 T=27.88 C  H=62.60 %
-[SAMPLE #  63] ts=108682 ms  T=26.3 C  H=63.1 %  | avg10 T=27.90 C  H=62.68 %
-[SAMPLE #  64] ts=109182 ms  T=26.5 C  H=63.7 %  | avg10 T=27.93 C  H=62.76 %
-[SAMPLE #  65] ts=109682 ms  T=26.2 C  H=62.8 %  | avg10 T=27.89 C  H=62.65 %
-[SAMPLE #  66] ts=110182 ms  T=26.6 C  H=62.6 %  | avg10 T=27.93 C  H=62.52 %
-[SAMPLE #  67] ts=110682 ms  T=26.3 C  H=62.3 %  | avg10 T=27.95 C  H=62.44 %
-[SAMPLE #  68] ts=111182 ms  T=25.8 C  H=62.1 %  | avg10 T=26.10 C  H=62.43 %
-[SAMPLE #  69] ts=111682 ms  T=25.8 C  H=62.4 %  | avg10 T=26.14 C  H=62.55 %
-[SAMPLE #  70] ts=112182 ms  T=26.1 C  H=61.6 %  | avg10 T=26.17 C  H=62.56 %
-[SAMPLE #  71] ts=112683 ms  T=26.1 C  H=62.4 %  | avg10 T=26.20 C  H=62.55 %
-[SAMPLE #  72] ts=113182 ms  T=25.7 C  H=62.9 %  | avg10 T=26.14 C  H=62.59 %
-[SAMPLE #  73] ts=113682 ms  T=25.9 C  H=62.1 %  | avg10 T=26.10 C  H=62.49 %
-[SAMPLE #  74] ts=114182 ms  T=25.6 C  H=62.6 %  | avg10 T=26.01 C  H=62.38 %
-[SAMPLE #  75] ts=114682 ms  T=25.7 C  H=62.9 %  | avg10 T=25.96 C  H=62.39 %
-[SAMPLE #  76] ts=115182 ms  T=25.4 C  H=63.6 %  | avg10 T=25.84 C  H=62.49 %
-[SAMPLE #  77] ts=115682 ms  T=25.6 C  H=64.5 %  | avg10 T=25.77 C  H=62.71 %
-[SAMPLE #  78] ts=116182 ms  T=25.6 C  H=64.4 %  | avg10 T=25.75 C  H=62.94 %
-[SAMPLE #  79] ts=116682 ms  T=25.1 C  H=63.8 %  | avg10 T=25.68 C  H=63.08 %
-[SAMPLE #  80] ts=117182 ms  T=24.6 C  H=64.3 %  | avg10 T=25.53 C  H=63.35 %
-[SAMPLE #  81] ts=117682 ms  T=25.0 C  H=63.5 %  | avg10 T=25.42 C  H=63.46 %
-[SAMPLE #  82] ts=118182 ms  T=24.8 C  H=63.7 %  | avg10 T=25.33 C  H=63.54 %
-[SAMPLE #  83] ts=118682 ms  T=25.3 C  H=62.7 %  | avg10 T=25.27 C  H=63.60 %
-[SAMPLE #  84] ts=119182 ms  T=25.2 C  H=62.4 %  | avg10 T=25.23 C  H=63.58 %
-[SAMPLE #  85] ts=119682 ms  T=25.7 C  H=63.1 %  | avg10 T=25.23 C  H=63.60 %
-[SAMPLE #  86] ts=120183 ms  T=26.1 C  H=62.9 %  | avg10 T=25.30 C  H=63.53 %
-[SAMPLE #  87] ts=120682 ms  T=26.1 C  H=63.7 %  | avg10 T=25.35 C  H=63.45 %
-[SAMPLE #  88] ts=121182 ms  T=25.8 C  H=63.7 %  | avg10 T=25.37 C  H=63.38 %
-[SAMPLE #  89] ts=121682 ms  T=26.3 C  H=64.5 %  | avg10 T=25.49 C  H=63.45 %
-[SAMPLE #  90] ts=122182 ms  T=25.8 C  H=64.3 %  | avg10 T=25.61 C  H=63.45 %
-[SAMPLE #  91] ts=122682 ms  T=25.6 C  H=65.3 %  | avg10 T=25.67 C  H=63.63 %
-[SAMPLE #  92] ts=123182 ms  T=25.7 C  H=64.5 %  | avg10 T=25.76 C  H=63.71 %
-[SAMPLE #  93] ts=123682 ms  T=25.6 C  H=63.6 %  | avg10 T=25.79 C  H=63.80 %
-[SAMPLE #  94] ts=124182 ms  T=25.6 C  H=64.6 %  | avg10 T=25.83 C  H=64.02 %
-[SAMPLE #  95] ts=124682 ms  T=26.0 C  H=65.3 %  | avg10 T=25.86 C  H=64.24 %
-[SAMPLE #  96] ts=125182 ms  T=25.7 C  H=65.0 %  | avg10 T=25.82 C  H=64.45 %
-[SAMPLE #  97] ts=125682 ms  T=25.9 C  H=64.9 %  | avg10 T=25.80 C  H=64.57 %
-[SAMPLE #  98] ts=126182 ms  T=26.3 C  H=64.6 %  | avg10 T=25.85 C  H=64.66 %
-[SAMPLE #  99] ts=126682 ms  T=25.8 C  H=64.0 %  | avg10 T=25.80 C  H=64.61 %
-[SAMPLE # 100] ts=127182 ms  T=26.0 C  H=63.5 %  | avg10 T=25.82 C  H=64.53 %
-[SAMPLE # 101] ts=127682 ms  T=25.9 C  H=62.7 %  | avg10 T=25.85 C  H=64.27 %
-[ALERT][2026-10-16 00:02:38.405] TYPE: HUMID_HIGH VALUE: 86.8% THRESHOLD: 80.0% (sample #102)
-[SAMPLE # 102] ts=128182 ms  T=25.8 C  H=86.8 %  | avg10 T=25.86 C  H=66.50 %
-[SAMPLE # 103] ts=128683 ms  T=26.0 C  H=62.0 %  | avg10 T=25.90 C  H=66.34 %
-[SAMPLE # 104] ts=129182 ms  T=26.2 C  H=62.1 %  | avg10 T=25.96 C  H=66.09 %
-[SAMPLE # 105] ts=129682 ms  T=26.6 C  H=61.2 %  | avg10 T=26.02 C  H=65.68 %
-[SAMPLE # 106] ts=130182 ms  T=26.8 C  H=60.6 %  | avg10 T=26.13 C  H=65.24 %
-[SAMPLE # 107] ts=130682 ms  T=27.2 C  H=61.6 %  | avg10 T=26.26 C  H=64.91 %
-[SAMPLE # 108] ts=131182 ms  T=27.5 C  H=60.9 %  | avg10 T=26.38 C  H=64.54 %
-[ALERT][2026-10-16 00:02:41.905] TYPE: TEMP_HIGH VALUE: 40.8C THRESHOLD: 40.0C (sample #109)
-[ALERT][2026-10-16 00:02:41.906] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C (sample #109)
-[SAMPLE # 109] ts=131683 ms  T=40.8 C  H=60.4 %  | avg10 T=27.88 C  H=64.18 %
-[ALERT][2026-10-16 00:02:42.405] TYPE: TEMP_SPIKE VALUE: 13.3C THRESHOLD: 5.0C (sample #110)
-[SAMPLE # 110] ts=132182 ms  T=27.5 C  H=59.4 %  | avg10 T=28.03 C  H=63.77 %
-[SAMPLE # 111] ts=132683 ms  T=27.9 C  H=59.1 %  | avg10 T=28.23 C  H=63.41 %
-[SAMPLE # 112] ts=133182 ms  T=27.6 C  H=59.4 %  | avg10 T=28.41 C  H=60.67 %
-[SAMPLE # 113] ts=133682 ms  T=27.1 C  H=60.0 %  | avg10 T=28.52 C  H=60.47 %
-[SAMPLE # 114] ts=134182 ms  T=27.4 C  H=61.0 %  | avg10 T=28.64 C  H=60.36 %
-[SAMPLE # 115] ts=134682 ms  T=26.9 C  H=61.3 %  | avg10 T=28.67 C  H=60.37 %
-[SAMPLE # 116] ts=135182 ms  T=27.4 C  H=61.3 %  | avg10 T=28.73 C  H=60.44 %
-[SAMPLE # 117] ts=135682 ms  T=27.3 C  H=61.7 %  | avg10 T=28.74 C  H=60.45 %
-[SAMPLE # 118] ts=136182 ms  T=27.3 C  H=61.1 %  | avg10 T=28.72 C  H=60.47 %
-[SAMPLE # 119] ts=136682 ms  T=26.8 C  H=60.5 %  | avg10 T=27.32 C  H=60.48 %
-[SAMPLE # 120] ts=137182 ms  T=27.3 C  H=60.9 %  | avg10 T=27.30 C  H=60.63 %
+# QEMU vexpress-a9: sms_app -d 60 -v  (interval 500 ms, SCHED_FIFO 50)
+[ALERT][10452] TYPE: TEMP_SPIKE VALUE: 6.0 THRESHOLD: 5.0
+[ALERT][13453] TYPE: TEMP_SPIKE VALUE: 6.0 THRESHOLD: 5.0
+[ALERT][32451] TYPE: TEMP_HIGH VALUE: 40.3 THRESHOLD: 40.0
+[ALERT][32451] TYPE: TEMP_SPIKE VALUE: 6.0 THRESHOLD: 5.0
+[ALERT][33951] TYPE: TEMP_HIGH VALUE: 40.6 THRESHOLD: 40.0
+[ALERT][34451] TYPE: TEMP_HIGH VALUE: 41.6 THRESHOLD: 40.0
+[ALERT][34951] TYPE: TEMP_HIGH VALUE: 42.1 THRESHOLD: 40.0
+[ALERT][35451] TYPE: TEMP_HIGH VALUE: 41.2 THRESHOLD: 40.0
+[ALERT][35951] TYPE: TEMP_HIGH VALUE: 41.3 THRESHOLD: 40.0
+[ALERT][36451] TYPE: TEMP_HIGH VALUE: 40.4 THRESHOLD: 40.0
+[ALERT][36952] TYPE: TEMP_HIGH VALUE: 41.4 THRESHOLD: 40.0
+[ALERT][37451] TYPE: TEMP_HIGH VALUE: 40.8 THRESHOLD: 40.0
+[ALERT][37951] TYPE: TEMP_HIGH VALUE: 40.5 THRESHOLD: 40.0
+[ALERT][38451] TYPE: TEMP_HIGH VALUE: 40.1 THRESHOLD: 40.0
+[ALERT][38951] TYPE: TEMP_HIGH VALUE: 40.2 THRESHOLD: 40.0
+[ALERT][39453] TYPE: TEMP_HIGH VALUE: 40.4 THRESHOLD: 40.0
+[main] SMS running (pid 87): interval=500 ms, T>40.0, H>80.0, duration=60 s. Ctrl+C to stop.
+[SAMPLE] ts=6955 T=29.6 C H=59.8 % | avg10 T=29.60 H=59.80
+[SAMPLE] ts=7451 T=29.2 C H=61.8 % | avg10 T=29.40 H=60.80
+[SAMPLE] ts=7952 T=28.2 C H=61.1 % | avg10 T=29.00 H=60.90
+[SAMPLE] ts=8452 T=28.0 C H=62.8 % | avg10 T=28.75 H=61.38
+[SAMPLE] ts=8953 T=27.9 C H=63.6 % | avg10 T=28.58 H=61.82
+[SAMPLE] ts=9452 T=27.2 C H=64.1 % | avg10 T=28.35 H=62.20
+[SAMPLE] ts=9952 T=26.2 C H=64.1 % | avg10 T=28.04 H=62.47
+[SAMPLE] ts=10452 T=32.2 C H=62.9 % | avg10 T=28.56 H=62.53
+[SAMPLE] ts=10951 T=31.4 C H=64.9 % | avg10 T=28.88 H=62.79
+[SAMPLE] ts=11453 T=32.2 C H=63.0 % | avg10 T=29.21 H=62.81
+[SAMPLE] ts=11951 T=31.6 C H=64.4 % | avg10 T=29.41 H=63.27
+[SAMPLE] ts=12452 T=32.3 C H=64.9 % | avg10 T=29.72 H=63.58
+[SAMPLE] ts=12951 T=31.7 C H=63.5 % | avg10 T=30.07 H=63.82
+[SAMPLE] ts=13453 T=37.7 C H=62.1 % | avg10 T=31.04 H=63.75
+[SAMPLE] ts=14023 T=37.1 C H=63.4 % | avg10 T=31.96 H=63.73
+[SAMPLE] ts=14953 T=36.1 C H=63.6 % | avg10 T=32.85 H=63.68
+[SAMPLE] ts=15451 T=36.4 C H=62.9 % | avg10 T=33.87 H=63.56
+[SAMPLE] ts=15951 T=35.5 C H=61.3 % | avg10 T=34.20 H=63.40
+[SAMPLE] ts=16452 T=34.5 C H=61.6 % | avg10 T=34.51 H=63.07
+[SAMPLE] ts=16951 T=34.6 C H=63.2 % | avg10 T=34.75 H=63.09
+[SAMPLE] ts=17460 T=34.5 C H=61.6 % | avg10 T=35.04 H=62.81
+[SAMPLE] ts=17951 T=35.0 C H=60.4 % | avg10 T=35.31 H=62.36
+[SAMPLE] ts=18451 T=34.2 C H=59.8 % | avg10 T=35.56 H=61.99
+[SAMPLE] ts=18952 T=33.8 C H=58.6 % | avg10 T=35.17 H=61.64
+[SAMPLE] ts=19460 T=32.8 C H=59.0 % | avg10 T=34.74 H=61.20
+[SAMPLE] ts=19953 T=32.5 C H=58.0 % | avg10 T=34.38 H=60.64
+[SAMPLE] ts=20453 T=32.2 C H=56.5 % | avg10 T=33.96 H=60.00
+[SAMPLE] ts=20951 T=31.9 C H=57.8 % | avg10 T=33.60 H=59.65
+[SAMPLE] ts=21451 T=32.9 C H=57.3 % | avg10 T=33.44 H=59.22
+[SAMPLE] ts=21951 T=33.3 C H=55.9 % | avg10 T=33.31 H=58.49
+[SAMPLE] ts=22451 T=33.6 C H=55.4 % | avg10 T=33.22 H=57.87
+[SAMPLE] ts=22952 T=33.6 C H=55.7 % | avg10 T=33.08 H=57.40
+[SAMPLE] ts=23451 T=33.3 C H=56.9 % | avg10 T=32.99 H=57.11
+[SAMPLE] ts=23951 T=32.7 C H=56.2 % | avg10 T=32.88 H=56.87
+[SAMPLE] ts=24451 T=33.6 C H=55.0 % | avg10 T=32.96 H=56.47
+[SAMPLE] ts=24951 T=33.2 C H=54.9 % | avg10 T=33.03 H=56.16
+[SAMPLE] ts=25452 T=33.3 C H=54.5 % | avg10 T=33.14 H=55.96
+[SAMPLE] ts=25951 T=34.2 C H=53.3 % | avg10 T=33.37 H=55.51
+[SAMPLE] ts=26451 T=33.3 C H=55.3 % | avg10 T=33.41 H=55.31
+[SAMPLE] ts=26952 T=34.1 C H=55.5 % | avg10 T=33.49 H=55.27
+[SAMPLE] ts=27451 T=34.3 C H=56.6 % | avg10 T=33.56 H=55.39
+[SAMPLE] ts=27951 T=33.5 C H=58.2 % | avg10 T=33.55 H=55.64
+[SAMPLE] ts=28452 T=33.3 C H=56.8 % | avg10 T=33.55 H=55.63
+[SAMPLE] ts=28951 T=34.0 C H=58.1 % | avg10 T=33.68 H=55.82
+[SAMPLE] ts=29453 T=34.2 C H=56.3 % | avg10 T=33.74 H=55.95
+[SAMPLE] ts=29952 T=33.7 C H=58.3 % | avg10 T=33.79 H=56.29
+[SAMPLE] ts=30452 T=33.0 C H=57.0 % | avg10 T=33.76 H=56.54
+[SAMPLE] ts=30951 T=33.7 C H=55.1 % | avg10 T=33.71 H=56.72
+[SAMPLE] ts=31451 T=33.6 C H=56.7 % | avg10 T=33.74 H=56.86
+[SAMPLE] ts=31952 T=34.3 C H=58.1 % | avg10 T=33.76 H=57.12
+[SAMPLE] ts=32451 T=40.3 C H=59.6 % | avg10 T=34.36 H=57.42
+[SAMPLE] ts=32951 T=40.0 C H=58.0 % | avg10 T=35.01 H=57.40
+[SAMPLE] ts=33451 T=39.9 C H=57.0 % | avg10 T=35.67 H=57.42
+[SAMPLE] ts=33951 T=40.6 C H=57.7 % | avg10 T=36.33 H=57.38
+[SAMPLE] ts=34451 T=41.6 C H=56.5 % | avg10 T=37.07 H=57.40
+[SAMPLE] ts=34951 T=42.1 C H=56.4 % | avg10 T=37.91 H=57.21
+[SAMPLE] ts=35451 T=41.2 C H=54.5 % | avg10 T=38.73 H=56.96
+[SAMPLE] ts=35951 T=41.3 C H=54.6 % | avg10 T=39.49 H=56.91
+[SAMPLE] ts=36451 T=40.4 C H=54.1 % | avg10 T=40.17 H=56.65
+[SAMPLE] ts=36952 T=41.4 C H=52.7 % | avg10 T=40.88 H=56.11
+[SAMPLE] ts=37451 T=40.8 C H=51.8 % | avg10 T=40.93 H=55.33
+[SAMPLE] ts=37951 T=40.5 C H=53.8 % | avg10 T=40.98 H=54.91
+[SAMPLE] ts=38451 T=40.1 C H=54.5 % | avg10 T=41.00 H=54.66
+[SAMPLE] ts=38951 T=40.2 C H=54.4 % | avg10 T=40.96 H=54.33
+[SAMPLE] ts=39453 T=40.4 C H=53.2 % | avg10 T=40.84 H=54.00
+[SAMPLE] ts=39952 T=40.0 C H=54.8 % | avg10 T=40.63 H=53.84
+[SAMPLE] ts=40451 T=39.3 C H=55.4 % | avg10 T=40.4[ALERT][41452] TYPE: TEMP_HIGH VALUE: 40.5 THRESHOLD: 40.0
+[ALERT][41951] TYPE: TEMP_HIGH VALUE: 40.1 THRESHOLD: 40.0
+[ALERT][42461] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][42952] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][43451] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][43951] TYPE: TEMP_HIGH VALUE: 44.6 THRESHOLD: 40.0
+[ALERT][44451] TYPE: TEMP_SPIKE VALUE: -6.0 THRESHOLD: 5.0
+[ALERT][45952] TYPE: TEMP_HIGH VALUE: 40.7 THRESHOLD: 40.0
+[ALERT][46452] TYPE: TEMP_HIGH VALUE: 41.5 THRESHOLD: 40.0
+[ALERT][46951] TYPE: TEMP_HIGH VALUE: 42.4 THRESHOLD: 40.0
+[ALERT][47451] TYPE: TEMP_HIGH VALUE: 42.9 THRESHOLD: 40.0
+[ALERT][47951] TYPE: TEMP_SPIKE VALUE: -6.0 THRESHOLD: 5.0
+[ALERT][49951] TYPE: TEMP_HIGH VALUE: 41.7 THRESHOLD: 40.0
+[ALERT][49951] TYPE: TEMP_SPIKE VALUE: 6.0 THRESHOLD: 5.0
+[ALERT][50451] TYPE: TEMP_HIGH VALUE: 42.5 THRESHOLD: 40.0
+[ALERT][50953] TYPE: TEMP_HIGH VALUE: 42.0 THRESHOLD: 40.0
+[ALERT][51451] TYPE: TEMP_HIGH VALUE: 41.2 THRESHOLD: 40.0
+[ALERT][51951] TYPE: TEMP_HIGH VALUE: 41.7 THRESHOLD: 40.0
+[ALERT][52451] TYPE: TEMP_HIGH VALUE: 40.8 THRESHOLD: 40.0
+[ALERT][52951] TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[ALERT][53451] TYPE: TEMP_HIGH VALUE: 41.4 THRESHOLD: 40.0
+[ALERT][53952] TYPE: TEMP_HIGH VALUE: 41.5 THRESHOLD: 40.0
+[ALERT][54452] TYPE: TEMP_HIGH VALUE: 40.9 THRESHOLD: 40.0
+[ALERT][54952] TYPE: TEMP_HIGH VALUE: 41.5 THRESHOLD: 40.0
+[ALERT][55451] TYPE: TEMP_HIGH VALUE: 42.2 THRESHOLD: 40.0
+[ALERT][55952] TYPE: TEMP_HIGH VALUE: 42.5 THRESHOLD: 40.0
+[ALERT][56451] TYPE: TEMP_HIGH VALUE: 43.5 THRESHOLD: 40.0
+[ALERT][56952] TYPE: TEMP_HIGH VALUE: 42.8 THRESHOLD: 40.0
+[ALERT][57452] TYPE: TEMP_HIGH VALUE: 43.0 THRESHOLD: 40.0
+[ALERT][57952] TYPE: TEMP_HIGH VALUE: 42.0 THRESHOLD: 40.0
+[ALERT][58451] TYPE: TEMP_HIGH VALUE: 42.0 THRESHOLD: 40.0
+[ALERT][58951] TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[ALERT][59451] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][59951] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][60451] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][60951] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][61451] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][61951] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][62451] TYPE: TEMP_HIGH VALUE: 44.8 THRESHOLD: 40.0
+[ALERT][62951] TYPE: TEMP_HIGH VALUE: 43.9 THRESHOLD: 40.0
+[ALERT][63453] TYPE: TEMP_HIGH VALUE: 43.2 THRESHOLD: 40.0
+[ALERT][63951] TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+[ALERT][64460] TYPE: TEMP_HIGH VALUE: 43.7 THRESHOLD: 40.0
+[ALERT][64951] TYPE: TEMP_HIGH VALUE: 44.4 THRESHOLD: 40.0
+[ALERT][65451] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][65952] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][66452] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][66951] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+4 H=53.93
+[SAMPLE] ts=40951 T=39.7 C H=56.1 % | avg10 T=40.28 H=54.08
+[SAMPLE] ts=41452 T=40.5 C H=57.2 % | avg10 T=40.29 H=54.39
+[SAMPLE] ts=41951 T=40.1 C H=58.0 % | avg10 T=40.16 H=54.92
+[SAMPLE] ts=42461 T=45.0 C H=58.3 % | avg10 T=40.58 H=55.57
+[SAMPLE] ts=42952 T=45.0 C H=59.3 % | avg10 T=41.03 H=56.12
+[SAMPLE] ts=43451 T=45.0 C H=60.5 % | avg10 T=41.52 H=56.72
+[SAMPLE] ts=43951 T=44.6 C H=62.2 % | avg10 T=41.96 H=57.50
+[SAMPLE] ts=44451 T=38.6 C H=60.3 % | avg10 T=41.78 H=58.21
+[SAMPLE] ts=44951 T=39.1 C H=59.8 % | avg10 T=41.69 H=58.71
+[SAMPLE] ts=45451 T=39.9 C H=59.9 % | avg10 T=41.75 H=59.16
+[SAMPLE] ts=45952 T=40.7 C H=60.3 % | avg10 T=41.85 H=59.58
+[SAMPLE] ts=46452 T=41.5 C H=62.2 % | avg10 T=41.95 H=60.08
+[SAMPLE] ts=46951 T=42.4 C H=62.6 % | avg10 T=42.18 H=60.54
+[SAMPLE] ts=47451 T=42.9 C H=62.1 % | avg10 T=41.97 H=60.92
+[SAMPLE] ts=47951 T=36.9 C H=64.1 % | avg10 T=41.16 H=61.40
+[SAMPLE] ts=48451 T=36.2 C H=64.0 % | avg10 T=40.28 H=61.75
+[SAMPLE] ts=48951 T=35.7 C H=64.5 % | avg10 T=39.39 H=61.98
+[SAMPLE] ts=49451 T=35.7 C H=62.5 % | avg10 T=39.10 H=62.20
+[SAMPLE] ts=49951 T=41.7 C H=63.4 % | avg10 T=39.36 H=62.56
+[SAMPLE] ts=50451 T=42.5 C H=63.3 % | avg10 T=39.62 H=62.90
+[SAMPLE] ts=50953 T=42.0 C H=64.7 % | avg10 T=39.75 H=63.34
+[SAMPLE] ts=51451 T=41.2 C H=65.2 % | avg10 T=39.72 H=63.64
+[SAMPLE] ts=51951 T=41.7 C H=65.0 % | avg10 T=39.65 H=63.88
+[SAMPLE] ts=52451 T=40.8 C H=66.3 % | avg10 T=39.44 H=64.30
+[SAMPLE] ts=52951 T=41.0 C H=66.6 % | avg10 T=39.85 H=64.55
+[SAMPLE] ts=53451 T=41.4 C H=67.3 % | avg10 T=40.37 H=64.88
+[SAMPLE] ts=53952 T=41.5 C H=67.6 % | avg10 T=40.95 H=65.19
+[SAMPLE] ts=54452 T=40.9 C H=67.6 % | avg10 T=41.47 H=65.70
+[SAMPLE] ts=54952 T=41.5 C H=66.8 % | avg10 T=41.45 H=66.04
+[SAMPLE] ts=55451 T=42.2 C H=65.1 % | avg10 T=41.42 H=66.22
+[SAMPLE] ts=55952 T=42.5 C H=66.9 % | avg10 T=41.47 H=66.44
+[SAMPLE] ts=56451 T=43.5 C H=66.9 % | avg10 T=41.70 H=66.61
+[SAMPLE] ts=56952 T=42.8 C H=67.8 % | avg10 T=41.81 H=66.89
+[SAMPLE] ts=57452 T=43.0 C H=69.0 % | avg10 T=42.03 H=67.16
+[SAMPLE] ts=57952 T=42.0 C H=70.0 % | avg10 T=42.13 H=67.50
+[SAMPLE] ts=58451 T=42.0 C H=70.5 % | avg10 T=42.19 H=67.82
+[SAMPLE] ts=58951 T=41.0 C H=71.2 % | avg10 T=42.14 H=68.18
+[SAMPLE] ts=59451 T=45.0 C H=71.7 % | avg10 T=42.55 H=68.59
+[SAMPLE] ts=59951 T=45.0 C H=71.6 % | avg10 T=42.90 H=69.07
+[SAMPLE] ts=60451 T=45.0 C H=71.8 % | avg10 T=43.18 H=69.74
+[SAMPLE] ts=60951 T=45.0 C H=69.8 % | avg10 T=43.43 H=70.03
+[SAMPLE] ts=61451 T=45.0 C H=69.9 % | avg10 T=43.58 H=70.33
+[SAMPLE] ts=61951 T=45.0 C H=70.7 % | avg10 T=43.80 H=70.62
+[SAMPLE] ts=62451 T=44.8 C H=69.7 % | avg10 T=43.98 H=70.69
+[SAMPLE] ts=62951 T=43.9 C H=68.8 % | avg10 T=44.17 H=70.57
+[SAMPLE] ts=63453 T=43.2 C H=70.1 % | avg10 T=44.29 H=70.53
+[SAMPLE] ts=63951 T=43.8 C H=68.7 % | avg10 T=44.57 H=70.28
+[SAMPLE] ts=64460 T=43.7 C H=67.1 % | avg10 T=44.44 H=69.82
+[SAMPLE] ts=64951 T=44.4 C H=68.0 % | avg10 T=44.38 H=69.46
+[SAMPLE] ts=65451 T=45.0 C H=69.4 % | avg10 T=44.38 H=69.22
+[SAMPLE] ts=65952 T=45.0 C H=70.3 % | avg10 T=44.38 H=69.27
+[SAMPLE] ts=66452 T=45.0 C H=71.6 % | avg10 T=44.38 H=69.44
 
-[main] duration reached -> shutting down...
-[main] all threads joined, /dev/sms_sensor closed
-================ SMS SUMMARY ================
-Stop reason        : duration reached
-Uptime             : 60.5 s
-Samples read       : 120 (EAGAIN retries 0, EINTR 0, EOF 0, errors 0)
-Samples processed  : 120
-Shared buffer      : produced=120 consumed=120 overflow=0 (0.00%) size=0/64
-Alerts             : TEMP_HIGH=2 HUMID_HIGH=1 TEMP_SPIKE=4 (total 7)
-Last avg10         : T=27.30 C  H=60.63 %
-Log file           : /tmp/sms.log (lines=138, flushes=12, rotations=0, dropped=0)
-Memory lock        : mlockall OK
-Sensor overruns    : 0
-===== JITTER REPORT (Sensor Thread) =====
-Policy          : SCHED_FIFO (prio 50)
-Interval        : 500 ms
-Samples         : 121
-Min / Avg / Max : 178 / 527.2 / 1785 us
-P99             : 850 us
-Histogram:
-  0-100us    :      0 (  0.0%) 
-  100-500us  :     56 ( 46.3%) #######################
-  500-1000us :     64 ( 52.9%) ##########################
-  >1000us    :      1 (  0.8%) 
-=============================================
+[main] shutting down...
+[SAMPLE] ts=66951 T=45.0 C H=69.6 % | avg10 T=44.38 H=69.33
+
+===== SMS SUMMARY =====
+uptime          : 60 s
+samples         : produced=120 consumed=120 in_buffer=0 overflow=0
+alerts          : TEMP_HIGH=58 HUMID_HIGH=0 TEMP_SPIKE=6
+dropped logs    : 0
+===== JITTER REPORT (SCHED_FIFO, interval 500 ms) =====
+samples : 121
+min     : 269 us
+avg     : 1447.2 us
+max     : 71320 us
+p99     : 10229 us
+histogram:
+  0-100us    : 0
+  100-500us  : 97
+  500-1000us : 6
+  >1000us    : 18
+[main] all threads stopped, exit 0
+
+# Ctrl+C (SIGINT) sau 3 s: sms_app -d 0
+exit code after SIGINT = 0
+[ALERT][67567] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][68067] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][68567] TYPE: TEMP_HIGH VALUE: 44.8 THRESHOLD: 40.0
+[ALERT][69067] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][69567] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[ALERT][70067] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[main] SMS running (pid 108): interval=500 ms, T>40.0, H>80.0, duration=0 s. Ctrl+C to stop.
+
+[main] shutting down...
+
+===== SMS SUMMARY =====
+uptime          : 3 s
+samples         : produced=6 consumed=6 in_buffer=0 overflow=0
+alerts          : TEMP_HIGH=6 HUMID_HIGH=0 TEMP_SPIKE=0
+dropped logs    : 0
+===== JITTER REPORT (SCHED_FIFO, interval 500 ms) =====
+samples : 6
+min     : 363 us
+avg     : 504.7 us
+max     : 623 us
+p99     : 623 us
+histogram:
+  0-100us    : 0
+  100-500us  : 4
+  500-1000us : 2
+  >1000us    : 0
+[main] all threads stopped, exit 0
+--- /dev/mqueue sau khi thoat (rong = da xoa queue):
