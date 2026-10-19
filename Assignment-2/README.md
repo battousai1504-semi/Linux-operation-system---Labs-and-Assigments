@@ -115,15 +115,15 @@ Trên PC (x86) không có driver ARM, nên chạy `./sms_app_x86 -D sim`: Sensor
 
 Histogram đầy đủ: [jitter_report.txt](SE200988_NguyenTranQuang_Asgn02/logs/jitter_report.txt).
 
-## Ghi chú để viết báo cáo
+## Ghi chú
 
-**Đồng bộ và deadlock.** App chỉ có **1 mutex** (`shared_buffer.lock`). Không chỗ nào giữ 2 lock cùng lúc, nên không thể có vòng chờ → không deadlock. Hai queue do kernel tự đồng bộ. Các biến dùng chung khác:
+**Đồng bộ và deadlock.** App chỉ có **1 mutex** (`shared_buffer.lock`). Không chỗ nào giữ 2 lock cùng lúc, nên không có vòng chờ → không deadlock. Hai queue do kernel tự đồng bộ. Các biến dùng chung khác:
 - `running`: kiểu `volatile sig_atomic_t`, chỉ signal handler và main ghi.
 - `dropped_logs`: nhiều thread cùng tăng → dùng `__atomic_fetch_add`.
 - `alert_count[]`, mảng jitter: chỉ 1 thread ghi; main chỉ đọc **sau khi join** thread đó.
 - Driver: 1 mutex `sms_lock`; `copy_to_user` gọi sau khi đã unlock.
 
-**Lỗi tìm được khi phát triển.** Valgrind báo `mq_timedsend(msg_ptr) points to uninitialised byte(s)`: struct `Alarm` có 4 byte đệm giữa `int type` và `long long ts_ms`, gửi qua queue là gửi cả byte rác. Sửa bằng `memset` trước khi gán field (`alert_thread.c`).
+**Lỗi ** Valgrind báo `mq_timedsend(msg_ptr) points to uninitialised byte(s)`: struct `Alarm` có 4 byte đệm giữa `int type` và `long long ts_ms`, gửi qua queue là gửi cả byte rác. Sửa bằng `memset` trước khi gán field (`alert_thread.c`).
 
 **Vì sao chọn như vậy.**
 - Circular buffer: cấp phát 1 lần, không `malloc` mỗi mẫu, nên không phân mảnh heap và không leak. Linked list thì mỗi mẫu phải malloc/free.
