@@ -44,7 +44,7 @@ int cb_push(CircularBuffer *cb, const SensorData *d)
 		cb->head = (cb->head + 1) % BUFFER_SIZE;
 		cb->count++;
 		cb->produced++;
-		pthread_cond_signal(&cb->not_empty);   /* danh thuc Processor */
+		pthread_cond_signal(&cb->not_empty); 
 	}
 	pthread_mutex_unlock(&cb->lock);
 	return ret;
@@ -56,7 +56,7 @@ int cb_pop(CircularBuffer *cb, SensorData *d)
 	while (cb->count == 0 && !cb->stopped)
 		pthread_cond_wait(&cb->not_empty, &cb->lock);
 
-	if (cb->count == 0) {          /* da stop va het du lieu */
+	if (cb->count == 0) {    
 		pthread_mutex_unlock(&cb->lock);
 		return -1;
 	}
@@ -68,7 +68,7 @@ int cb_pop(CircularBuffer *cb, SensorData *d)
 	return 0;
 }
 
-/* Goi khi shutdown: danh thuc Processor dang ngu de no thoat */
+
 void cb_stop(CircularBuffer *cb)
 {
 	pthread_mutex_lock(&cb->lock);
