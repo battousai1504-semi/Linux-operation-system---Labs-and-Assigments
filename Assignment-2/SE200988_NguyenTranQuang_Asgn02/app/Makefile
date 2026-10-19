@@ -1,9 +1,4 @@
 # Makefile - build sms_app
-# Author : Nguyen Tran Quang - SE200988
-#   make arm   : sms_app      (ARMv7, link static, chay tren QEMU)
-#   make host  : sms_app_x86  (x86_64, co -g, dung cho GDB/Valgrind/strace/perf voi -D sim)
-#   make       : build ca hai
-#   make clean : xoa binary
 
 CC_ARM  ?= arm-linux-gnueabihf-gcc
 CC_HOST ?= gcc
