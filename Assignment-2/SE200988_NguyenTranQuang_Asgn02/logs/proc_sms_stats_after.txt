@@ -1,6 +1,7 @@
-# cat /proc/sms_stats sau 60s (interval 500 ms -> ky vong ~120)
+=== PROC_AFTER START ===
 read_count       : 120
-last_temperature : 45.0 C
-last_humidity    : 69.6 %
+last_temperature : 22.9 C
+last_humidity    : 37.7 %
 interval_ms      : 500
 uptime_s         : 60
+=== PROC_AFTER END ===

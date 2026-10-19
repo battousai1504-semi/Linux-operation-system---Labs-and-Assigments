@@ -1,6 +1,7 @@
-# cat /proc/sms_stats truoc khi chay sms_app -d 60
+=== PROC_BEFORE START ===
 read_count       : 0
 last_temperature : 30.0 C
 last_humidity    : 60.0 %
 interval_ms      : 100
 uptime_s         : 0
+=== PROC_BEFORE END ===

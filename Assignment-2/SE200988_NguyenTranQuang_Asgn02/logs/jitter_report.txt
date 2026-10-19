@@ -1,72 +1,59 @@
-# Jitter Sensor Thread tren QEMU vexpress-a9 (TCG, -smp 2)
-# Phan 1: chu ky 10 ms, 15 s/lan (~1500 mau), SCHED_FIFO vs SCHED_OTHER, khong tai va co 2 vong lap chiem CPU
+=== JITTER_TEST START ===
 interval=10 ms, duration=15 s, CPUs=2
 
 ##### policy=fifo  background_load=0 busy loop(s) #####
 ===== JITTER REPORT (SCHED_FIFO, interval 10 ms) =====
 samples : 1501
-min     : 168 us
-avg     : 442.8 us
-max     : 4846 us
-p99     : 2555 us
+min     : 106 us
+avg     : 577.5 us
+max     : 1816 us
+p99     : 805 us
 histogram:
   0-100us    : 0
-  100-500us  : 1294
-  500-1000us : 176
-  >1000us    : 31
-samples         : produced=1484 consumed=1484 in_buffer=0 overflow=0
+  100-500us  : 282
+  500-1000us : 1216
+  >1000us    : 3
+samples         : produced=1500 consumed=1500 in_buffer=0 overflow=0
 
 ##### policy=other  background_load=0 busy loop(s) #####
 ===== JITTER REPORT (SCHED_OTHER, interval 10 ms) =====
 samples : 1501
-min     : 292 us
-avg     : 487.9 us
-max     : 6541 us
-p99     : 2343 us
+min     : 157 us
+avg     : 587.9 us
+max     : 1547 us
+p99     : 808 us
 histogram:
   0-100us    : 0
-  100-500us  : 1246
-  500-1000us : 221
-  >1000us    : 34
-samples         : produced=1478 consumed=1478 in_buffer=0 overflow=0
+  100-500us  : 411
+  500-1000us : 1088
+  >1000us    : 2
+samples         : produced=1501 consumed=1501 in_buffer=0 overflow=0
 
 ##### policy=fifo  background_load=2 busy loop(s) #####
 ===== JITTER REPORT (SCHED_FIFO, interval 10 ms) =====
-samples : 1501
-min     : 180 us
-avg     : 463.1 us
-max     : 24277 us
-p99     : 4375 us
+samples : 1499
+min     : 87 us
+avg     : 144.6 us
+max     : 1812 us
+p99     : 285 us
 histogram:
-  0-100us    : 0
-  100-500us  : 1398
-  500-1000us : 11
-  >1000us    : 92
-samples         : produced=1425 consumed=1425 in_buffer=0 overflow=0
+  0-100us    : 46
+  100-500us  : 1448
+  500-1000us : 3
+  >1000us    : 2
+samples         : produced=1497 consumed=1497 in_buffer=0 overflow=0
 
 ##### policy=other  background_load=2 busy loop(s) #####
 ===== JITTER REPORT (SCHED_OTHER, interval 10 ms) =====
-samples : 1501
-min     : 229 us
-avg     : 405.7 us
-max     : 5840 us
-p99     : 3733 us
+samples : 1500
+min     : 123 us
+avg     : 201.3 us
+max     : 2503 us
+p99     : 382 us
 histogram:
   0-100us    : 0
-  100-500us  : 1417
-  500-1000us : 19
-  >1000us    : 65
-samples         : produced=1473 consumed=1473 in_buffer=0 overflow=0
-
-# Phan 2: lan chay 60 s, chu ky 500 ms (SCHED_FIFO)
-===== JITTER REPORT (SCHED_FIFO, interval 500 ms) =====
-samples : 121
-min     : 269 us
-avg     : 1447.2 us
-max     : 71320 us
-p99     : 10229 us
-histogram:
-  0-100us    : 0
-  100-500us  : 97
-  500-1000us : 6
-  >1000us    : 18
+  100-500us  : 1495
+  500-1000us : 1
+  >1000us    : 4
+samples         : produced=1496 consumed=1496 in_buffer=0 overflow=0
+=== JITTER_TEST END ===
