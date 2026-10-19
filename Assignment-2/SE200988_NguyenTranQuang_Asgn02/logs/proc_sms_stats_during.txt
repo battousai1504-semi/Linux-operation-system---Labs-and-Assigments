@@ -1,6 +1,7 @@
-# cat /proc/sms_stats tai T=30s
-read_count       : 58
-last_temperature : 41.3 C
-last_humidity    : 54.6 %
+=== PROC_DURING START ===
+read_count       : 59
+last_temperature : 23.1 C
+last_humidity    : 56.0 %
 interval_ms      : 500
 uptime_s         : 30
+=== PROC_DURING END ===

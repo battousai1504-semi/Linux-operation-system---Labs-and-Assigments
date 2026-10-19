@@ -1,44 +1,46 @@
-# /proc/PID/status cua sms_app tren QEMU
-## T=5s
-VmSize:	    2900 kB
-VmLck:	    2888 kB
-VmRSS:	    1736 kB
+=== MEM_T5 START ===
+VmSize:	    2908 kB
+VmLck:	    2896 kB
+VmRSS:	    1748 kB
 Threads:	5
-## T=30s
-VmSize:	    2900 kB
-VmLck:	    2888 kB
-VmRSS:	    1736 kB
+=== MEM_T5 END ===
+=== MEM_T30 START ===
+VmSize:	    2908 kB
+VmLck:	    2896 kB
+VmRSS:	    1748 kB
 Threads:	5
-## T=55s
-VmSize:	    2900 kB
-VmLck:	    2888 kB
-VmRSS:	    1736 kB
+=== MEM_T30 END ===
+=== MEM_T55 START ===
+VmSize:	    2908 kB
+VmLck:	    2896 kB
+VmRSS:	    1748 kB
 Threads:	5
-
-## Threads (/proc/PID/task/*/stat) tai T=30s
+=== MEM_T55 END ===
+=== THREADS START ===
 tid=87    (sms_app)        rt_priority=0   policy=SCHED_OTHER
 tid=89    (sms_logger)     rt_priority=0   policy=SCHED_OTHER
 tid=90    (sms_alert)      rt_priority=0   policy=SCHED_OTHER
 tid=91    (sms_processor)  rt_priority=0   policy=SCHED_OTHER
 tid=92    (sms_sensor)     rt_priority=50  policy=SCHED_FIFO
-
-## /proc/PID/maps tai T=30s
-00010000-00080000 r-xp 00000000 00:02 236        /usr/bin/sms_app
-00080000-00083000 r--p 00070000 00:02 236        /usr/bin/sms_app
-00083000-00085000 rw-p 00073000 00:02 236        /usr/bin/sms_app
-00085000-000bd000 rw-p 00000000 00:00 0          [heap]
+=== THREADS END ===
+=== MAPS_T30 START ===
+00010000-00083000 r-xp 00000000 00:02 232        /usr/bin/sms_app
+00093000-00095000 r--p 00073000 00:02 232        /usr/bin/sms_app
+00095000-00097000 rw-p 00075000 00:02 232        /usr/bin/sms_app
+00097000-000cf000 rw-p 00000000 00:00 0          [heap]
+76cb6000-76cb7000 ---p 00000000 00:00 0 
+76cb7000-76cf7000 rw-p 00000000 00:00 0 
 76d00000-76d21000 rw-p 00000000 00:00 0 
 76d21000-76e00000 ---p 00000000 00:00 0 
-76ef4000-76ef5000 ---p 00000000 00:00 0 
-76ef5000-76f35000 rw-p 00000000 00:00 0 
-76f35000-76f36000 ---p 00000000 00:00 0 
-76f36000-76f76000 rw-p 00000000 00:00 0 
-76f76000-76f77000 ---p 00000000 00:00 0 
-76f77000-76fb7000 rw-p 00000000 00:00 0 
-76fb7000-76fb8000 ---p 00000000 00:00 0 
-76fb8000-76ff8000 rw-p 00000000 00:00 0 
-7eef1000-7ef12000 rw-p 00000000 00:00 0          [stack]
-7ef50000-7ef51000 r-xp 00000000 00:00 0          [sigpage]
-7ef51000-7ef52000 r--p 00000000 00:00 0          [vvar]
-7ef52000-7ef53000 r-xp 00000000 00:00 0          [vdso]
+76ef7000-76ef8000 ---p 00000000 00:00 0 
+76ef8000-76f38000 rw-p 00000000 00:00 0 
+76f38000-76f39000 ---p 00000000 00:00 0 
+76f39000-76f79000 rw-p 00000000 00:00 0 
+76f79000-76f7a000 ---p 00000000 00:00 0 
+76f7a000-76fba000 rw-p 00000000 00:00 0 
+7e8f1000-7e912000 rw-p 00000000 00:00 0          [stack]
+7ee15000-7ee16000 r-xp 00000000 00:00 0          [sigpage]
+7ee16000-7ee17000 r--p 00000000 00:00 0          [vvar]
+7ee17000-7ee18000 r-xp 00000000 00:00 0          [vdso]
 ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+=== MAPS_T30 END ===
