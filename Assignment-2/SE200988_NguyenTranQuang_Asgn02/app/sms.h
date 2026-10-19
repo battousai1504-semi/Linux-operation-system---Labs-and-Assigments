@@ -1,10 +1,6 @@
 /*
  * sms.h - Khai bao chung cho sms_app (ASSIGNMENT-02)
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * Gom tat ca struct, bien toan cuc va prototype vao 1 header cho de doc.
- * Moi file .c tuong ung 1 chuc nang (1 thread hoac buffer).
  */
 #ifndef SMS_H
 #define SMS_H
@@ -13,7 +9,7 @@
 #include <signal.h>
 #include <stdio.h>
 
-/* ---------- Cau hinh mac dinh (khong hardcode trong code) ---------- */
+
 #define DEFAULT_DEV       "/dev/sms_sensor"
 #define DEFAULT_LOG       "/tmp/sms.log"
 #define SIM_DEV           "sim"            /* -D sim: gia lap cam bien (chay tren PC, khong can driver) */
@@ -29,7 +25,7 @@
 #define THREAD_STACK      (256 * 1024)
 #define MAX_JITTER        20000
 
-/* ---------- Kieu du lieu ---------- */
+
 typedef struct {
 	long long ts_ms;
 	float temp;
@@ -46,7 +42,7 @@ typedef struct {
 } Alarm;
 
 typedef struct {
-	SensorData *data;           /* malloc 1 lan luc khoi dong */
+	SensorData *data;        
 	int head, tail, count;
 	int stopped;
 	unsigned long produced, consumed, overflow;
@@ -65,7 +61,7 @@ struct config {
 	const char *log_path;
 };
 
-/* ---------- Bien toan cuc (dinh nghia trong sms_app.c) ---------- */
+
 extern struct config cfg;
 extern volatile sig_atomic_t running;
 extern CircularBuffer shared_buffer;
