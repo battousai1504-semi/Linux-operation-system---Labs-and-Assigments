@@ -1,16 +1,10 @@
 /*
- * processor_thread.c - Processor Thread: tinh trung binh va phat hien bat thuong
+ * processor_thread.c
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * Lay mau tu shared_buffer (ngu tren condition variable khi rong),
- * tinh rolling average 10 mau, gui alarm vao alarm_queue khi:
- *   nhiet do > nguong, do am > nguong, nhiet do doi > 5 do so voi mau truoc.
  */
 #include <math.h>
 #include "sms.h"
 
-/* Ham rieng de dat breakpoint GDB (kich ban B: set variable temperature=45.0) */
 void detect_anomaly(long long ts, float temperature, float humidity,
 		    float prev_temp, int has_prev)
 {
