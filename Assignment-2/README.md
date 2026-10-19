@@ -2,11 +2,10 @@
 
 Sinh viên: **Nguyễn Trần Quang** — MSSV **SE200988** — Embedded Linux Systems
 
-Bản này viết lại ASSIGNMENT-02 cho gọn, chỉ dùng những gì đã làm trong repo:
+Bản ASSIGNMENT-02
 
 - Driver theo đúng mẫu **LAB-02** (`register_chrdev` + `class_create/device_create` + `proc_create/seq_file`) và **ASSIGNMENT-01** (`unlocked_ioctl`, `copy_from_user`, `mutex`).
 - App dùng pthread, 1 mutex + 1 condition variable cho buffer, 2 POSIX message queue. Không có struct context, không có callback, không có thread phụ.
-- 9 file code (867 dòng code, không tính comment/dòng trống), bản cũ 14 file (1315 dòng).
 
 ## Cây thư mục
 
@@ -77,7 +76,7 @@ make -C app                    # make arm -> sms_app, make host -> sms_app_x86
 ./qemu/run_qemu.sh autotest    # tự chạy test_sms.sh + jitter_test.sh rồi tắt máy
 ```
 
-`run_qemu.sh` lấy busybox và dtb từ thư mục `Lab01/` của repo này. Muốn dùng đường dẫn khác thì đặt biến `KDIR`, `ROOTFS`, `DTB`.
+`run_qemu.sh` lấy busybox và dtb từ thư mục `Lab01/` của repo.
 
 Trong shell QEMU:
 
