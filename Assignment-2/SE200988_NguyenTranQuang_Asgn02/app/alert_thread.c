@@ -13,7 +13,7 @@
 #include <string.h>
 #include "sms.h"
 
-unsigned long alert_count[3];             /* chi Alert Thread ghi, main doc sau khi join */
+unsigned long alert_count[3];             
 static mqd_t alarm_q = (mqd_t)-1;
 static const char *alarm_names[] = { "TEMP_HIGH", "HUMID_HIGH", "TEMP_SPIKE" };
 
@@ -23,7 +23,7 @@ int alert_init(void)
 
 	attr.mq_maxmsg = 10;
 	attr.mq_msgsize = sizeof(Alarm);
-	mq_unlink(ALARM_QUEUE_NAME);              /* xoa queue cu neu lan truoc bi kill */
+	mq_unlink(ALARM_QUEUE_NAME);              
 	alarm_q = mq_open(ALARM_QUEUE_NAME, O_CREAT | O_RDWR, 0600, &attr);
 	if (alarm_q == (mqd_t)-1) {
 		perror("mq_open alarm_queue");
@@ -35,9 +35,6 @@ int alert_init(void)
 void send_alarm(int type, long long ts, float value, float threshold)
 {
 	Alarm a;
-
-	/* memset ca struct: xoa ca byte dem (padding) giua cac field,
-	 * neu khong Valgrind bao "uninitialised byte(s)" khi mq_send */
 	memset(&a, 0, sizeof(a));
 	a.type = type;
 	a.ts_ms = ts;
