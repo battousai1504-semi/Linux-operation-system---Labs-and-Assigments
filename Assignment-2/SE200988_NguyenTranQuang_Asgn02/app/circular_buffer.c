@@ -1,11 +1,6 @@
 /*
- * circular_buffer.c - Buffer vong an toan da luong (shared_buffer)
+ * circular_buffer.c
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * Producer = Sensor Thread, Consumer = Processor Thread.
- * 1 mutex bao ve toan bo struct, 1 condition variable de consumer ngu khi rong.
- * Producer khong cho: buffer day thi bo mau va tang overflow.
  */
 #include <stdlib.h>
 #include "sms.h"
