@@ -1,5 +1,4 @@
-# gdb_alert.gdb - GDB kich ban B: gia lap nhiet do vuot nguong
-# Chay: gdb -q -batch -x gdb_alert.gdb --args ./sms_app_x86 -D sim -d 8 -L /tmp/gdb.log
+# gdb_alert.gdb
 set pagination off
 set print thread-events off
 break detect_anomaly
