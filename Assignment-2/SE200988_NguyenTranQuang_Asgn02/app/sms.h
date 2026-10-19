@@ -12,16 +12,16 @@
 
 #define DEFAULT_DEV       "/dev/sms_sensor"
 #define DEFAULT_LOG       "/tmp/sms.log"
-#define SIM_DEV           "sim"            /* -D sim: gia lap cam bien (chay tren PC, khong can driver) */
+#define SIM_DEV           "sim"
 #define ALARM_QUEUE_NAME  "/sms_alarm"
 #define LOG_QUEUE_NAME    "/sms_log"
-#define BUFFER_SIZE       64               /* so phan tu circular buffer */
-#define AVG_WINDOW        10               /* rolling average 10 mau */
-#define TEMP_SPIKE_LIMIT  5.0f             /* doi > 5 do so voi mau truoc */
+#define BUFFER_SIZE       64  
+#define AVG_WINDOW        10            
+#define TEMP_SPIKE_LIMIT  5.0f       
 #define LOG_MSG_LEN       200
-#define LOG_MAX_BYTES     (1024 * 1024)    /* rotate log khi > 1 MB */
+#define LOG_MAX_BYTES     (1024 * 1024) 
 #define LOG_FLUSH_SEC     5
-#define SENSOR_PRIORITY   50               /* SCHED_FIFO priority */
+#define SENSOR_PRIORITY   50     
 #define THREAD_STACK      (256 * 1024)
 #define MAX_JITTER        20000
 
