@@ -1,12 +1,6 @@
 /*
- * logger_thread.c - Logger Thread + log_queue (POSIX message queue)
+ * logger_thread.c 
  * Author : Nguyen Tran Quang - SE200988
- * Date   : 2026-10-16
- *
- * Cac thread goi log_msg() -> mq_send (non-blocking) vao /sms_log.
- * Logger Thread mq_receive, ghi vao file kem timestamp,
- * flush moi 5 giay, rotate sang sms.log.1 khi file > 1 MB.
- * Shutdown: main gui 1 message rong (do dai 0).
  */
 #include <errno.h>
 #include <fcntl.h>
@@ -16,9 +10,9 @@
 #include <time.h>
 #include "sms.h"
 
-unsigned long dropped_logs;               /* so log bi bo vi queue day */
-static mqd_t log_q_send = (mqd_t)-1;      /* cac thread gui (O_NONBLOCK: khong bao gio bi chan) */
-static mqd_t log_q_recv = (mqd_t)-1;      /* Logger Thread nhan (blocking) */
+unsigned long dropped_logs;      
+static mqd_t log_q_send = (mqd_t)-1; 
+static mqd_t log_q_recv = (mqd_t)-1;     
 static FILE *log_fp;
 static const char *log_path;
 
@@ -44,7 +38,7 @@ int logger_init(const char *path)
 	return 0;
 }
 
-/* Dung giong printf, goi duoc tu moi thread */
+
 void log_msg(const char *fmt, ...)
 {
 	char msg[LOG_MSG_LEN];
@@ -108,7 +102,7 @@ void *logger_thread(void *arg)
 				continue;
 			break;
 		}
-		if (n == 0)                 /* lenh dung */
+		if (n == 0)               
 			break;
 
 		clock_gettime(CLOCK_REALTIME, &now);
