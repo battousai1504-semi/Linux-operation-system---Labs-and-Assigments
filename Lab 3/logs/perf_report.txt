@@ -1,0 +1,142 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 48  of event 'cpu-clock'
+# Event count (approx.): 241206000
+#
+# Children      Self  Command      Shared Object  Symbol                         
+# ........  ........  ...........  .............  ...............................
+#
+   100.00%     0.00%  perf_target  perf_target    [.] _start
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               |          
+               |--97.92%--main
+               |          |          
+               |          |--45.83%--heavy_compute
+               |          |          
+               |          |--39.58%--__ieee754_log_fma
+               |          |          
+               |          |--10.42%--log@plt
+               |          |          
+               |           --2.08%--__log_finite@GLIBC_2.15@plt
+               |          
+                --2.08%--linear_search
+
+   100.00%     0.00%  perf_target  libc.so.6      [.] __libc_start_main_impl (inlined)
+            |
+            ---__libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               |          
+               |--97.92%--main
+               |          |          
+               |          |--45.83%--heavy_compute
+               |          |          
+               |          |--39.58%--__ieee754_log_fma
+               |          |          
+               |          |--10.42%--log@plt
+               |          |          
+               |           --2.08%--__log_finite@GLIBC_2.15@plt
+               |          
+                --2.08%--linear_search
+
+   100.00%     0.00%  perf_target  libc.so.6      [.] call_init (inlined)
+            |
+            ---call_init (inlined)
+               __libc_start_call_main
+               |          
+               |--97.92%--main
+               |          |          
+               |          |--45.83%--heavy_compute
+               |          |          
+               |          |--39.58%--__ieee754_log_fma
+               |          |          
+               |          |--10.42%--log@plt
+               |          |          
+               |           --2.08%--__log_finite@GLIBC_2.15@plt
+               |          
+                --2.08%--linear_search
+
+   100.00%     0.00%  perf_target  libc.so.6      [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               |          
+               |--97.92%--main
+               |          |          
+               |          |--45.83%--heavy_compute
+               |          |          
+               |          |--39.58%--__ieee754_log_fma
+               |          |          
+               |          |--10.42%--log@plt
+               |          |          
+               |           --2.08%--__log_finite@GLIBC_2.15@plt
+               |          
+                --2.08%--linear_search
+
+    97.92%     0.00%  perf_target  perf_target    [.] main
+            |
+            ---main
+               |          
+               |--45.83%--heavy_compute
+               |          
+               |--39.58%--__ieee754_log_fma
+               |          
+               |--10.42%--log@plt
+               |          
+                --2.08%--__log_finite@GLIBC_2.15@plt
+
+    45.83%    45.83%  perf_target  perf_target    [.] heavy_compute
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               main
+               heavy_compute
+
+    39.58%    39.58%  perf_target  libm.so.6      [.] __ieee754_log_fma
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               main
+               __ieee754_log_fma
+
+    10.42%    10.42%  perf_target  perf_target    [.] log@plt
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               main
+               log@plt
+
+     2.08%     2.08%  perf_target  libm.so.6      [.] __log_finite@GLIBC_2.15@plt
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               main
+               __log_finite@GLIBC_2.15@plt
+
+     2.08%     2.08%  perf_target  perf_target    [.] linear_search
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               linear_search
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

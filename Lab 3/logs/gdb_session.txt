@@ -1,0 +1,85 @@
+Remote debugging using 127.0.0.1:1234
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+0x00010254 in _start ()
+Breakpoint 1 at 0x1035e: file buggy_app.c, line 7.
+Breakpoint 2 at 0x103a8: file buggy_app.c, line 18.
+Breakpoint 3 at 0x103e8: file buggy_app.c, line 31.
+Continuing.
+
+Breakpoint 1, process_data (data=0x407ffde0, len=5) at buggy_app.c:7
+7	    int sum = 0;
+#0  process_data (data=0x407ffde0, len=5) at buggy_app.c:7
+#1  0x00010458 in main () at buggy_app.c:44
+No matching arguments.
+❌️ No symbol "i" in current context.
+1	#include <stdio.h>
+2	#include <stdlib.h>
+3	#include <string.h>
+4	
+5	void process_data(int *data, int len)
+6	{
+7	    int sum = 0;
+8	
+9	    for (int i = 0; i <= len; i++) {
+10	        sum += data[i];
+Breakpoint 4 at 0x10368: file buggy_app.c, line 10.
+Continuing.
+
+Breakpoint 4, process_data (data=0x407ffde0, len=5) at buggy_app.c:10
+10	        sum += data[i];
+OOB_EVIDENCE: i=5 len=5
+$1 = {10, 20, 30, 40, 50}
+$2 = 1973386240
+#0  process_data (data=0x407ffde0, len=5) at buggy_app.c:10
+#1  0x00010458 in main () at buggy_app.c:44
+Continuing.
+
+Breakpoint 2, create_message (text=0x490b0 "Hello Embedded Linux") at buggy_app.c:18
+18	    char *buf = malloc(strlen(text) + 1);
+text = 0x490b0 "Hello Embedded Linux"
+12	
+13	    printf("Sum = %d\n", sum);
+14	}
+15	
+16	char *create_message(const char *text)
+17	{
+18	    char *buf = malloc(strlen(text) + 1);
+19	
+20	    if (!buf)
+21	        return NULL;
+create_message (text=0x490b0 "Hello Embedded Linux") at buggy_app.c:26
+26	    return buf;
+UAF_EVIDENCE: buf_after_free=0x75c50
+0x75c50:	"u"
+#0  create_message (text=0x490b0 "Hello Embedded Linux") at buggy_app.c:26
+#1  0x0001046c in main () at buggy_app.c:47
+Continuing.
+
+Breakpoint 3, calculate (a=100000, b=100000) at buggy_app.c:31
+31	    int result = a * b;
+#0  calculate (a=100000, b=100000) at buggy_app.c:31
+#1  0x00010498 in main () at buggy_app.c:51
+a = 100000
+b = 100000
+25	
+26	    return buf;
+27	}
+28	
+29	int calculate(int a, int b)
+30	{
+31	    int result = a * b;
+32	
+33	    printf("calculate(%d, %d) = %d\n", a, b, result);
+34	    return result;
+calculate (a=100000, b=100000) at buggy_app.c:33
+33	    printf("calculate(%d, %d) = %d\n", a, b, result);
+OVERFLOW_32BIT_RESULT=1410065408
+EXPECTED_64BIT_RESULT=10000000000
+#0  calculate (a=100000, b=100000) at buggy_app.c:33
+#1  0x00010498 in main () at buggy_app.c:51
+Continuing.
+[Inferior 1 (process 13582) exited normally]

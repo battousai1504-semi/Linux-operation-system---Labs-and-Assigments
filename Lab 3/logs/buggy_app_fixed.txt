@@ -1,0 +1,8 @@
+=== Fixed App - LAB03 ===
+[TEST1] Array processing
+Sum = 150
+[TEST2] Creating message
+Message: Hello Embedded Linux
+[TEST3] Integer calculation
+calculate(100000, 100000) = 10000000000
+Done.

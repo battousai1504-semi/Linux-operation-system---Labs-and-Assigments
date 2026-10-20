@@ -1,0 +1,29 @@
+=== Perf Target App - LAB03 ===
+[1] Running heavy computation...
+[2] Running linear searches...
+[3] Writing test file...
+Result: 114330831660.746
+Search sink: 19999800
+
+ Performance counter stats for './perf_target':
+
+            252.22 msec task-clock                                                            
+       350,773,840      cpu_atom/cycles/                                                        (1.78%)
+       752,140,047      cpu_core/cycles/                                                        (98.22%)
+       763,656,482      cpu_atom/instructions/                                                  (1.78%)
+     3,838,583,610      cpu_core/instructions/                                                  (98.22%)
+       108,747,156      cpu_atom/branches/                                                      (1.78%)
+       550,338,224      cpu_core/branches/                                                      (98.22%)
+           469,956      cpu_atom/branch-misses/                                                 (1.78%)
+             8,432      cpu_core/branch-misses/                                                 (98.22%)
+         3,655,581      cpu_atom/cache-references/                                              (1.78%)
+           453,986      cpu_core/cache-references/                                              (98.22%)
+         2,114,690      cpu_atom/cache-misses/                                                  (1.78%)
+            30,694      cpu_core/cache-misses/                                                  (98.22%)
+
+       0.253430562 seconds time elapsed
+
+       0.249437000 seconds user
+       0.003991000 seconds sys
+
+

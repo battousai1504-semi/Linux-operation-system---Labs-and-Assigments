@@ -1,0 +1,9 @@
+stress-ng: info:  [14180] setting to a 20 secs run per stressor
+stress-ng: info:  [14180] dispatching hogs: 24 cpu, 2 io, 2 vm
+stress-ng: info:  [14219] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [14221] vm: using 128MB per stressor instance (total 256MB of 24.14GB available memory)
+stress-ng: info:  [14180] skipped: 0
+stress-ng: info:  [14180] passed: 28: cpu (24) io (2) vm (2)
+stress-ng: info:  [14180] failed: 0
+stress-ng: info:  [14180] metrics untrustworthy: 0
+stress-ng: info:  [14180] successful run completed in 20.07 secs

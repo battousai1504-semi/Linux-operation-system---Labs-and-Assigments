@@ -1,0 +1,21 @@
+# Compiled programs and object files
+*.o
+*.a
+*.so
+apps/buggy_app
+apps/buggy_app_fixed_arm
+apps/leaky_app
+apps/leaky_app_fixed
+apps/leaky_app_arm
+apps/perf_target
+apps/perf_target_arm
+
+# Profiling runtime data
+perf.data
+perf.data.old
+
+# Runtime files
+core
+core.*
+*.swp
+*~
