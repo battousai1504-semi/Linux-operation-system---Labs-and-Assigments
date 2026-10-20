@@ -1,0 +1,4 @@
+# Min Latencies: 00003 00003 00005 00003
+# Avg Latencies: 00006 00006 00009 00005
+# Max Latencies: 00022 00023 00042 00027
+# Histogram Overflows: 00000 00000 00000 00000

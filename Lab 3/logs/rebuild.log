@@ -1,0 +1,12 @@
+make: Entering directory '/home/trucgay/embedded_lab3/apps'
+rm -f buggy_app buggy_app_fixed_arm
+rm -f leaky_app leaky_app_fixed leaky_app_arm
+rm -f perf_target perf_target_arm
+arm-linux-gnueabihf-gcc-11 -static -g3 -O0 -fno-omit-frame-pointer -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard -Wall -Wextra -fno-inline -fwrapv -o buggy_app buggy_app.c
+arm-linux-gnueabihf-gcc-11 -static -g3 -O0 -fno-omit-frame-pointer -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard -Wall -Wextra -o buggy_app_fixed_arm buggy_app_fixed.c
+gcc-11 -g3 -O0 -fno-omit-frame-pointer -Wall -Wextra -o leaky_app leaky_app.c
+gcc-11 -g3 -O0 -fno-omit-frame-pointer -Wall -Wextra -o leaky_app_fixed leaky_app_fixed.c
+arm-linux-gnueabihf-gcc-11 -static -g3 -O0 -fno-omit-frame-pointer -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard -Wall -Wextra -o leaky_app_arm leaky_app.c
+gcc-11 -g3 -O0 -fno-omit-frame-pointer -Wall -Wextra -o perf_target perf_target.c -lm
+arm-linux-gnueabihf-gcc-11 -static -g3 -O0 -fno-omit-frame-pointer -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard -Wall -Wextra -o perf_target_arm perf_target.c -lm
+make: Leaving directory '/home/trucgay/embedded_lab3/apps'
