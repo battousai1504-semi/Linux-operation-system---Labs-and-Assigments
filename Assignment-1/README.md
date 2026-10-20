@@ -136,10 +136,3 @@ The recorded QEMU ARMv7 sessions showed:
 
 - **Task 1:** Kernel and Echo modes, RESET, GET_STATS, GET_VERSION, invalid ioctl handling (`ENOTTY`), and module cleanup passed.
 - **Task 2:** auto-increment on read, setting the counter to `100`, resetting to `0`, rejection of negative/non-numeric writes, `/proc/counter_info` counters, and module cleanup passed.
-- Both test scripts completed with exit code `0` in the recorded runs.
-
-These are **functional test results**, not a claim that all remaining assignment deliverables or concurrency scenarios have been fully verified.
-
-## Assignment completion notes
-
-The assignment brief additionally requires a technical report (architecture diagram, comparison of character/block/network drivers, design analysis, and test evidence), four theory answers, comments documenting functions, and the specified submission structure. These items should be checked and completed before final submission. This README does not replace the required report.
